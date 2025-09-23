@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.35</span><span class="period">.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity and <span class="process-math">\(M\)</span> an ideal in <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(M\)</span> is a maximal ideal of <span class="process-math">\(R\)</span> if and only if <span class="process-math">\(R/M\)</span> is a field.</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(M\)</span> be a maximal ideal in <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a commutative ring, then <span class="process-math">\(R/M\)</span> must also be a commutative ring. Clearly, <span class="process-math">\(1 + M\)</span> acts as an identity for <span class="process-math">\(R/M\text{.}\)</span> We must also show that every nonzero element in <span class="process-math">\(R/M\)</span> has an inverse. If <span class="process-math">\(a + M\)</span> is a nonzero element in <span class="process-math">\(R/M\text{,}\)</span> then <span class="process-math">\(a \notin M\text{.}\)</span> Define <span class="process-math">\(I\)</span> to be the set <span class="process-math">\(\{ ra + m : r \in R \text{ and } m \in M \}\text{.}\)</span> We will show that <span class="process-math">\(I\)</span> is an ideal in <span class="process-math">\(R\text{.}\)</span> The set <span class="process-math">\(I\)</span> is nonempty since <span class="process-math">\(0a+0=0\)</span> is in <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(r_1 a + m_1\)</span> and <span class="process-math">\(r_2 a + m_2\)</span> are two elements in <span class="process-math">\(I\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rings-prop-subring.html">
+\begin{equation*}
+(r_1 a + m_1) - ( r_2 a + m_2) = (r_1 - r_2)a + (m_1 - m_2)
+\end{equation*}
+</div>
+<div class="para">is in <span class="process-math">\(I\text{.}\)</span> Also, for any <span class="process-math">\(r \in R\)</span> it is true that <span class="process-math">\(rI \subset I\text{;}\)</span> hence, <span class="process-math">\(I\)</span> is closed under multiplication and satisfies the necessary conditions to be an ideal. Therefore, by <a href="rings-section-definitions.html#rings-prop-subring" class="xref" data-knowl="./knowl/xref/rings-prop-subring.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 16.10">Proposition 16.10</a> and the definition of an ideal, <span class="process-math">\(I\)</span> is an ideal properly containing <span class="process-math">\(M\text{.}\)</span> Since <span class="process-math">\(M\)</span> is a maximal ideal, <span class="process-math">\(I=R\text{;}\)</span> consequently, by the definition of <span class="process-math">\(I\)</span> there must be an <span class="process-math">\(m\)</span> in <span class="process-math">\(M\)</span> and an element <span class="process-math">\(b\)</span> in <span class="process-math">\(R\)</span> such that <span class="process-math">\(1=ab+m\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rings-prop-subring.html">
+\begin{equation*}
+1 + M = ab + M = ba + M = (a+M)(b+M)\text{.}
+\end{equation*}
+</div>
+</div>   <div class="para">Conversely, suppose that <span class="process-math">\(M\)</span> is an ideal and <span class="process-math">\(R/M\)</span> is a field. Since <span class="process-math">\(R/M\)</span> is a field, it must contain at least two elements: <span class="process-math">\(0 + M = M\)</span> and <span class="process-math">\(1 + M\text{.}\)</span> Hence, <span class="process-math">\(M\)</span> is a proper ideal of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(I\)</span> be any ideal properly containing <span class="process-math">\(M\text{.}\)</span> We need to show that <span class="process-math">\(I = R\text{.}\)</span> Choose <span class="process-math">\(a\)</span> in <span class="process-math">\(I\)</span> but not in <span class="process-math">\(M\text{.}\)</span> Since <span class="process-math">\(a+ M\)</span> is a nonzero element in a field, there exists an element <span class="process-math">\(b +M\)</span> in <span class="process-math">\(R/M\)</span> such that <span class="process-math">\((a+M)(b+M) = ab + M = 1+M\text{.}\)</span> Consequently, there exists an element <span class="process-math">\(m \in M\)</span> such that <span class="process-math">\(ab + m = 1\)</span> and <span class="process-math">\(1\)</span> is in <span class="process-math">\(I\text{.}\)</span> Therefore, <span class="process-math">\(r1 =r \in I\)</span> for all <span class="process-math">\(r \in R\text{.}\)</span> Consequently, <span class="process-math">\(I = R\text{.}\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="rings-section-maximal-prime-ideals.html#rings-theorem-maximal-ideal-field">in-context</a></span>
+</body>
+</html>
