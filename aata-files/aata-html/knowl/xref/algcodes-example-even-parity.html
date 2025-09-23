@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +19,7 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
 </h3>
 <div class="para logical">
 <div class="para">
@@ -41,6 +48,8 @@
 \end{align*}
 </div>
 <div class="para">Suppose an A is sent and a transmission error in the sixth bit is caused by noise over the communication channel so that  <span class="process-math">\((0100\; 0101)\)</span> is received. We know an error has occurred since the received word has an odd number of <span class="process-math">\(1\)</span>s, and we can now request that the codeword be transmitted again. When used for error checking, the leftmost bit is called a <dfn class="terminology">parity check bit</dfn>.</div>
-</div> <div class="para">By far the most common error-detecting codes used in computers are based on the addition of a parity bit. Typically, a computer stores information in <span class="process-math">\(m\)</span>-tuples called <dfn class="terminology">words</dfn>. Common word lengths are <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(16\text{,}\)</span> and <span class="process-math">\(32\)</span> bits. One bit in the word is set aside as the parity check bit, and is not used to store information. This bit is set to either <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{,}\)</span> depending on the number of <span class="process-math">\(1\)</span>s in the word.</div> <div class="para">Adding a parity check bit allows the detection of all single errors because changing a single bit either increases or decreases the number of <span class="process-math">\(1\)</span>s by one, and in either case the parity has been changed from even to odd, so the new word is not a codeword. (We could also construct an error detection scheme based on <dfn class="terminology">odd parity</dfn>; that is, we could set the parity check bit so that a codeword always has an odd number of <span class="process-math">\(1\)</span>s.)</div></article><span class="incontext"><a class="internal" href="algcodes-section-error-detecting-correcting-codes.html#algcodes-example-even-parity">in-context</a></span>
+</div>
+<div class="para">By far the most common error-detecting codes used in computers are based on the addition of a parity bit. Typically, a computer stores information in <span class="process-math">\(m\)</span>-tuples called <dfn class="terminology">words</dfn>. Common word lengths are <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(16\text{,}\)</span> and <span class="process-math">\(32\)</span> bits. One bit in the word is set aside as the parity check bit, and is not used to store information. This bit is set to either <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{,}\)</span> depending on the number of <span class="process-math">\(1\)</span>s in the word.</div>
+<div class="para">Adding a parity check bit allows the detection of all single errors because changing a single bit either increases or decreases the number of <span class="process-math">\(1\)</span>s by one, and in either case the parity has been changed from even to odd, so the new word is not a codeword. (We could also construct an error detection scheme based on <dfn class="terminology">odd parity</dfn>; that is, we could set the parity check bit so that a codeword always has an odd number of <span class="process-math">\(1\)</span>s.)</div></article><span class="incontext"><a class="internal" href="algcodes-section-error-detecting-correcting-codes.html#algcodes-example-even-parity">in-context</a></span>
 </body>
 </html>

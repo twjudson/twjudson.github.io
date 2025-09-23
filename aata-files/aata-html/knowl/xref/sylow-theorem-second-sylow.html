@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +19,18 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.7</span><span class="period">.</span><span class="space"> </span><span class="title">Second Sylow Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Second Sylow Theorem.</span>
 </h3>
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime dividing <span class="process-math">\(|G|\text{.}\)</span> Then all Sylow <span class="process-math">\(p\)</span>-subgroups of <span class="process-math">\(G\)</span> are conjugate. That is, if <span class="process-math">\(P_1\)</span> and <span class="process-math">\(P_2\)</span> are two Sylow <span class="process-math">\(p\)</span>-subgroups, there exists a <span class="process-math">\(g \in G\)</span> such that <span class="process-math">\(g P_1 g^{-1} = P_2\text{.}\)</span>
-</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+</div></article><article class="proof"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para logical">
 <div class="para">Let <span class="process-math">\(P\)</span> be a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> and suppose that <span class="process-math">\(|G|=p^r m\)</span> with <span class="process-math">\(|P|=p^r\text{.}\)</span> Let</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sylow-lemma-distinct-conjugates.html">
 \begin{equation*}
 {\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}
 \end{equation*}
 </div>
-<div class="para">consist of the distinct conjugates of <span class="process-math">\(P\)</span> in <span class="process-math">\(G\text{.}\)</span> By <a href="sylow-section-sylow-theorems.html#sylow-lemma-distinct-conjugates" class="xref" data-knowl="./knowl/xref/sylow-lemma-distinct-conjugates.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.6">Lemma 15.6</a>, <span class="process-math">\(k = [G: N(P)]\text{.}\)</span> Notice that</div>
+<div class="para">consist of the distinct conjugates of <span class="process-math">\(P\)</span> in <span class="process-math">\(G\text{.}\)</span> By <a href="sylow-section-sylow-theorems.html#sylow-lemma-distinct-conjugates" class="xref" data-knowl="./knowl/xref/sylow-lemma-distinct-conjugates.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.1.6">Lemma 15.1.6</a>, <span class="process-math">\(k = [G: N(P)]\text{.}\)</span> Notice that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sylow-lemma-distinct-conjugates.html">
 \begin{equation*}
 |G|= p^r m = |N(P)| \cdot [G: N(P)]= |N(P)| \cdot k\text{.}
@@ -30,7 +38,8 @@
 </div>
 <div class="para">Since <span class="process-math">\(p^r\)</span> divides <span class="process-math">\(|N(P)|\text{,}\)</span> <span class="process-math">\(p\)</span> cannot divide <span class="process-math">\(k\text{.}\)</span>
 </div>
-</div> <div class="para">Given any other Sylow <span class="process-math">\(p\)</span>-subgroup <span class="process-math">\(Q\text{,}\)</span> we must show that <span class="process-math">\(Q \in {\mathcal S}\text{.}\)</span> Consider the <span class="process-math">\(Q\)</span>-conjugacy classes of each <span class="process-math">\(P_i\text{.}\)</span> Clearly, these conjugacy classes partition <span class="process-math">\({\mathcal S}\text{.}\)</span> The size of the partition containing <span class="process-math">\(P_i\)</span> is <span class="process-math">\([Q :N(P_i) \cap Q]\)</span> by <a href="sylow-section-sylow-theorems.html#sylow-lemma-distinct-conjugates" class="xref" data-knowl="./knowl/xref/sylow-lemma-distinct-conjugates.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.6">Lemma 15.6</a>, and Lagrange’s Theorem tells us that <span class="process-math">\(|Q| = [Q :N(P_i) \cap Q] |N(P_i) \cap Q|\text{.}\)</span> Thus, <span class="process-math">\([Q :N(P_i) \cap Q]\)</span> must be a divisor of <span class="process-math">\(|Q|= p^r\text{.}\)</span> Hence, the number of conjugates in every equivalence class of the partition is a power of <span class="process-math">\(p\text{.}\)</span> However, since <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(k\text{,}\)</span> one of these equivalence classes must contain only a single Sylow <span class="process-math">\(p\)</span>-subgroup, say <span class="process-math">\(P_j\text{.}\)</span> In this case, <span class="process-math">\(x^{-1} P_j x = P_j\)</span> for all <span class="process-math">\(x \in Q\text{.}\)</span> By <a href="sylow-section-sylow-theorems.html#sylow-lemma-p-order" class="xref" data-knowl="./knowl/xref/sylow-lemma-p-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.5">Lemma 15.5</a>, <span class="process-math">\(P_j = Q\text{.}\)</span>
-</div></article></details><span class="incontext"><a class="internal" href="sylow-section-sylow-theorems.html#sylow-theorem-second-sylow">in-context</a></span>
+</div>
+<div class="para">Given any other Sylow <span class="process-math">\(p\)</span>-subgroup <span class="process-math">\(Q\text{,}\)</span> we must show that <span class="process-math">\(Q \in {\mathcal S}\text{.}\)</span> Consider the <span class="process-math">\(Q\)</span>-conjugacy classes of each <span class="process-math">\(P_i\text{.}\)</span> Clearly, these conjugacy classes partition <span class="process-math">\({\mathcal S}\text{.}\)</span> The size of the partition containing <span class="process-math">\(P_i\)</span> is <span class="process-math">\([Q :N(P_i) \cap Q]\)</span> by <a href="sylow-section-sylow-theorems.html#sylow-lemma-distinct-conjugates" class="xref" data-knowl="./knowl/xref/sylow-lemma-distinct-conjugates.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.1.6">Lemma 15.1.6</a>, and Lagrange’s Theorem tells us that <span class="process-math">\(|Q| = [Q :N(P_i) \cap Q] |N(P_i) \cap Q|\text{.}\)</span> Thus, <span class="process-math">\([Q :N(P_i) \cap Q]\)</span> must be a divisor of <span class="process-math">\(|Q|= p^r\text{.}\)</span> Hence, the number of conjugates in every equivalence class of the partition is a power of <span class="process-math">\(p\text{.}\)</span> However, since <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(k\text{,}\)</span> one of these equivalence classes must contain only a single Sylow <span class="process-math">\(p\)</span>-subgroup, say <span class="process-math">\(P_j\text{.}\)</span> In this case, <span class="process-math">\(x^{-1} P_j x = P_j\)</span> for all <span class="process-math">\(x \in Q\text{.}\)</span> By <a href="sylow-section-sylow-theorems.html#sylow-lemma-p-order" class="xref" data-knowl="./knowl/xref/sylow-lemma-p-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 15.1.5">Lemma 15.1.5</a>, <span class="process-math">\(P_j = Q\text{.}\)</span>
+</div></article><span class="incontext"><a class="internal" href="sylow-section-sylow-theorems.html#sylow-theorem-second-sylow">in-context</a></span>
 </body>
 </html>

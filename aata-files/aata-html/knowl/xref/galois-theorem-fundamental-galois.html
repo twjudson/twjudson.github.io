@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +19,7 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">23.23</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Galois Theory.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">23.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Galois Theory.</span>
 </h3>
 <div class="para logical">
 <div class="para">Let <span class="process-math">\(F\)</span> be a finite field or a field of characteristic zero. If <span class="process-math">\(E\)</span> is a finite normal extension of <span class="process-math">\(F\)</span> with Galois group <span class="process-math">\(G(E/F)\text{,}\)</span> then the following statements are true.</div>
@@ -40,8 +47,10 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 </div>
 </div></li>
 </ol>
-</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">(1) Suppose that <span class="process-math">\(G(E/K) = G(E/L) = G\text{.}\)</span> Both <span class="process-math">\(K\)</span> and <span class="process-math">\(L\)</span> are fixed fields of <span class="process-math">\(G\text{;}\)</span> hence, <span class="process-math">\(K=L\)</span> and the map defined by <span class="process-math">\(K \mapsto G(E/K)\)</span> is one-to-one. To show that the map is onto, let <span class="process-math">\(G\)</span> be a subgroup of <span class="process-math">\(G(E/F)\)</span> and <span class="process-math">\(K\)</span> be the field fixed by <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(F \subset K \subset E\text{;}\)</span> consequently, <span class="process-math">\(E\)</span> is a normal extension of <span class="process-math">\(K\text{.}\)</span> Thus, <span class="process-math">\(G(E/K) = G\)</span> and the map <span class="process-math">\(K \mapsto G(E/K)\)</span> is a bijection.</div> <div class="para logical">
-<div class="para">(2) By Theorem <a href="galois-section-field-automorphisms.html#galois-theorem-extension-order" class="xref" data-knowl="./knowl/xref/galois-theorem-extension-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 23.7">Theorem 23.7</a>, <span class="process-math">\(|G(E/K)| = [E:K]\text{;}\)</span> therefore,</div>
+</div></article><article class="proof"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para">(1) Suppose that <span class="process-math">\(G(E/K) = G(E/L) = G\text{.}\)</span> Both <span class="process-math">\(K\)</span> and <span class="process-math">\(L\)</span> are fixed fields of <span class="process-math">\(G\text{;}\)</span> hence, <span class="process-math">\(K=L\)</span> and the map defined by <span class="process-math">\(K \mapsto G(E/K)\)</span> is one-to-one. To show that the map is onto, let <span class="process-math">\(G\)</span> be a subgroup of <span class="process-math">\(G(E/F)\)</span> and <span class="process-math">\(K\)</span> be the field fixed by <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(F \subset K \subset E\text{;}\)</span> consequently, <span class="process-math">\(E\)</span> is a normal extension of <span class="process-math">\(K\text{.}\)</span> Thus, <span class="process-math">\(G(E/K) = G\)</span> and the map <span class="process-math">\(K \mapsto G(E/K)\)</span> is a bijection.</div>
+<div class="para logical">
+<div class="para">(2) By Theorem <a href="galois-section-field-automorphisms.html#galois-theorem-extension-order" class="xref" data-knowl="./knowl/xref/galois-theorem-extension-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 23.1.7">Theorem 23.1.7</a>, <span class="process-math">\(|G(E/K)| = [E:K]\text{;}\)</span> therefore,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/galois-theorem-extension-order.html">
 \begin{equation*}
 |G(E/F)| = [G(E/F):G(E/K)] \cdot |G(E/K)| = [E:F] = [E:K][K:F]\text{.}
@@ -49,8 +58,11 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 </div>
 <div class="para">Thus, <span class="process-math">\([K:F] = [G(E/F):G(E/K)]\text{.}\)</span>
 </div>
-</div> <div class="para">Statement (3) is illustrated in <a href="galois-section-fund-theorem-galois-theory.html#galois-figure-2" class="xref" data-knowl="./knowl/xref/galois-figure-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 23.24">Figure 23.24</a>. We leave the proof of this property as an exercise.</div> <div class="para">(4) This part takes a little more work. Let <span class="process-math">\(K\)</span> be a normal extension of <span class="process-math">\(F\text{.}\)</span> If <span class="process-math">\(\sigma\)</span> is in <span class="process-math">\(G(E/F)\)</span> and <span class="process-math">\(\tau\)</span> is in <span class="process-math">\(G(E/K)\text{,}\)</span> we need to show that <span class="process-math">\(\sigma^{-1} \tau \sigma\)</span> is in <span class="process-math">\(G(E/K)\text{;}\)</span> that is, we need to show that <span class="process-math">\(\sigma^{-1} \tau \sigma( \alpha) = \alpha\)</span> for all <span class="process-math">\(\alpha \in K\text{.}\)</span> Suppose that <span class="process-math">\(f(x)\)</span> is the minimal polynomial of <span class="process-math">\(\alpha\)</span> over <span class="process-math">\(F\text{.}\)</span> Then <span class="process-math">\(\sigma( \alpha )\)</span> is also a root of <span class="process-math">\(f(x)\)</span> lying in <span class="process-math">\(K\text{,}\)</span> since <span class="process-math">\(K\)</span> is a normal extension of <span class="process-math">\(F\text{.}\)</span> Hence, <span class="process-math">\(\tau( \sigma( \alpha )) = \sigma( \alpha )\)</span> or <span class="process-math">\(\sigma^{-1} \tau \sigma( \alpha) = \alpha\text{.}\)</span>
-</div> <div class="para logical">
+</div>
+<div class="para">Statement (3) is illustrated in <a href="galois-section-fund-theorem-galois-theory.html#galois-figure-2" class="xref" data-knowl="./knowl/xref/galois-figure-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 23.2.11">Figure 23.2.11</a>. We leave the proof of this property as an exercise.</div>
+<div class="para">(4) This part takes a little more work. Let <span class="process-math">\(K\)</span> be a normal extension of <span class="process-math">\(F\text{.}\)</span> If <span class="process-math">\(\sigma\)</span> is in <span class="process-math">\(G(E/F)\)</span> and <span class="process-math">\(\tau\)</span> is in <span class="process-math">\(G(E/K)\text{,}\)</span> we need to show that <span class="process-math">\(\sigma^{-1} \tau \sigma\)</span> is in <span class="process-math">\(G(E/K)\text{;}\)</span> that is, we need to show that <span class="process-math">\(\sigma^{-1} \tau \sigma( \alpha) = \alpha\)</span> for all <span class="process-math">\(\alpha \in K\text{.}\)</span> Suppose that <span class="process-math">\(f(x)\)</span> is the minimal polynomial of <span class="process-math">\(\alpha\)</span> over <span class="process-math">\(F\text{.}\)</span> Then <span class="process-math">\(\sigma( \alpha )\)</span> is also a root of <span class="process-math">\(f(x)\)</span> lying in <span class="process-math">\(K\text{,}\)</span> since <span class="process-math">\(K\)</span> is a normal extension of <span class="process-math">\(F\text{.}\)</span> Hence, <span class="process-math">\(\tau( \sigma( \alpha )) = \sigma( \alpha )\)</span> or <span class="process-math">\(\sigma^{-1} \tau \sigma( \alpha) = \alpha\text{.}\)</span>
+</div>
+<div class="para logical">
 <div class="para">Conversely, let <span class="process-math">\(G(E/K)\)</span> be a normal subgroup of <span class="process-math">\(G(E/F)\text{.}\)</span> We need to show that <span class="process-math">\(F = K_{G(K/F)}\text{.}\)</span> Let <span class="process-math">\(\tau \in G(E/K)\text{.}\)</span> For all <span class="process-math">\(\sigma \in G(E/F)\)</span> there exists a <span class="process-math">\(\overline{\tau} \in G(E/K)\)</span> such that <span class="process-math">\(\tau \sigma = \sigma \overline{\tau}\text{.}\)</span> Consequently, for all <span class="process-math">\(\alpha \in K\)</span>
 </div>
 <div class="displaymath process-math">
@@ -60,7 +72,8 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 </div>
 <div class="para">hence, <span class="process-math">\(\sigma( \alpha )\)</span> must be in the fixed field of <span class="process-math">\(G(E/K)\text{.}\)</span> Let <span class="process-math">\(\overline{\sigma}\)</span> be the restriction of <span class="process-math">\(\sigma\)</span> to <span class="process-math">\(K\text{.}\)</span> Then <span class="process-math">\(\overline{\sigma}\)</span> is an automorphism of <span class="process-math">\(K\)</span> fixing <span class="process-math">\(F\text{,}\)</span> since <span class="process-math">\(\sigma( \alpha ) \in K\)</span> for all <span class="process-math">\(\alpha \in K\text{;}\)</span> hence, <span class="process-math">\(\overline{\sigma} \in G(K/F)\text{.}\)</span> Next, we will show that the fixed field of <span class="process-math">\(G(K/F)\)</span> is <span class="process-math">\(F\text{.}\)</span> Let <span class="process-math">\(\beta\)</span> be an element in <span class="process-math">\(K\)</span> that is fixed by all automorphisms in <span class="process-math">\(G(K/F)\text{.}\)</span> In particular, <span class="process-math">\(\overline{\sigma}(\beta) = \beta\)</span> for all <span class="process-math">\(\sigma \in G(E/F)\text{.}\)</span> Therefore, <span class="process-math">\(\beta\)</span> belongs to the fixed field <span class="process-math">\(F\)</span> of <span class="process-math">\(G(E/F)\text{.}\)</span>
 </div>
-</div> <div class="para logical">
+</div>
+<div class="para logical">
 <div class="para">Finally, we must show that when <span class="process-math">\(K\)</span> is a normal extension of <span class="process-math">\(F\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -86,6 +99,6 @@ G(K/F) \cong G(E/F) / G(E/K)\text{.}
 G(K/F) \cong G(E/F) / G( E/K )\text{.}
 \end{equation*}
 </div>
-</div></article></details><span class="incontext"><a class="internal" href="galois-section-fund-theorem-galois-theory.html#galois-theorem-fundamental-galois">in-context</a></span>
+</div></article><span class="incontext"><a class="internal" href="galois-section-fund-theorem-galois-theory.html#galois-theorem-fundamental-galois">in-context</a></span>
 </body>
 </html>

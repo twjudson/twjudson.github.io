@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -14,7 +21,7 @@
 <article class="exercise exercise-like"><h3 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h3>
-<div class="para">A better algorithm for factoring odd positive integers is <dfn class="terminology">Fermat’s factorization algorithm</dfn>.</div> <ol class="lower-alpha" id="crypt-exercise-fermats-factorization-algorithm-1-2">
+<div class="para">A better algorithm for factoring odd positive integers is <dfn class="terminology">Fermat’s factorization algorithm</dfn>.</div> <ol class="lower-alpha lower-alpha-level-1" id="crypt-exercise-fermats-factorization-algorithm-1-2">
 <li><div class="para logical">
 <div class="para">Let <span class="process-math">\(n= ab\)</span> be an odd composite number. Prove that <span class="process-math">\(n\)</span> can be written as the difference of two perfect squares:</div>
 <div class="displaymath process-math">
@@ -26,7 +33,7 @@ n = x^2 - y^2 = (x - y)(x + y)\text{.}
 </div>
 </div></li>
 <li><div class="para">Write a program to implement the following factorization algorithm based on the observation in part (a). The expression <code class="code-inline tex2jax_ignore">ceiling(sqrt(n))</code> means the smallest integer greater than or equal to the square root of <span class="process-math">\(n\text{.}\)</span> Write another program to do factorization using trial division and compare the speed of the two algorithms. Which algorithm is faster and why?</div></li>
-</ol> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">x := ceiling(sqrt(n))
+</ol> <div class="code-box"><pre class="program"><code class="language-none">x := ceiling(sqrt(n))
 y := 1
 
 1 : while x^2 - y^2 &gt; n do

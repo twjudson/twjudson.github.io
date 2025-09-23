@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,10 +19,11 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1.13</span><span class="period">.</span>
 </h4>
 <div class="para">Let <span class="process-math">\(C\)</span> be a code with <span class="process-math">\(d_{\min} = 2n + 1\text{.}\)</span> Then <span class="process-math">\(C\)</span> can correct any <span class="process-math">\(n\)</span> or fewer errors. Furthermore, any <span class="process-math">\(2n\)</span> or fewer errors can be detected in <span class="process-math">\(C\text{.}\)</span>
-</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+</div></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<div class="para logical">
 <div class="para">Suppose that a codeword <span class="process-math">\({\mathbf x}\)</span> is sent and the word <span class="process-math">\({\mathbf y}\)</span> is received with at most <span class="process-math">\(n\)</span> errors. Then <span class="process-math">\(d( {\mathbf x}, {\mathbf y}) \leq n\text{.}\)</span> If <span class="process-math">\({\mathbf z}\)</span> is any codeword other than <span class="process-math">\({\mathbf x}\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -23,6 +31,6 @@
 \end{equation*}
 </div>
 <div class="para">Hence, <span class="process-math">\(d({\mathbf y}, {\mathbf z} ) \geq n+1\)</span> and <span class="process-math">\({\mathbf y}\)</span> will be correctly decoded as <span class="process-math">\({\mathbf x}\text{.}\)</span> Now suppose that <span class="process-math">\({\mathbf x}\)</span> is transmitted and <span class="process-math">\({\mathbf y}\)</span> is received and that at least one error  has occurred, but not more than <span class="process-math">\(2n\)</span> errors. Then <span class="process-math">\(1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n\text{.}\)</span> Since the minimum distance between codewords is <span class="process-math">\(2n +1\text{,}\)</span> <span class="process-math">\({\mathbf y}\)</span> cannot be a codeword. Consequently, the code can detect between <span class="process-math">\(1\)</span> and <span class="process-math">\(2n\)</span> errors.</div>
-</div></article></details><span class="incontext"><a class="internal" href="algcodes-section-error-detecting-correcting-codes.html#algcodes-theorem-min-distance">in-context</a></span>
+</div></article><span class="incontext"><a class="internal" href="algcodes-section-error-detecting-correcting-codes.html#algcodes-theorem-min-distance">in-context</a></span>
 </body>
 </html>
