@@ -1,0 +1,110 @@
+<diagram>
+  <annotations>
+    <annotation id="figure" speech2="Integral curves of the differential equation x prime equal x having the form C time e to the t">
+      <grouped>figure</grouped>
+      <position>1</position>
+      <children>
+        <active>grid-axes</active>
+        <active>solutions</active>
+      </children>
+      <components>
+        <active>grid-axes</active>
+        <active>solutions</active>
+      </components>
+    </annotation>
+    <annotation id="grid-axes" speech2="The coordinate grid and axes">
+      <grouped>grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>grid</active>
+        <active>axes</active>
+      </children>
+      <components>
+        <active>grid</active>
+        <active>axes</active>
+      </components>
+      <parents>
+        <grouped>figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="grid" speech2="The coordinate grid">
+      <active>grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="axes" speech2="The coordinate axes">
+      <active>axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="solutions" speech2="A set of six integral curves">
+      <grouped>solutions</grouped>
+      <position>2</position>
+      <children>
+        <active>graph-f1</active>
+        <active>graph-f4</active>
+        <active>graph-f2</active>
+        <active>graph-f5</active>
+        <active>graph-f3</active>
+        <active>graph-f6</active>
+      </children>
+      <components>
+        <active>graph-f1</active>
+        <active>graph-f4</active>
+        <active>graph-f2</active>
+        <active>graph-f5</active>
+        <active>graph-f3</active>
+        <active>graph-f6</active>
+      </components>
+      <parents>
+        <grouped>figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f1" speech2="An integral curve with C = 1/10">
+      <active>graph-f1</active>
+      <position>1</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f4" speech2="An integral curve with C = -1/10">
+      <active>graph-f4</active>
+      <position>2</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f2" speech2="An integral curve with C = 1/20">
+      <active>graph-f2</active>
+      <position>3</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f5" speech2="An integral curve with C = -1/20">
+      <active>graph-f5</active>
+      <position>4</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f3" speech2="An integral curve with C = 1/30">
+      <active>graph-f3</active>
+      <position>5</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+    <annotation id="graph-f6" speech2="An integral curve with C = -1/30">
+      <active>graph-f6</active>
+      <position>6</position>
+      <parents>
+        <grouped>solutions</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

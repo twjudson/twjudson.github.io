@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ODE-Project Bifurcations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="The Ordinary Differential Equations Project">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.8';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="odeproject.html"><span class="title">The Ordinary Differential Equations Project</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="firstlook06.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="firstlook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="firstlook08.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\real}{\operatorname{Re}}
+\newcommand{\imaginary}{\operatorname{Im}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="firstlook.html" class="internal"><span class="codenumber">1</span> <span class="title">A First Look at Differential Equations</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook01.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Modeling with Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-exponential-growth" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-logistic-growth" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Logistic Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-spring-mass" class="internal"><span class="codenumber">1.1.3</span> <span class="title">A Spring-Mass Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-predator-prey" class="internal"><span class="codenumber">1.1.4</span> <span class="title">A Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-modeling-hiv" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Modeling the HIV-1 Virus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-questions-for-thought" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Some Questions for Thought</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-important-lessons" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook01.html#reading-questions-firstlook01" class="internal"><span class="codenumber">1.1.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-exercises" class="internal"><span class="codenumber">1.1.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-sage" class="internal"><span class="codenumber">1.1.10</span> <span class="title">An Introduction to <em class="emphasis">Sage</em></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-sage-exercises" class="internal"><span class="codenumber">1.1.10</span> <span class="title"><em class="emphasis">Sage</em> Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook02.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Separable Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-separable-de" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Separable Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-newtons-law-cooling" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Newton’s Law of Cooling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-mixing-problem" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Mixing Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-retirement" class="internal"><span class="codenumber">1.2.4</span> <span class="title">A Retirement Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-some-theory" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Some Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-what-can-go-wrong" class="internal"><span class="codenumber">1.2.6</span> <span class="title">What Can Go Wrong</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-important-lessons" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook02.html#reading-questions-firstlook02" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-exercises-" class="internal"><span class="codenumber">1.2.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-sage" class="internal"><span class="codenumber">1.2.10</span> <span class="title">Sage—Quick Start Guide to Solving Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook03.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Geometric and Quantitative Analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits" class="internal"><span class="codenumber">1.3.1</span> <span class="title">RC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits-revisited" class="internal"><span class="codenumber">1.3.3</span> <span class="title">RC Circuits Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-direction-fields" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Plotting Direction Fields with Sage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-autonomous-equations" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Autonomous Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-important-lessons" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook03.html#reading-questions-firstlook03" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-exercises" class="internal"><span class="codenumber">1.3.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage" class="internal"><span class="codenumber">1.3.9</span> <span class="title">Sage—Plotting Direction Fields and Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields-sage" class="internal"><span class="codenumber">1.3.9.1</span> <span class="title">Plotting direction fields</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-desolve_rk4" class="internal"><span class="codenumber">1.3.9.2</span> <span class="title">Plotting solutions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-4" class="internal"><span class="codenumber">1.3.9.3</span> <span class="title">Sage Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook04.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Analyzing Equations Numerically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-eulers-method" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-error-bound" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding an Error Bound</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-improving-euler" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Improving Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-important-lessons" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook04.html#reading-questions-firstlook04" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook04.html#exercises-firstlook04" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-sage-project" class="internal"><span class="codenumber">1.4.7</span> <span class="title">Sage—Numerical Routines for solving ODEs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook05.html" class="internal"><span class="codenumber">1.5</span> <span class="title">First-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mine-tailings" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Mine Tailings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-first-order-linear-de" class="internal"><span class="codenumber">1.5.2</span> <span class="title">First-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mixing-models" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Mixing Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-finance-models" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Finance Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-8" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-important-lessons" class="internal"><span class="codenumber">1.5.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook05.html#reading-questions-firstlook05" class="internal"><span class="codenumber">1.5.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook05.html#exercises-firstlook05" class="internal"><span class="codenumber">1.5.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook06.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-existence" class="internal"><span class="codenumber">1.6.1</span> <span class="title">The Existence and Uniqueness Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-picard" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Picard Iteration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-important-lessons" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook06.html#reading-questions-firstlook06" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook06.html#exercises-firstlook06" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="firstlook07.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Bifurcations</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-logisitic-harvesting" class="internal"><span class="codenumber">1.7.1</span> <span class="title">The Logistic Model with Harvesting Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-one-parameter-families" class="internal"><span class="codenumber">1.7.2</span> <span class="title">One-Parameter Families</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-important-lessons" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook07.html#reading-questions-firstlook07" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-exercises" class="internal"><span class="codenumber">1.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="firstlook08.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Projects for First-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Systems of Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems01.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Modeling with Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-predator-prey" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-spring-mass" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Spring-Mass Model Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-epidemics" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Modeling Epidemics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-important-lessons" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems01.html#reading-questions-system01" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems01.html#systems01-exercises" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-sage" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems02.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Geometry of Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-direction-fields" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-predator-prey" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Modified Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-competing-species" class="internal"><span class="codenumber">2.2.3</span> <span class="title">A Competing Species Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-sage-direction-fields" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Plotting Direction Fields with <em class="emphasis">Sage</em></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-phase-plane-analysis" class="internal"><span class="codenumber">2.2.5</span> <span class="title">A Summary of Phase Plane Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-important-lessons" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems02.html#reading-questions-system02" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems02.html#systems02-exercises" class="internal"><span class="codenumber">2.2.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#subsection-sytems02-sage" class="internal"><span class="codenumber">2.2.9</span> <span class="title">Plotting Nullclines with <em class="emphasis">Sage</em></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems03.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Numerical Techniques for Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-duffing" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Duffing’s Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-eulers-method" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Euler’s Method for Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-taylor-series" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Taylor Series Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-existence-uniqueness" class="internal"><span class="codenumber">2.3.4</span> <span class="title">A Word about Existence and Uniqueness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-important-lessons" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems03.html#reading-questions-system03" class="internal"><span class="codenumber">2.3.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-exercises" class="internal"><span class="codenumber">2.3.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems with Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage-12" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Sage Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems04.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Solving Systems Analytically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-partially-coupled" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Partially Coupled Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-sage-linear-systems" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-harmonic-oscillator" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-important-lessons" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems04.html#reading-questions-system04" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems04.html#systems04-exercises" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="systems05.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Projects for Systems of Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear.html" class="internal"><span class="codenumber">3</span> <span class="title">Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear01.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Linear Algebra in a Nutshell</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-matrices" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-linear-independence" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-finding-eigenvalues" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-important-lessons" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear01.html#reading-questions-linear01" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear01.html#exercises-linear01" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-sage-project" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Finding Eigenvalues and Eigenvectors with Sage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear02.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Planar Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-planar-systems" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Planar Systems and <span class="process-math">\(2 \times 2\)</span> Matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-systems-of-de" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Systems of Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-solving-systems" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Solving Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-important-lessons" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear02.html#reading-questions-linear02" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear02.html#linear02-exercises" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear03.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Phase Plane Analysis of Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-different-signs" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Case <span class="process-math">\(\lambda_1 \lt 0 \lt \lambda_2\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-negative" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \lt \lambda_2 \lt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-positive" class="internal"><span class="codenumber">3.3.3</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \gt \lambda_2 \gt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-important-lessons" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear03.html#reading-questions-linear03" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear03.html#linear03-exercises" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear04.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Complex Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-spiral-sinks-sources" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spiral Sinks and Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-quick-start" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Solving Systems with Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-important-lessons" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear04.html#reading-questions-linear04" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear04.html#linear04-exercises" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear05.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Repeated Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-quick-start" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Solving Systems with Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-important-lessons" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear05.html#reading-questions-linear05" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear05.html#exercises-linear05" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear06.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Changing Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-linear-maps" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Linear Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates-system" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Systems and Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-distinct-real-eigenvalues" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Distinct Real Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.6.6</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-important-lessons" class="internal"><span class="codenumber">3.6.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear06.html#reading-questions-linear06" class="internal"><span class="codenumber">3.6.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear06.html#linear06-exercises" class="internal"><span class="codenumber">3.6.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear07.html" class="internal"><span class="codenumber">3.7</span> <span class="title">The Trace-Determinant Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-trace-determinant" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Trace-Determinant Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-parameterized-families" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Parameterized Families of Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-important-lessons" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear07.html#reading-questions-linear07" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear07.html#linear07-exercises" class="internal"><span class="codenumber">3.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear08.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Linear Systems in Higher Dimensions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-higher-order-systems" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Higher-Order Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-geometry" class="internal"><span class="codenumber">3.8.2</span> <span class="title">The Geometry of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-double-spring-mass" class="internal"><span class="codenumber">3.8.3</span> <span class="title">The Double Spring-Mass Systems Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-important-lessons" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear08.html#reading-questions-linear08" class="internal"><span class="codenumber">3.8.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear08.html#linear08-exercises" class="internal"><span class="codenumber">3.8.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear09.html" class="internal"><span class="codenumber">3.9</span> <span class="title">The Matrix Exponential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-matrix-exponential" class="internal"><span class="codenumber">3.9.1</span> <span class="title">The Exponential of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-generalized-eigenvalues" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Generalized Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-important-lessons" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear09.html#reading-questions-linear09" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear09.html#linear09-exercises" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear10.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Projects Systems of Linear Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="secondorder.html" class="internal"><span class="codenumber">4</span> <span class="title">Second-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder01.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Homogeneous Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-rlc-circuit" class="internal"><span class="codenumber">4.1.1</span> <span class="title">RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-second-order-linear-de" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-harmonic-oscillators" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Classifying Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-important-lessons" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder01.html#reading-questions-secondorder01" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-sage" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Solving Second Order Linear Equations with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises-sage" class="internal"><span class="codenumber">4.1.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder02.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-nonhomogeneous-de" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-forcing" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Forcing Terms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-undetermined-coefficients" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The Method of Undetermined Coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-strategy" class="internal"><span class="codenumber">4.2.4</span> <span class="title">A Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-important-lessons" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder02.html#reading-questions-secondorder02" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-exercises" class="internal"><span class="codenumber">4.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder03.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Sinusoidal Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-complexification" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Complexification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-qualitative-analysis" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Qualitative Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-important-lessons" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder03.html#reading-questions-secondorder03" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-exercises" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder04.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Forcing and Resonance</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-resonance" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Resonance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-beats" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Beats or the Case <span class="process-math">\(\omega \neq \omega_0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-forced-damped" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Forced Damped Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-important-lessons" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder04.html#reading-questions-secondorder04" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-exercises" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="secondorder05.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Projects for Second-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="nonlinear.html" class="internal"><span class="codenumber">5</span> <span class="title">Nonlinear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear01.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Linearization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Equilibrium Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-linearization-fails" class="internal"><span class="codenumber">5.1.2</span> <span class="title">When Linearization Fails</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-important-lessons" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear01.html#reading-questions-nonlinear01" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-exercises" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear02.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Hamiltonian Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-pendulum" class="internal"><span class="codenumber">5.2.1</span> <span class="title">The Nonlinear Pendulum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-hamiltonian-systems" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-ideal-pendulum" class="internal"><span class="codenumber">5.2.3</span> <span class="title">The Ideal Pendulum Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Equilibrium Solutions of Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-important-lessons" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear02.html#reading-questions-nonlinear02" class="internal"><span class="codenumber">5.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-exercises" class="internal"><span class="codenumber">5.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear03.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Nonlinear Mechanics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-pendulum-damping" class="internal"><span class="codenumber">5.3.1</span> <span class="title">The Nonlinear Pendulum and Damping</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-lyapunov-functions" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Lyapunov Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-gradient-systems" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Gradient Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-important-lessons" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear03.html#reading-questions-nonlinear03" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-exercises" class="internal"><span class="codenumber">5.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear04.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Hopf Bifurcation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-bifurcations" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bifurcations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-hopf-bifurcation" class="internal"><span class="codenumber">5.4.2</span> <span class="title">The Hopf Bifurcation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-important-lessons" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear04.html#reading-questions-nonlinear04" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-exercises" class="internal"><span class="codenumber">5.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="nonlinear05.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Projects</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="laplace.html" class="internal"><span class="codenumber">6</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace01.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-definitions" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Definition of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-properties" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Properties of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-existence-and-uniqueness" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Existence and Uniqueness of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-finding-laplace-transforms" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Finding Laplace Transforms and Inverse Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-important-lessons" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace01.html#reading-questions-laplace01" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#exercises-laplace01" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-sage" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Laplace Transforms with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#laplace01-12" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace02.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Solving Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-derivatives" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Laplace Transforms of the Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-discontinuous-functions" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-harmonic-oscillators" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Forced Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-important-lessons" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace02.html#reading-questions-laplace02" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace02.html#laplace02-exercises" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace03.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Delta Functions and Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-impulse-forcing" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Impulse Forcing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-dirac-delta" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Laplace Transform of the Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-important-lessons" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace03.html#reading-questions-laplace03" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace03.html#laplace03-exercises" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace04.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Convolution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-convolution" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Convolution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-applying-convolution" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Applying the Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-important-lessons" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace04.html#reading-questions-laplace04" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace04.html#laplace04-exercises" class="internal"><span class="codenumber">6.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="laplace05.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Projects for Laplace Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Reference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Readings and References</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="firstlook07"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bifurcations</span>
+</h2>
+<article class="objectives goal-like" id="firstlook07-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc" id="firstlook07-2-1">
+<li id="firstlook07-2-1-1">
+<div class="para logical" id="firstlook07-2-1-1-1">
+<div class="para">To understand that a one-parameter family of differential equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f_\lambda(x)
+\end{equation*}
+</div>
+<div class="para">has a <dfn class="terminology">bifurcation</dfn> at <span class="process-math">\(\lambda = \lambda_0\)</span> if a change in the number or type of equilibrium solutions occurs.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#firstlook07-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="firstlook07-2-1-2">
+<div class="para" id="firstlook07-2-1-2-1">To understand that bifurcation diagrams are an effective way of representing the nature of the solutions of a one-parameter family of differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#firstlook07-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 1.7"><a href="#firstlook07-2" title="Copy heading and permalink for Objectives 1.7" aria-label="Copy heading and permalink for Objectives 1.7">🔗</a></div></article><section class="introduction" id="firstlook07-3"><div class="para logical" id="firstlook07-3-1">
+<div class="para">Many of the equations that we have examined have a <dfn class="terminology">parameter</dfn>, which means that we actually have a family of differential equations. For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = kx
+\end{equation*}
+</div>
+<div class="para">has the growth rate parameter <span class="process-math">\(k\text{.}\)</span> The logistic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = kP\left( 1 - \frac{P}{N} \right)
+\end{equation*}
+</div>
+<div class="para">has two parameters, <span class="process-math">\(k\)</span> and <span class="process-math">\(N\text{.}\)</span> In this section we will investigate how the solutions of a differential equation vary as we change the value of a parameter.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="firstlook07-subsection-logisitic-harvesting"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Logistic Model with Harvesting Revisited</span>
+</h3>
+<div class="para logical" id="firstlook07-subsection-logisitic-harvesting-2">
+<div class="para">Recall how we modeled logistic growth in a trout pond in <a href="firstlook03.html#firstlook03-example-harvesting" class="xref" data-knowl="./knowl/xref/firstlook03-example-harvesting.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.3.9: A Logistic Model with Harvesting">Example 1.3.9</a> with the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook03-example-harvesting.html ./knowl/xref/firstlook07-figure-logistic-harvesting-sink-source.html">
+\begin{equation*}
+\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right).
+\end{equation*}
+</div>
+<div class="para">If we allowed fishing in our pond at a rate of 32 fish per year, then the equation became</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook03-example-harvesting.html ./knowl/xref/firstlook07-figure-logistic-harvesting-sink-source.html">
+\begin{equation*}
+\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right) - 32.
+\end{equation*}
+</div>
+<div class="para">There are two equilibrium solutions for this equation, <span class="process-math">\(P_1 = 160\)</span> (a sink) and <span class="process-math">\(P_2 = 40\)</span> (a source). If the population of the pond falls below 40, then the fish will die out unless the pond is restocked or fishing is banned (<a href="firstlook07.html#firstlook07-figure-logistic-harvesting-sink-source" class="xref" data-knowl="./knowl/xref/firstlook07-figure-logistic-harvesting-sink-source.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.1">Figure 1.7.1</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-logistic-harvesting-sink-source"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/logistic-harvesting-sink-source.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Harvesting with <span class="process-math">\(H = 32\)</span><div class="autopermalink" data-description="Figure 1.7.1"><a href="#firstlook07-figure-logistic-harvesting-sink-source" title="Copy heading and permalink for Figure 1.7.1" aria-label="Copy heading and permalink for Figure 1.7.1">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-logisitic-harvesting-4">
+<div class="para">Now let us see what happens when we allow more fishing in our pond, say <span class="process-math">\(H = 100\text{.}\)</span> Our differential equation now becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-over-harvesting.html ./knowl/xref/firstlook07-figure-over-harvesting.html">
+\begin{equation*}
+\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right) - 100.
+\end{equation*}
+</div>
+<div class="para">To determine the equilibrium solutions, we must solve</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-over-harvesting.html ./knowl/xref/firstlook07-figure-over-harvesting.html" id="firstlook07-equation-over-harvesting">
+\begin{equation}
+\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right) - 100 = 0\tag{1.7.1}
+\end{equation}
+</div>
+<div class="para">for <span class="process-math">\(P\text{.}\)</span> This last equation can be rewritten as <span class="process-math">\(P^2 - 200P + 20000 = 0\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-over-harvesting.html ./knowl/xref/firstlook07-figure-over-harvesting.html">
+\begin{equation*}
+P = \frac{200 \pm \sqrt{200^2 - 4 \cdot 20000}}{2} = 100 \pm \sqrt{-10000},
+\end{equation*}
+</div>
+<div class="para">which means that equation <a href="firstlook07.html#firstlook07-equation-over-harvesting" class="xref" data-knowl="./knowl/xref/firstlook07-equation-over-harvesting.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.7.1">(1.7.1)</a> has no real solutions and that we have no equilibrium solutions. Furthermore, <span class="process-math">\(dP/dt \lt 0\)</span> for all values of <span class="process-math">\(P\text{.}\)</span>  This means that no matter how many fish are in the pond initially, the trout population will eventually die out due to overfishing  (<a href="firstlook07.html#firstlook07-figure-over-harvesting" class="xref" data-knowl="./knowl/xref/firstlook07-figure-over-harvesting.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.2">Figure 1.7.2</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-over-harvesting"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/over-harvesting.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Harvesting with <span class="process-math">\(H = 100\)</span><div class="autopermalink" data-description="Figure 1.7.2"><a href="#firstlook07-figure-over-harvesting" title="Copy heading and permalink for Figure 1.7.2" aria-label="Copy heading and permalink for Figure 1.7.2">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-logisitic-harvesting-6">
+<div class="para">Finally, we will let <span class="process-math">\(H = 50\text{.}\)</span> In this case, we must solve</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-figure-logistic-harvesting-bifurcation.html">
+\begin{equation*}
+\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right) - 50 = 0
+\end{equation*}
+</div>
+<div class="para">in order to determine any equilibrium solutions. We now obtain a single equilibrium solution at <span class="process-math">\(P = 100\text{.}\)</span> In fact, <span class="process-math">\(P = 100\)</span> will be a node. For values of <span class="process-math">\(P \gt 100\)</span> as well as values of <span class="process-math">\(P \lt 100\text{,}\)</span> we have <span class="process-math">\(dP/dt \lt 0\text{,}\)</span> and the number of fish in the pond will decrease (<a href="firstlook07.html#firstlook07-figure-logistic-harvesting-bifurcation" class="xref" data-knowl="./knowl/xref/firstlook07-figure-logistic-harvesting-bifurcation.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.3">Figure 1.7.3</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-logistic-harvesting-bifurcation"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/logistic-harvesting-bifurcation.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Harvesting with <span class="process-math">\(H = 50\)</span><div class="autopermalink" data-description="Figure 1.7.3"><a href="#firstlook07-figure-logistic-harvesting-bifurcation" title="Copy heading and permalink for Figure 1.7.3" aria-label="Copy heading and permalink for Figure 1.7.3">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-logisitic-harvesting-8">
+<div class="para">To better understand what is happening, we will generalize our model. Suppose that a population with a limited carrying capacity <span class="process-math">\(N\)</span> is modeled with the logistic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = kP\left(1 - \frac{P}{N}\right).
+\end{equation*}
+</div>
+<div class="para">If we allow harvesting at a constant rate <span class="process-math">\(H\text{,}\)</span> our model now becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = kP\left(1 - \frac{P}{N}\right) - H.
+\end{equation*}
+</div>
+<div class="para">To analyze our model, we will first find the equilibrium solutions. If we will let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_H(P) = kP\left(1 - \frac{P}{N}\right) - H,
+\end{equation*}
+</div>
+<div class="para">each equilibrium solution must satisfy <span class="process-math">\(f_H(P) = 0\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-k P^2 + kNP - H  N = 0.
+\end{equation*}
+</div>
+<div class="para">Therefore, our equilibrium solutions are given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P = \frac{-kN \pm \sqrt{k^2N^2 - 4kHN}}{-2k} = \frac{N}{2} \pm  \sqrt{\frac{N^2}{4} - \frac{HN}{k}}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook07-subsection-logisitic-harvesting-9">
+<div class="para">The explanation of how our model behaves lies in the discriminant,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{N^2}{4} - \frac{HN}{k}.
+\end{equation*}
+</div>
+<div class="para">If</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{N^2}{4} - \frac{HN}{k} \lt 0
+\end{equation*}
+</div>
+<div class="para">or, equivalently if <span class="process-math">\(H \gt kN/4\text{,}\)</span> there are no equilibrium solutions and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = f_H(P) \lt 0
+\end{equation*}
+</div>
+<div class="para">for all values of <span class="process-math">\(P\text{.}\)</span> In particular, all solutions of <span class="process-math">\(dP/dt = f_H(P)\)</span> tend towards negative infinity as <span class="process-math">\(t \to \infty\text{.}\)</span> In this case, the population is doomed to extinction no matter how large the initial population is. Since negative populations do not make sense, we say that the population is extinct when <span class="process-math">\(P = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook07-subsection-logisitic-harvesting-10">
+<div class="para">On the other hand, if <span class="process-math">\(H \lt kN/4\text{,}\)</span> we have equilibrium solutions at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_1 =\frac{N}{2} + \sqrt{\frac{N^2}{4} - \frac{HN}{k}}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P_2 = \frac{N}{2} - \sqrt{\frac{N^2}{4} - \frac{HN}{k}}.
+\end{equation*}
+</div>
+<div class="para">The first equilibrium solution, <span class="process-math">\(P_1\)</span> is a sink, while the second, <span class="process-math">\(P_2\)</span> is a source.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook07-subsection-logisitic-harvesting-11">Finally, if <span class="process-math">\(H = kN/4\text{,}\)</span> then we will have exactly one equilibrium solution at <span class="process-math">\(P = N/2\text{.}\)</span> Although <span class="process-math">\(dP/dt \lt 0\)</span> for all <span class="process-math">\(P \neq N/2\text{,}\)</span> we see that <span class="process-math">\(P \to N/2\)</span> as <span class="process-math">\(t \to \infty\)</span> for all initial values of <span class="process-math">\(P\)</span> greater than <span class="process-math">\(N/2\text{.}\)</span> For initial values of <span class="process-math">\(P\)</span> less than <span class="process-math">\(N/2\text{,}\)</span> solutions tend towards <span class="process-math">\(- \infty\)</span> as <span class="process-math">\(t \to \infty\text{.}\)</span> Thus, the initial population of fish must be at least <span class="process-math">\(kN/4\text{;}\)</span> otherwise, the fish will go extinct.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook07-subsection-logisitic-harvesting-12">
+<div class="para">In our example, we have a family of differential equations—one for each value of <span class="process-math">\(H\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-fishing.html" id="firstlook07-equation-fishing">
+\begin{equation}
+\frac{dP}{dt} = P\left( 1 - \frac{P}{200}\right) - H.\tag{1.7.2}
+\end{equation}
+</div>
+<div class="para">A small change in <span class="process-math">\(H\)</span> can have a dramatic effect on how the solutions of the differential equation behave. Changing the value of <span class="process-math">\(H\)</span> from <span class="process-math">\(50\)</span> to <span class="process-math">\(50.1\)</span> will doom the population of fish to extinction no matter what the initial population is. As we increase the value of <span class="process-math">\(H\text{,}\)</span> the number of equilibrium solutions changes from two to one and then to none. This change occurs exactly at <span class="process-math">\(H = 50\text{.}\)</span> We say that a <dfn class="terminology">bifurcation</dfn> occurs at <span class="process-math">\(H = 50\)</span> for equation <a href="firstlook07.html#firstlook07-equation-fishing" class="xref" data-knowl="./knowl/xref/firstlook07-equation-fishing.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.7.2">(1.7.2)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="firstlook07-subsection-logisitic-harvesting-13"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Upland Bird Populations.</span>
+</h4>
+<div class="introduction" id="firstlook07-subsection-logisitic-harvesting-13-2"><div class="para" id="firstlook07-subsection-logisitic-harvesting-13-2-1">The chukar partridge, or simply chukar, is a upland gamebird in the pheasant family. Originally native to Asia and ranging from the eastern Mediterranean to Himalayas, the chukar has been widely introduced as an upland game bird with populations now established in the United States, Canada, Chile, Argentina, New Zealand and Hawaii. One particularly good area for hunting chukar is the western Great Basin area of the U.S. (eastern Oregon and Washington and western Idaho).<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="firstlook07-subsection-logisitic-harvesting-13-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="firstlook07-subsection-logisitic-harvesting-13-3-1-1">Suppose that the population of chukar on a private game ranch in eastern Oregon grows logisitically.  Estimates tell us that the one hundred square mile ranch and that the ranch can support at most <span class="process-math">\(120\)</span> birds per square mile. The growth rate of the chukar population is estimated to be <span class="process-math">\(1.5\)</span> birds per year. Model the growth of the chukar population with an initial value problem.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-13-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="autopermalink" data-description="Task 1.7.1.a"><a href="#firstlook07-subsection-logisitic-harvesting-13-3" title="Copy heading and permalink for Task 1.7.1.a" aria-label="Copy heading and permalink for Task 1.7.1.a">🔗</a></div></article><article class="task exercise-like" id="firstlook07-subsection-logisitic-harvesting-13-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="firstlook07-subsection-logisitic-harvesting-13-4-1-1">Suppose that hunting on the ranch is restricted to guests and the average guest harvest <span class="process-math">\(10\)</span> chukars per visit. Modify the model in part (a) to take into account the effect that hunting has on the chukar population.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-13-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.7.1.b"><a href="#firstlook07-subsection-logisitic-harvesting-13-4" title="Copy heading and permalink for Task 1.7.1.b" aria-label="Copy heading and permalink for Task 1.7.1.b">🔗</a></div></article><article class="task exercise-like" id="firstlook07-subsection-logisitic-harvesting-13-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="firstlook07-subsection-logisitic-harvesting-13-5-1-1">What is the maximum number of guests that the ranch can accommodate and still maintain a healthy population of game birds? How many chukar per square mile would be needed to allow this many guests?<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-logisitic-harvesting-13-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.7.1.c"><a href="#firstlook07-subsection-logisitic-harvesting-13-5" title="Copy heading and permalink for Task 1.7.1.c" aria-label="Copy heading and permalink for Task 1.7.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.7.1: Upland Bird Populations"><a href="#firstlook07-subsection-logisitic-harvesting-13" title="Copy heading and permalink for Activity 1.7.1: Upland Bird Populations" aria-label="Copy heading and permalink for Activity 1.7.1: Upland Bird Populations">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.7.1: The Logistic Model with Harvesting Revisited"><a href="#firstlook07-subsection-logisitic-harvesting" title="Copy heading and permalink for Subsection 1.7.1: The Logistic Model with Harvesting Revisited" aria-label="Copy heading and permalink for Subsection 1.7.1: The Logistic Model with Harvesting Revisited">🔗</a></div></section><section class="subsection" id="firstlook07-subsection-one-parameter-families"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-Parameter Families</span>
+</h3>
+<div class="para logical" id="firstlook07-subsection-one-parameter-families-2">
+<div class="para">Let us consider the equation</div>
+<div class="displaymath process-math" id="firstlook07-equation-one-parameter-bifurcation">
+\begin{equation}
+\frac{dx}{dt} = x^2 - 4x + \lambda\tag{1.7.3}
+\end{equation}
+</div>
+<div class="para">as a family of differential equations indexed by the parameter <span class="process-math">\(\lambda\text{.}\)</span> If we let <span class="process-math">\(f_\lambda(x) = x^2 - 4x + \lambda\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f_\lambda(x)
+\end{equation*}
+</div>
+<div class="para">is a called <dfn class="terminology">one-parameter family</dfn> of differential equations. For each value of <span class="process-math">\(\lambda\text{,}\)</span> we obtain an autonomous differential equation, and for each value of <span class="process-math">\(\lambda\text{,}\)</span> we have a different phase line to examine.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook07-subsection-one-parameter-families-4">
+<div class="para">For <span class="process-math">\(\lambda = 0\text{,}\)</span> the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-0.html">
+\begin{equation*}
+\frac{dx}{dt} = f_0(x) = x^2 - 4x = x(x-4),
+\end{equation*}
+</div>
+<div class="para">there is a sink at <span class="process-math">\(x = 0\)</span> and a source at <span class="process-math">\(x = 4\)</span> (<a href="firstlook07.html#firstlook07-figure-one-parameter-bifurcation-0" class="xref" data-knowl="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-0.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.4">Figure 1.7.4</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-one-parameter-bifurcation-0"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/one-parameter-bifurcation-0.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(x' = x^2 - 4x + \lambda\)</span> for <span class="process-math">\(\lambda = 0\)</span><div class="autopermalink" data-description="Figure 1.7.4"><a href="#firstlook07-figure-one-parameter-bifurcation-0" title="Copy heading and permalink for Figure 1.7.4" aria-label="Copy heading and permalink for Figure 1.7.4">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-one-parameter-families-6">
+<div class="para">For <span class="process-math">\(\lambda = 4\text{,}\)</span> the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-4.html">
+\begin{equation*}
+\frac{dx}{dt} = f_4(x) = x^2 - 4x + 4 = (x - 2)^2,
+\end{equation*}
+</div>
+<div class="para">we have exactly one equilibrium solution, a node at <span class="process-math">\(x = 2\)</span> (<a href="firstlook07.html#firstlook07-figure-one-parameter-bifurcation-4" class="xref" data-knowl="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.5">Figure 1.7.5</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-one-parameter-bifurcation-4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/one-parameter-bifurcation-4.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(x' = x^2 - 4x + \lambda\)</span> for <span class="process-math">\(\lambda = 4\)</span><div class="autopermalink" data-description="Figure 1.7.5"><a href="#firstlook07-figure-one-parameter-bifurcation-4" title="Copy heading and permalink for Figure 1.7.5" aria-label="Copy heading and permalink for Figure 1.7.5">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-one-parameter-families-8">
+<div class="para">If <span class="process-math">\(\lambda = 8\text{,}\)</span> then the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-8.html">
+\begin{equation*}
+\frac{dx}{dt} = f_8(x) = x^2 - 4x + 8
+\end{equation*}
+</div>
+<div class="para">has no equilibrium solutions (<a href="firstlook07.html#firstlook07-figure-one-parameter-bifurcation-8" class="xref" data-knowl="./knowl/xref/firstlook07-figure-one-parameter-bifurcation-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.6">Figure 1.7.6</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-one-parameter-bifurcation-8"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/one-parameter-bifurcation-8.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(x' = x^2 - 4x + \lambda\)</span> for <span class="process-math">\(\lambda = 8\)</span><div class="autopermalink" data-description="Figure 1.7.6"><a href="#firstlook07-figure-one-parameter-bifurcation-8" title="Copy heading and permalink for Figure 1.7.6" aria-label="Copy heading and permalink for Figure 1.7.6">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-one-parameter-families-10">
+<div class="para">In fact, the number of equilibrium solutions for <a href="firstlook07.html#firstlook07-equation-one-parameter-bifurcation" class="xref" data-knowl="./knowl/xref/firstlook07-equation-one-parameter-bifurcation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.7.3">(1.7.3)</a> changes at <span class="process-math">\(\lambda = 4\text{.}\)</span> We say that <span class="process-math">\(\lambda = 4\)</span> is a <dfn class="terminology">bifurcation value</dfn> for the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-one-parameter-bifurcation.html ./knowl/xref/firstlook07-equation-bifurcation-1.html ./knowl/xref/firstlook07-figure-bifurcation-diagram.html" id="firstlook07-equation-bifurcation-1">
+\begin{equation}
+\frac{dx}{dt} = f_\lambda(x) = x^2 - 4x + \lambda.\tag{1.7.4}
+\end{equation}
+</div>
+<div class="para">For <span class="process-math">\(\lambda \lt 4\text{,}\)</span> we have two equilibrium solutions.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-one-parameter-bifurcation.html ./knowl/xref/firstlook07-equation-bifurcation-1.html ./knowl/xref/firstlook07-figure-bifurcation-diagram.html">
+\begin{equation*}
+x = 2 \pm \sqrt{4 - \lambda}.
+\end{equation*}
+</div>
+<div class="para">For values of <span class="process-math">\(\lambda \gt 4\text{,}\)</span> there are no equilibrium solutions. We can record all of the information for the various values in a graph called the <dfn class="terminology">bifurcation diagram</dfn>. The horizontal axis is <span class="process-math">\(\lambda\)</span> and the vertical axis is <span class="process-math">\(x\text{.}\)</span> Over each value of <span class="process-math">\(\lambda\text{,}\)</span> we will plot the corresponding phase line. The curve in the graph represents the various equilibrium solutions for the different values of <span class="process-math">\(\lambda\text{.}\)</span> The bifurcation diagram for equation <a href="firstlook07.html#firstlook07-equation-bifurcation-1" class="xref" data-knowl="./knowl/xref/firstlook07-equation-bifurcation-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.7.4">(1.7.4)</a> is a parabola (<a href="firstlook07.html#firstlook07-figure-bifurcation-diagram" class="xref" data-knowl="./knowl/xref/firstlook07-figure-bifurcation-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.7">Figure 1.7.7</a>). We have a phase line for each value of <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-bifurcation-diagram"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/bifurcation-diagram.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Bifurcation diagram for <span class="process-math">\(x' = x^2 - 4x + \lambda\)</span><div class="autopermalink" data-description="Figure 1.7.7"><a href="#firstlook07-figure-bifurcation-diagram" title="Copy heading and permalink for Figure 1.7.7" aria-label="Copy heading and permalink for Figure 1.7.7">🔗</a></div></figcaption></figure><div class="para logical" id="firstlook07-subsection-one-parameter-families-12">
+<div class="para">Bifurcations for a one-parameter family of differential equations <span class="process-math">\(dx/dt = f_\lambda(x)\)</span> are, in fact, rare. Let us consider a bifurcation where a sink changes to a source as we vary the parameter <span class="process-math">\(\lambda\text{.}\)</span> Suppose that for <span class="process-math">\(\lambda = \lambda_0\text{,}\)</span> we have a sink at <span class="process-math">\(x_0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f_{\lambda_0}(x_0) = 0.
+\end{equation*}
+</div>
+<div class="para">Furthermore, the graph of <span class="process-math">\(f_{\lambda_0}(x)\)</span> must be decreasing for <span class="process-math">\(x\)</span> near <span class="process-math">\(x_0\text{,}\)</span> since <span class="process-math">\(f_{\lambda_0}(x)\)</span> must be postive for values of <span class="process-math">\(x \lt x_0\)</span> and negative for values of <span class="process-math">\(x \gt x_0\text{.}\)</span>  In other words, <span class="process-math">\(f'_{\lambda_0}(x) \lt 0\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(x_0\)</span> with <span class="process-math">\(f'_{\lambda_0}(x_0) \lt 0\text{,}\)</span> then for all <span class="process-math">\(\lambda_1\)</span> sufficiently close to <span class="process-math">\(\lambda_0\text{,}\)</span> the differential equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f_{\lambda_1}(x)
+\end{equation*}
+</div>
+<div class="para">must have sink at a point <span class="process-math">\(x = x_1\)</span> very close to <span class="process-math">\(x_0\text{.}\)</span>  A similar situation holds if <span class="process-math">\(x_0\)</span> is a source and <span class="process-math">\(f'_{\lambda_0}(x_0) \gt 0\text{.}\)</span> Thus, bifurcations can only occur when <span class="process-math">\(f_{\lambda_0}(x_0) = 0\)</span> and <span class="process-math">\(f'_{\lambda_0}(x_0) = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="firstlook07-subsection-one-parameter-families-13"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="firstlook07-subsection-one-parameter-families-13-1">
+<div class="para">Now consider the one-parameter family</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-figure-bifurcation-pitchfork.html">
+\begin{equation*}
+\frac{dy}{dt}  = y^3 - \alpha y = y (y^2 - \alpha).
+\end{equation*}
+</div>
+<div class="para">We will have an equilibrium solution at zero for all values of <span class="process-math">\(\alpha\)</span> and two additional equilibrium solutions at <span class="process-math">\(\pm \sqrt{\alpha}\)</span> for <span class="process-math">\(\alpha \gt 0\text{.}\)</span>  This type of  bifurcation is a <dfn class="terminology">pitch fork bifurcation</dfn> (<a href="firstlook07.html#firstlook07-figure-bifurcation-pitchfork" class="xref" data-knowl="./knowl/xref/firstlook07-figure-bifurcation-pitchfork.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.9">Figure 1.7.9</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-bifurcation-pitchfork"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/bifurcation-pitchfork.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The bifurcation diagram for <span class="process-math">\(y' = y^3 - \alpha y\)</span><div class="autopermalink" data-description="Figure 1.7.9"><a href="#firstlook07-figure-bifurcation-pitchfork" title="Copy heading and permalink for Figure 1.7.9" aria-label="Copy heading and permalink for Figure 1.7.9">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 1.7.8"><a href="#firstlook07-subsection-one-parameter-families-13" title="Copy heading and permalink for Example 1.7.8" aria-label="Copy heading and permalink for Example 1.7.8">🔗</a></div></article><article class="activity project-like" id="firstlook07-subsection-one-parameter-families-14"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bifurcations.</span>
+</h4>
+<div class="introduction" id="firstlook07-subsection-one-parameter-families-14-2"><div class="para" id="firstlook07-subsection-one-parameter-families-14-2-1">For each of the following parametrized family of differential equations, plot phase lines for <span class="process-math">\(c = -2, -1, 0, 1, 2\text{,}\)</span> find any bifurcation values, and sketch the bifurcation diagram.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="firstlook07-subsection-one-parameter-families-14-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="firstlook07-subsection-one-parameter-families-14-3-1-1">
+<span class="process-math">\(y' = (1 - y)y + c\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-14-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.7.2.a"><a href="#firstlook07-subsection-one-parameter-families-14-3" title="Copy heading and permalink for Task 1.7.2.a" aria-label="Copy heading and permalink for Task 1.7.2.a">🔗</a></div></article><article class="task exercise-like" id="firstlook07-subsection-one-parameter-families-14-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="firstlook07-subsection-one-parameter-families-14-4-1-1">
+<span class="process-math">\(y' = (c - y^2)y\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-14-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.7.2.b"><a href="#firstlook07-subsection-one-parameter-families-14-4" title="Copy heading and permalink for Task 1.7.2.b" aria-label="Copy heading and permalink for Task 1.7.2.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.7.2: Bifurcations"><a href="#firstlook07-subsection-one-parameter-families-14" title="Copy heading and permalink for Activity 1.7.2: Bifurcations" aria-label="Copy heading and permalink for Activity 1.7.2: Bifurcations">🔗</a></div></article><article class="example example-like" id="firstlook07-subsection-one-parameter-families-15"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="firstlook07-subsection-one-parameter-families-15-1">
+<div class="para">Let us find the bifurcation values of the one-parameter family</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-bifurcation-2.html ./knowl/xref/firstlook07-figure-two-bifurcations.html" id="firstlook07-equation-bifurcation-2">
+\begin{equation}
+\frac{dy}{dt}  = y(y - 2)^2 + \lambda.\tag{1.7.5}
+\end{equation}
+</div>
+<div class="para">If <span class="process-math">\(g_\lambda(y) = y(y - 2)^2 + \lambda\text{,}\)</span> then <span class="process-math">\(g'_\lambda(y) =  3y^2 - 8y + 4\text{.}\)</span> The roots of <span class="process-math">\(g'_\lambda(y) = 0\)</span> are <span class="process-math">\(y = 2\)</span> and <span class="process-math">\(y = 2/3\text{.}\)</span> In order for <span class="process-math">\(\lambda\)</span> to be a bifurcation value, we must have  <span class="process-math">\(g_\lambda(2) = \lambda = 0\)</span> or</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/firstlook07-equation-bifurcation-2.html ./knowl/xref/firstlook07-figure-two-bifurcations.html">
+\begin{equation*}
+g_\lambda(2/3) = \frac{32}{27} + \lambda = 0 
+\end{equation*}
+</div>
+<div class="para">Thus, equation <a href="firstlook07.html#firstlook07-equation-bifurcation-2" class="xref" data-knowl="./knowl/xref/firstlook07-equation-bifurcation-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.7.5">(1.7.5)</a> has two bifurcation values, <span class="process-math">\(\lambda = -32/27\)</span> and <span class="process-math">\(\lambda = 0\text{.}\)</span> The bifurcation diagram for this one-parameter family is given in <a href="firstlook07.html#firstlook07-figure-two-bifurcations" class="xref" data-knowl="./knowl/xref/firstlook07-figure-two-bifurcations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.7.11">Figure 1.7.11</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-one-parameter-families-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="firstlook07-figure-two-bifurcations"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/bifurcation-two-bifurcations.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The bifurcation diagram for <span class="process-math">\(y' =  y(1 - y)^2 + \lambda\)</span><div class="autopermalink" data-description="Figure 1.7.11"><a href="#firstlook07-figure-two-bifurcations" title="Copy heading and permalink for Figure 1.7.11" aria-label="Copy heading and permalink for Figure 1.7.11">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 1.7.10"><a href="#firstlook07-subsection-one-parameter-families-15" title="Copy heading and permalink for Example 1.7.10" aria-label="Copy heading and permalink for Example 1.7.10">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.7.2: One-Parameter Families"><a href="#firstlook07-subsection-one-parameter-families" title="Copy heading and permalink for Subsection 1.7.2: One-Parameter Families" aria-label="Copy heading and permalink for Subsection 1.7.2: One-Parameter Families">🔗</a></div></section><section class="subsection" id="firstlook07-subsection-important-lessons"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Important Lessons</span>
+</h3>
+<div class="para logical" id="firstlook07-subsection-important-lessons-2">
+<ul class="disc" id="firstlook07-subsection-important-lessons-2-1">
+<li id="firstlook07-subsection-important-lessons-2-1-1">
+<div class="para logical" id="firstlook07-subsection-important-lessons-2-1-1-1">
+<div class="para">A one-parameter family of differential equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dt} = f_\lambda(x)
+\end{equation*}
+</div>
+<div class="para">has a bifurcation at <span class="process-math">\(\lambda = \lambda_0\)</span> if a change in the number of equilibrium solutions occurs.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-important-lessons-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook07-subsection-important-lessons-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook07-subsection-important-lessons-2-1-2">
+<div class="para" id="firstlook07-subsection-important-lessons-2-1-2-1">Bifurcation diagrams are an effective way of representing the nature of the solutions of a one-parameter family of differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-important-lessons-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook07-subsection-important-lessons-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook07-subsection-important-lessons-2-1-3">
+<div class="para" id="firstlook07-subsection-important-lessons-2-1-3-1">Bifurcations for a one-parameter family of differential equations <span class="process-math">\(dx/dt = f_\lambda(x)\)</span> are rare. Bifurcations occur when <span class="process-math">\(f_{\lambda_0}(x_0) = 0\)</span> and <span class="process-math">\(f'_{\lambda_0}(x_0) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-important-lessons-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook07-subsection-important-lessons-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-subsection-important-lessons-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.7.3: Important Lessons"><a href="#firstlook07-subsection-important-lessons" title="Copy heading and permalink for Subsection 1.7.3: Important Lessons" aria-label="Copy heading and permalink for Subsection 1.7.3: Important Lessons">🔗</a></div></section><section class="reading-questions" id="reading-questions-firstlook07"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+</h3>
+<article class="exercise exercise-like" id="rq-firstlook07-bifurcation-explain"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="rq-firstlook07-bifurcation-explain-1-1">Explain what a bifurcation is in your own words.<div class="autopermalink" data-description="Paragraph"><a href="#rq-firstlook07-bifurcation-explain-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.7.4.1"><a href="#rq-firstlook07-bifurcation-explain" title="Copy heading and permalink for Reading Question 1.7.4.1" aria-label="Copy heading and permalink for Reading Question 1.7.4.1">🔗</a></div></article><article class="exercise exercise-like" id="rq-firstlook07-bifurcation-rare"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="rq-firstlook07-bifurcation-rare-1-1">Explain why a bifurcation is relatively rare for a one-parameter family of differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#rq-firstlook07-bifurcation-rare-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.7.4.2"><a href="#rq-firstlook07-bifurcation-rare" title="Copy heading and permalink for Reading Question 1.7.4.2" aria-label="Copy heading and permalink for Reading Question 1.7.4.2">🔗</a></div></article><div class="autopermalink" data-description="Reading Questions 1.7.4"><a href="#reading-questions-firstlook07" title="Copy heading and permalink for Reading Questions 1.7.4" aria-label="Copy heading and permalink for Reading Questions 1.7.4">🔗</a></div></section><section class="exercises" id="firstlook07-exercises"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="firstlook07-exercises-bifurcations">
+<h4 class="heading"><span class="title">Bifurcations and Bifurcation Diagrams.</span></h4>
+<div class="introduction" id="firstlook07-exercises-bifurcations-2"><div class="para" id="firstlook07-exercises-bifurcations-2-1">For each of the following parametrized family of differential equations, plot phase lines for <span class="process-math">\(\lambda = -2, -1, 0, 1, 2\text{,}\)</span> find any bifurcation values, and sketch the bifurcation diagram.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="firstlook07-exercises-bifurcations-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="firstlook07-exercises-bifurcations-3-1-1">
+<span class="process-math">\(y' = \lambda - y^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.1"><a href="#firstlook07-exercises-bifurcations-3" title="Copy heading and permalink for Exercise 1.7.5.1" aria-label="Copy heading and permalink for Exercise 1.7.5.1">🔗</a></div></article><article class="exercise exercise-like" id="firstlook07-exercises-bifurcations-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="firstlook07-exercises-bifurcations-4-1-1">
+<span class="process-math">\(y' = \lambda y^2 - 1\)</span> for <span class="process-math">\(\lambda \in {\mathbb R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.2"><a href="#firstlook07-exercises-bifurcations-4" title="Copy heading and permalink for Exercise 1.7.5.2" aria-label="Copy heading and permalink for Exercise 1.7.5.2">🔗</a></div></article><article class="exercise exercise-like" id="firstlook07-exercises-bifurcations-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="firstlook07-exercises-bifurcations-5-1-1">
+<span class="process-math">\(y' = \lambda - 2y + y^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.3"><a href="#firstlook07-exercises-bifurcations-5" title="Copy heading and permalink for Exercise 1.7.5.3" aria-label="Copy heading and permalink for Exercise 1.7.5.3">🔗</a></div></article><article class="exercise exercise-like" id="firstlook07-exercises-bifurcations-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="firstlook07-exercises-bifurcations-6-1-1">
+<span class="process-math">\(y' = (\lambda - 4y^2)y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.4"><a href="#firstlook07-exercises-bifurcations-6" title="Copy heading and permalink for Exercise 1.7.5.4" aria-label="Copy heading and permalink for Exercise 1.7.5.4">🔗</a></div></article><article class="exercise exercise-like" id="firstlook07-exercises-bifurcations-7"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="firstlook07-exercises-bifurcations-7-1-1">
+<span class="process-math">\(y' = (\lambda - y^4)y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-bifurcations-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.5"><a href="#firstlook07-exercises-bifurcations-7" title="Copy heading and permalink for Exercise 1.7.5.5" aria-label="Copy heading and permalink for Exercise 1.7.5.5">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.7.5.1–5: Bifurcations and Bifurcation Diagrams"><a href="#firstlook07-exercises-bifurcations" title="Copy heading and permalink for Exercise Group 1.7.5.1–5: Bifurcations and Bifurcation Diagrams" aria-label="Copy heading and permalink for Exercise Group 1.7.5.1–5: Bifurcations and Bifurcation Diagrams">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="firstlook07-exercises-3"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="firstlook07-exercises-3-1-1">Describe the phase line portraits for <span class="process-math">\(y' = \lambda y - \sin y\)</span> for <span class="process-math">\(\lambda &gt; 2 / \pi\)</span> and how it depends on the parameter <span class="process-math">\(\lambda\text{.}\)</span> Draw the bifurcation diagram for this equation.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook07-exercises-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.7.5.6"><a href="#firstlook07-exercises-3" title="Copy heading and permalink for Exercise 1.7.5.6" aria-label="Copy heading and permalink for Exercise 1.7.5.6">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.7.5: Exercises"><a href="#firstlook07-exercises" title="Copy heading and permalink for Exercises 1.7.5: Exercises" aria-label="Copy heading and permalink for Exercises 1.7.5: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section 1.7: Bifurcations"><a href="#firstlook07" title="Copy heading and permalink for Section 1.7: Bifurcations" aria-label="Copy heading and permalink for Section 1.7: Bifurcations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="firstlook06.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="firstlook08.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

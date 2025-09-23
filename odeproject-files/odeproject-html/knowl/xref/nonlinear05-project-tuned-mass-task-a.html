@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="task exercise-like"><h4 class="heading">
+<span class="type">Task</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5.2.a</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para">To construct a simple model of a tuned-mass damper, we will consider a mass, <span class="process-math">\(m_1\text{,}\)</span> connected to a fixed wall with a spring and a dashpot. To this first mass, we attach a second mass, <span class="process-math">\(m_2\text{,}\)</span> by using a spring and a dashpot (see <a href="nonlinear05.html#nonlinear05-figure-tmd" class="xref" data-knowl="./knowl/xref/nonlinear05-figure-tmd.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.5.2">Figure 5.5.2</a>). Here the oscillator to be damped has mass <span class="process-math">\(m_1\)</span> with spring or restoring constant <span class="process-math">\(k_1\)</span> and resistance or damping constant <span class="process-math">\(b_1\text{.}\)</span> This could be a large structure, where <span class="process-math">\(k_1\)</span> would be its stiffness while <span class="process-math">\(b_1\)</span> would reflect internal frictional resistance to motion proportional to the velocity of the structure. The damping oscillator would be a large mass which sits atop the structure and is permitted to slide or roll as the structure sways in response to wind or seismic forces. This damper has mass <span class="process-math">\(m_2\)</span> with spring or restoring constant <span class="process-math">\(k_2\)</span> and resistance or damping constant <span class="process-math">\(b_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#nonlinear05-project-tuned-mass-task-a-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/prefigure/tmd.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Diagram of a tuned mass damper<div class="autopermalink" data-description="Figure 5.5.2"><a href="#nonlinear05-figure-tmd" title="Copy heading and permalink for Figure 5.5.2" aria-label="Copy heading and permalink for Figure 5.5.2">🔗</a></div></figcaption></figure><div class="para logical">
+<div class="para">Using Newton’s Second Law, which says that the mass times the acceleration of that mass is equal to the sum of all external forces acting on the mass show that the governing equations for the motions of the structure and the damper are given by</div>
+<div class="displaymath process-math">
+\begin{align}
+m_1 x_1''  &amp; = -k_1 x_1 - b_1 x_1' - k_2(x_1 - x_2) - b_2(x_1' - x_2') + \rho_0 \cos(\omega t)\tag{5.5.1}\\
+m_2 x_2''  &amp; = -k_2(x_2 - x_1) - b_2(x_2' - x_1').\tag{5.5.2}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#nonlinear05-project-tuned-mass-task-a-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">In our study here we will first presume an “ideal” structure with no resistance or damping coefficient; i.e., <span class="process-math">\(b_1 = 0\text{,}\)</span> and the same for the damper; i.e., <span class="process-math">\(b_2 = 0\text{.}\)</span> As we can see there is a driving force applied to the structure of <span class="process-math">\(f(t) = \rho_0 \cos(\omega t)\text{.}\)</span> Our interest will be in seeing if we can tune the added mass damper to reduce or eliminate the possibility of resonance when the initial structure is driven by a force with a frequency equal to that of the natural frequency of the initial mass system.<div class="autopermalink" data-description="Paragraph"><a href="#nonlinear05-project-tuned-mass-task-a-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">If we let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/nonlinear05-project-eqn-tuned-mass-1.html ./knowl/xref/nonlinear05-project-eqn-tuned-mass-2.html">
+\begin{align*}
+p_1 &amp; = m_1 x'_1\\
+p_2 &amp; = m_2 x'_2,
+\end{align*}
+</div>
+<div class="para">show that the system <a href="nonlinear05.html#nonlinear05-project-tuned-mass-task-a-3-1" class="xref" data-knowl="./knowl/xref/nonlinear05-project-eqn-tuned-mass-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.5.1">(5.5.1)</a>–<a href="nonlinear05.html#nonlinear05-project-tuned-mass-task-a-3-1" class="xref" data-knowl="./knowl/xref/nonlinear05-project-eqn-tuned-mass-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.5.2">(5.5.2)</a> can be written as a system of four first-order linear equations.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#nonlinear05-project-tuned-mass-task-a-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.5.2.a"><a href="#nonlinear05-project-tuned-mass-task-a" title="Copy heading and permalink for Task 5.5.2.a" aria-label="Copy heading and permalink for Task 5.5.2.a">🔗</a></div></article><span class="incontext"><a class="internal" href="nonlinear05.html#nonlinear05-project-tuned-mass-task-a">in-context</a></span>
+</body>
+</html>

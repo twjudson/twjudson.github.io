@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h4>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Abel’s Theorem</dfn>. If <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are solutions of the homogeneous equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'' + p(t) y' + q(t) y = 0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are continuous on an open interval <span class="process-math">\(I = (a, b)\text{,}\)</span> show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+W[y_1, y_2](t) = c \exp\left(   - \int p(t) \, dt \right),
+\end{equation*}
+</div>
+<div class="para">for some constant <span class="process-math">\(c\)</span> that depends on <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> but not on <span class="process-math">\(t\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="secondorder02-exercises-7-1-1-14">
+<li>
+<div class="para">Use Abel’s Theorem to find the Wronskian of <span class="process-math">\(2 t^2 y'' + 3ty' - y = 0\)</span> up to a constant multiple, where <span class="process-math">\(t \gt 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4.2.7.26.a"><a href="#secondorder02-exercises-7-1-1-14-1" title="Copy heading and permalink for Item 4.2.7.26.a" aria-label="Copy heading and permalink for Item 4.2.7.26.a">🔗</a></div>
+</li>
+<li>
+<div class="para">Prove Abel’s Theorem.</div>
+<div class="autopermalink" data-description="Item 4.2.7.26.b"><a href="#secondorder02-exercises-7-1-1-14-2" title="Copy heading and permalink for Item 4.2.7.26.b" aria-label="Copy heading and permalink for Item 4.2.7.26.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#secondorder02-exercises-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical">
+<ol class="lower-alpha lower-alpha-level-1" id="secondorder02-exercises-7-2-1-1">
+<li>
+<div class="para">We can rewrite <span class="process-math">\(2 t^2 y'' + 3ty' - y = 0\)</span> as<div class="displaymath process-math">
+\begin{equation*}
+y'' + \frac{3}{2t} y' - \frac{1}{2t^2} y = 0.
+\end{equation*}
+</div>Since <span class="process-math">\(p(t) = 1/2t\text{,}\)</span> Abel’s Theorem tells us that<div class="displaymath process-math">
+\begin{equation*}
+W[y_1, y_2](t) = c \exp\left(   - \int \frac{3}{2t} \, dt \right) = c \exp\left(   - \frac{3}{2} \ln t \right) = ct^{-3/2}.
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item 4.2.7.26.a"><a href="#secondorder02-exercises-7-2-1-1-1" title="Copy heading and permalink for Item 4.2.7.26.a" aria-label="Copy heading and permalink for Item 4.2.7.26.a">🔗</a></div>
+</li>
+<li>
+<div class="para">Since <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\)</span> are solutions to our differential equation, we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{gather*}
+y_1'' + p(t) y_1' + q(t) y_1 = 0\\
+y_2'' + p(t) y_2' + q(t) y_2 = 0.
+\end{gather*}
+</div>Multiplying the first equation by <span class="process-math">\(y_2\)</span> and the second equation by <span class="process-math">\(y_1\)</span> and subtracting, we obtain<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{equation}
+(y_1 y_2'' - y_1'' y_2) + p(t) (y_1 y_2' - y_1' y_2) = 0.\tag{4.2.5}
+\end{equation}
+</div>If<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{equation*}
+W(t) = W(y_1, y_2)(t) = y_1 y_2' - y_1' y_2,
+\end{equation*}
+</div>then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{equation*}
+W' = y_1 y_2'' - y_1'' y_2,
+\end{equation*}
+</div>and equation <a href="secondorder02.html#secondorder02-equation-exercise-abel-hint" class="xref" data-knowl="./knowl/xref/secondorder02-equation-exercise-abel-hint.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.5">(4.2.5)</a> becomes<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{equation*}
+W' + p(t) W = 0.
+\end{equation*}
+</div>This equation is separable with solution<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/secondorder02-equation-exercise-abel-hint.html">
+\begin{equation*}
+W(t) = c \exp\left( - \int p(t) \, dt \right).
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item 4.2.7.26.b"><a href="#secondorder02-exercises-7-2-1-1-2" title="Copy heading and permalink for Item 4.2.7.26.b" aria-label="Copy heading and permalink for Item 4.2.7.26.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#secondorder02-exercises-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.7.26.1"><a href="#secondorder02-exercises-7-2" title="Copy heading and permalink for Hint 4.2.7.26.1" aria-label="Copy heading and permalink for Hint 4.2.7.26.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4.2.7.26"><a href="#secondorder02-exercises-7" title="Copy heading and permalink for Exercise 4.2.7.26" aria-label="Copy heading and permalink for Exercise 4.2.7.26">🔗</a></div></article><span class="incontext"><a class="internal" href="secondorder02.html#secondorder02-exercises-7">in-context</a></span>
+</body>
+</html>

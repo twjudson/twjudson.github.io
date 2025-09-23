@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ODE-Project Colophon</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="The Ordinary Differential Equations Project">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.917314eae5e3ab90.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.b5027876c2f06108.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97f3ae4f7a71ba18.css">
+<style>
+#firstlook01-exercise-yprime-yx2-y-1-1-2 { counter-set: firstlook01-exercise-yprime-yx2-y-1-1-2 0; }
+#firstlook01-exercise-yprime-yx2-y-1-1-2 > li::marker { content: "("counter(firstlook01-exercise-yprime-yx2-y-1-1-2,lower-alpha)")"; }
+#firstlook01-exercise-yprime-yx2-y-1-1-2 > li { counter-increment: firstlook01-exercise-yprime-yx2-y-1-1-2; }
+#firstlook01-exercise-y-double-prime-plus-9y-1-1-2 { counter-set: firstlook01-exercise-y-double-prime-plus-9y-1-1-2 0; }
+#firstlook01-exercise-y-double-prime-plus-9y-1-1-2 > li::marker { content: "("counter(firstlook01-exercise-y-double-prime-plus-9y-1-1-2,lower-alpha)")"; }
+#firstlook01-exercise-y-double-prime-plus-9y-1-1-2 > li { counter-increment: firstlook01-exercise-y-double-prime-plus-9y-1-1-2; }
+#firstlook01-exercise-rabbit-population-1-1-2 { counter-set: firstlook01-exercise-rabbit-population-1-1-2 0; }
+#firstlook01-exercise-rabbit-population-1-1-2 > li::marker { content: "("counter(firstlook01-exercise-rabbit-population-1-1-2,lower-alpha)")"; }
+#firstlook01-exercise-rabbit-population-1-1-2 > li { counter-increment: firstlook01-exercise-rabbit-population-1-1-2; }
+#firstlook01-exercise-radio-carbon-dating-2-1-2 { counter-set: firstlook01-exercise-radio-carbon-dating-2-1-2 0; }
+#firstlook01-exercise-radio-carbon-dating-2-1-2 > li::marker { content: "("counter(firstlook01-exercise-radio-carbon-dating-2-1-2,lower-alpha)")"; }
+#firstlook01-exercise-radio-carbon-dating-2-1-2 > li { counter-increment: firstlook01-exercise-radio-carbon-dating-2-1-2; }
+#firstlook01-exercise-predator-prey-1-1-2 { counter-set: firstlook01-exercise-predator-prey-1-1-2 0; }
+#firstlook01-exercise-predator-prey-1-1-2 > li::marker { content: "("counter(firstlook01-exercise-predator-prey-1-1-2,lower-alpha)")"; }
+#firstlook01-exercise-predator-prey-1-1-2 > li { counter-increment: firstlook01-exercise-predator-prey-1-1-2; }
+#firstlook02-exercises--6-2-1-4 { counter-set: firstlook02-exercises--6-2-1-4 0; }
+#firstlook02-exercises--6-2-1-4 > li::marker { content: "("counter(firstlook02-exercises--6-2-1-4,lower-alpha)")"; }
+#firstlook02-exercises--6-2-1-4 > li { counter-increment: firstlook02-exercises--6-2-1-4; }
+#firstlook02-exercises--8-1-1-1 { counter-set: firstlook02-exercises--8-1-1-1 0; }
+#firstlook02-exercises--8-1-1-1 > li::marker { content: "("counter(firstlook02-exercises--8-1-1-1,lower-alpha)")"; }
+#firstlook02-exercises--8-1-1-1 > li { counter-increment: firstlook02-exercises--8-1-1-1; }
+#firstlook02-subsection-sage-3-2 { counter-set: firstlook02-subsection-sage-3-2 0; }
+#firstlook02-subsection-sage-3-2 > li::marker { content: ""counter(firstlook02-subsection-sage-3-2,decimal)"."; }
+#firstlook02-subsection-sage-3-2 > li { counter-increment: firstlook02-subsection-sage-3-2; }
+#firstlook03-subsection-sage-4-2-1-1-4 { counter-set: firstlook03-subsection-sage-4-2-1-1-4 0; }
+#firstlook03-subsection-sage-4-2-1-1-4 > li::marker { content: "("counter(firstlook03-subsection-sage-4-2-1-1-4,lower-alpha)")"; }
+#firstlook03-subsection-sage-4-2-1-1-4 > li { counter-increment: firstlook03-subsection-sage-4-2-1-1-4; }
+#firstlook04-exercises-euler-2-1-3 { counter-set: firstlook04-exercises-euler-2-1-3 0; }
+#firstlook04-exercises-euler-2-1-3 > li::marker { content: "("counter(firstlook04-exercises-euler-2-1-3,lower-alpha)")"; }
+#firstlook04-exercises-euler-2-1-3 > li { counter-increment: firstlook04-exercises-euler-2-1-3; }
+#exercises-firstlook04-3-1-1-3 { counter-set: exercises-firstlook04-3-1-1-3 0; }
+#exercises-firstlook04-3-1-1-3 > li::marker { content: "("counter(exercises-firstlook04-3-1-1-3,lower-alpha)")"; }
+#exercises-firstlook04-3-1-1-3 > li { counter-increment: exercises-firstlook04-3-1-1-3; }
+#exercises-firstlook04-4-1-1-2 { counter-set: exercises-firstlook04-4-1-1-2 0; }
+#exercises-firstlook04-4-1-1-2 > li::marker { content: "("counter(exercises-firstlook04-4-1-1-2,lower-alpha)")"; }
+#exercises-firstlook04-4-1-1-2 > li { counter-increment: exercises-firstlook04-4-1-1-2; }
+#exercises-firstlook05-6-1-3-2 { counter-set: exercises-firstlook05-6-1-3-2 0; }
+#exercises-firstlook05-6-1-3-2 > li::marker { content: "("counter(exercises-firstlook05-6-1-3-2,lower-alpha)")"; }
+#exercises-firstlook05-6-1-3-2 > li { counter-increment: exercises-firstlook05-6-1-3-2; }
+#exercises-firstlook05-8-2-1-5 { counter-set: exercises-firstlook05-8-2-1-5 0; }
+#exercises-firstlook05-8-2-1-5 > li::marker { content: "("counter(exercises-firstlook05-8-2-1-5,lower-alpha)")"; }
+#exercises-firstlook05-8-2-1-5 > li { counter-increment: exercises-firstlook05-8-2-1-5; }
+#exercises-firstlook05-8-2-1-5-4-1-3 { counter-set: exercises-firstlook05-8-2-1-5-4-1-3 0; }
+#exercises-firstlook05-8-2-1-5-4-1-3 > li::marker { content: ""counter(exercises-firstlook05-8-2-1-5-4-1-3,lower-roman)"."; }
+#exercises-firstlook05-8-2-1-5-4-1-3 > li { counter-increment: exercises-firstlook05-8-2-1-5-4-1-3; }
+#exercises-firstlook05-9-2-1-2 { counter-set: exercises-firstlook05-9-2-1-2 0; }
+#exercises-firstlook05-9-2-1-2 > li::marker { content: "("counter(exercises-firstlook05-9-2-1-2,lower-alpha)")"; }
+#exercises-firstlook05-9-2-1-2 > li { counter-increment: exercises-firstlook05-9-2-1-2; }
+#exercises-firstlook05-10-2-1-5 { counter-set: exercises-firstlook05-10-2-1-5 0; }
+#exercises-firstlook05-10-2-1-5 > li::marker { content: "("counter(exercises-firstlook05-10-2-1-5,lower-alpha)")"; }
+#exercises-firstlook05-10-2-1-5 > li { counter-increment: exercises-firstlook05-10-2-1-5; }
+#exercises-firstlook05-11-1-1-9 { counter-set: exercises-firstlook05-11-1-1-9 0; }
+#exercises-firstlook05-11-1-1-9 > li::marker { content: "("counter(exercises-firstlook05-11-1-1-9,lower-alpha)")"; }
+#exercises-firstlook05-11-1-1-9 > li { counter-increment: exercises-firstlook05-11-1-1-9; }
+#exercises-firstlook05-11-2-1-1 { counter-set: exercises-firstlook05-11-2-1-1 0; }
+#exercises-firstlook05-11-2-1-1 > li::marker { content: "("counter(exercises-firstlook05-11-2-1-1,lower-alpha)")"; }
+#exercises-firstlook05-11-2-1-1 > li { counter-increment: exercises-firstlook05-11-2-1-1; }
+#exercises-firstlook05-12-1-1-8 { counter-set: exercises-firstlook05-12-1-1-8 0; }
+#exercises-firstlook05-12-1-1-8 > li::marker { content: "("counter(exercises-firstlook05-12-1-1-8,lower-alpha)")"; }
+#exercises-firstlook05-12-1-1-8 > li { counter-increment: exercises-firstlook05-12-1-1-8; }
+#exercises-firstlook05-13-1-1-2 { counter-set: exercises-firstlook05-13-1-1-2 0; }
+#exercises-firstlook05-13-1-1-2 > li::marker { content: "("counter(exercises-firstlook05-13-1-1-2,lower-alpha)")"; }
+#exercises-firstlook05-13-1-1-2 > li { counter-increment: exercises-firstlook05-13-1-1-2; }
+#exercises-firstlook06-2-1-1-2 { counter-set: exercises-firstlook06-2-1-1-2 0; }
+#exercises-firstlook06-2-1-1-2 > li::marker { content: "("counter(exercises-firstlook06-2-1-1-2,lower-alpha)")"; }
+#exercises-firstlook06-2-1-1-2 > li { counter-increment: exercises-firstlook06-2-1-1-2; }
+#exercises-firstlook06-2-2-1-1 { counter-set: exercises-firstlook06-2-2-1-1 0; }
+#exercises-firstlook06-2-2-1-1 > li::marker { content: "("counter(exercises-firstlook06-2-2-1-1,lower-alpha)")"; }
+#exercises-firstlook06-2-2-1-1 > li { counter-increment: exercises-firstlook06-2-2-1-1; }
+#exercises-firstlook06-4-1-1-2 { counter-set: exercises-firstlook06-4-1-1-2 0; }
+#exercises-firstlook06-4-1-1-2 > li::marker { content: "("counter(exercises-firstlook06-4-1-1-2,lower-alpha)")"; }
+#exercises-firstlook06-4-1-1-2 > li { counter-increment: exercises-firstlook06-4-1-1-2; }
+#exercises-firstlook06-5-1-1-2 { counter-set: exercises-firstlook06-5-1-1-2 0; }
+#exercises-firstlook06-5-1-1-2 > li::marker { content: "("counter(exercises-firstlook06-5-1-1-2,lower-alpha)")"; }
+#exercises-firstlook06-5-1-1-2 > li { counter-increment: exercises-firstlook06-5-1-1-2; }
+#firstlook06-exercises-exist-11-1-1-1 { counter-set: firstlook06-exercises-exist-11-1-1-1 0; }
+#firstlook06-exercises-exist-11-1-1-1 > li::marker { content: "("counter(firstlook06-exercises-exist-11-1-1-1,lower-alpha)")"; }
+#firstlook06-exercises-exist-11-1-1-1 > li { counter-increment: firstlook06-exercises-exist-11-1-1-1; }
+#systems01-exercises-2-1-1-3 { counter-set: systems01-exercises-2-1-1-3 0; }
+#systems01-exercises-2-1-1-3 > li::marker { content: "("counter(systems01-exercises-2-1-1-3,lower-alpha)")"; }
+#systems01-exercises-2-1-1-3 > li { counter-increment: systems01-exercises-2-1-1-3; }
+#systems01-exercises-3-1-1-3 { counter-set: systems01-exercises-3-1-1-3 0; }
+#systems01-exercises-3-1-1-3 > li::marker { content: "("counter(systems01-exercises-3-1-1-3,lower-alpha)")"; }
+#systems01-exercises-3-1-1-3 > li { counter-increment: systems01-exercises-3-1-1-3; }
+#systems01-exercises-4-1-1-7 { counter-set: systems01-exercises-4-1-1-7 0; }
+#systems01-exercises-4-1-1-7 > li::marker { content: "("counter(systems01-exercises-4-1-1-7,lower-alpha)")"; }
+#systems01-exercises-4-1-1-7 > li { counter-increment: systems01-exercises-4-1-1-7; }
+#systems01-exercises-5-1-1-1 { counter-set: systems01-exercises-5-1-1-1 0; }
+#systems01-exercises-5-1-1-1 > li::marker { content: "("counter(systems01-exercises-5-1-1-1,lower-alpha)")"; }
+#systems01-exercises-5-1-1-1 > li { counter-increment: systems01-exercises-5-1-1-1; }
+#systems01-exercises-6-1-1-1 { counter-set: systems01-exercises-6-1-1-1 0; }
+#systems01-exercises-6-1-1-1 > li::marker { content: "("counter(systems01-exercises-6-1-1-1,lower-alpha)")"; }
+#systems01-exercises-6-1-1-1 > li { counter-increment: systems01-exercises-6-1-1-1; }
+#systems01-exercises-7-1-1-4 { counter-set: systems01-exercises-7-1-1-4 0; }
+#systems01-exercises-7-1-1-4 > li::marker { content: "("counter(systems01-exercises-7-1-1-4,lower-alpha)")"; }
+#systems01-exercises-7-1-1-4 > li { counter-increment: systems01-exercises-7-1-1-4; }
+#systems01-exercises-8-1-1-1 { counter-set: systems01-exercises-8-1-1-1 0; }
+#systems01-exercises-8-1-1-1 > li::marker { content: "("counter(systems01-exercises-8-1-1-1,lower-alpha)")"; }
+#systems01-exercises-8-1-1-1 > li { counter-increment: systems01-exercises-8-1-1-1; }
+#systems02-exercises-2-1-1-3 { counter-set: systems02-exercises-2-1-1-3 0; }
+#systems02-exercises-2-1-1-3 > li::marker { content: "("counter(systems02-exercises-2-1-1-3,lower-alpha)")"; }
+#systems02-exercises-2-1-1-3 > li { counter-increment: systems02-exercises-2-1-1-3; }
+#systems02-exercises-4-1-2-2 { counter-set: systems02-exercises-4-1-2-2 0; }
+#systems02-exercises-4-1-2-2 > li::marker { content: "("counter(systems02-exercises-4-1-2-2,lower-alpha)")"; }
+#systems02-exercises-4-1-2-2 > li { counter-increment: systems02-exercises-4-1-2-2; }
+#systems03-exercises-2-1-1-5 { counter-set: systems03-exercises-2-1-1-5 0; }
+#systems03-exercises-2-1-1-5 > li::marker { content: "("counter(systems03-exercises-2-1-1-5,lower-alpha)")"; }
+#systems03-exercises-2-1-1-5 > li { counter-increment: systems03-exercises-2-1-1-5; }
+#systems03-exercises-3-1-1-5 { counter-set: systems03-exercises-3-1-1-5 0; }
+#systems03-exercises-3-1-1-5 > li::marker { content: "("counter(systems03-exercises-3-1-1-5,lower-alpha)")"; }
+#systems03-exercises-3-1-1-5 > li { counter-increment: systems03-exercises-3-1-1-5; }
+#systems03-exercises-4-1-1-5 { counter-set: systems03-exercises-4-1-1-5 0; }
+#systems03-exercises-4-1-1-5 > li::marker { content: "("counter(systems03-exercises-4-1-1-5,lower-alpha)")"; }
+#systems03-exercises-4-1-1-5 > li { counter-increment: systems03-exercises-4-1-1-5; }
+#systems03-subsection-sage-12-2-1-1-4 { counter-set: systems03-subsection-sage-12-2-1-1-4 0; }
+#systems03-subsection-sage-12-2-1-1-4 > li::marker { content: "("counter(systems03-subsection-sage-12-2-1-1-4,lower-alpha)")"; }
+#systems03-subsection-sage-12-2-1-1-4 > li { counter-increment: systems03-subsection-sage-12-2-1-1-4; }
+#systems04-exercises-4-1-1-1 { counter-set: systems04-exercises-4-1-1-1 0; }
+#systems04-exercises-4-1-1-1 > li::marker { content: "("counter(systems04-exercises-4-1-1-1,lower-alpha)")"; }
+#systems04-exercises-4-1-1-1 > li { counter-increment: systems04-exercises-4-1-1-1; }
+#exercises-linear01-2-1-1-7 { counter-set: exercises-linear01-2-1-1-7 0; }
+#exercises-linear01-2-1-1-7 > li::marker { content: "("counter(exercises-linear01-2-1-1-7,lower-alpha)")"; }
+#exercises-linear01-2-1-1-7 > li { counter-increment: exercises-linear01-2-1-1-7; }
+#exercises-linear01-3-1-1-2 { counter-set: exercises-linear01-3-1-1-2 0; }
+#exercises-linear01-3-1-1-2 > li::marker { content: "("counter(exercises-linear01-3-1-1-2,lower-alpha)")"; }
+#exercises-linear01-3-1-1-2 > li { counter-increment: exercises-linear01-3-1-1-2; }
+#exercises-linear01-4-1-1-2 { counter-set: exercises-linear01-4-1-1-2 0; }
+#exercises-linear01-4-1-1-2 > li::marker { content: "("counter(exercises-linear01-4-1-1-2,lower-alpha)")"; }
+#exercises-linear01-4-1-1-2 > li { counter-increment: exercises-linear01-4-1-1-2; }
+#linear01-exercises-eigenvalues-2-1-3 { counter-set: linear01-exercises-eigenvalues-2-1-3 0; }
+#linear01-exercises-eigenvalues-2-1-3 > li::marker { content: "("counter(linear01-exercises-eigenvalues-2-1-3,lower-alpha)")"; }
+#linear01-exercises-eigenvalues-2-1-3 > li { counter-increment: linear01-exercises-eigenvalues-2-1-3; }
+#linear02-theorem-equilibrium-solution-1-1-4 { counter-set: linear02-theorem-equilibrium-solution-1-1-4 0; }
+#linear02-theorem-equilibrium-solution-1-1-4 > li::marker { content: ""counter(linear02-theorem-equilibrium-solution-1-1-4,decimal)"."; }
+#linear02-theorem-equilibrium-solution-1-1-4 > li { counter-increment: linear02-theorem-equilibrium-solution-1-1-4; }
+#linear02-exercises-5-1-1-2 { counter-set: linear02-exercises-5-1-1-2 0; }
+#linear02-exercises-5-1-1-2 > li::marker { content: "("counter(linear02-exercises-5-1-1-2,lower-alpha)")"; }
+#linear02-exercises-5-1-1-2 > li { counter-increment: linear02-exercises-5-1-1-2; }
+#linear03-exercises-solving-linear-systems-2-1-3 { counter-set: linear03-exercises-solving-linear-systems-2-1-3 0; }
+#linear03-exercises-solving-linear-systems-2-1-3 > li::marker { content: "("counter(linear03-exercises-solving-linear-systems-2-1-3,lower-alpha)")"; }
+#linear03-exercises-solving-linear-systems-2-1-3 > li { counter-increment: linear03-exercises-solving-linear-systems-2-1-3; }
+#linear06-subsection-changing-coordinates-system-3-8 { counter-set: linear06-subsection-changing-coordinates-system-3-8 0; }
+#linear06-subsection-changing-coordinates-system-3-8 > li::marker { content: ""counter(linear06-subsection-changing-coordinates-system-3-8,decimal)"."; }
+#linear06-subsection-changing-coordinates-system-3-8 > li { counter-increment: linear06-subsection-changing-coordinates-system-3-8; }
+#linear08-subsection-geometry-9-2-1-1 { counter-set: linear08-subsection-geometry-9-2-1-1 0; }
+#linear08-subsection-geometry-9-2-1-1 > li::marker { content: ""counter(linear08-subsection-geometry-9-2-1-1,decimal)"."; }
+#linear08-subsection-geometry-9-2-1-1 > li { counter-increment: linear08-subsection-geometry-9-2-1-1; }
+#linear08-exercises-solving-linear-systems-2-1-3 { counter-set: linear08-exercises-solving-linear-systems-2-1-3 0; }
+#linear08-exercises-solving-linear-systems-2-1-3 > li::marker { content: "("counter(linear08-exercises-solving-linear-systems-2-1-3,lower-alpha)")"; }
+#linear08-exercises-solving-linear-systems-2-1-3 > li { counter-increment: linear08-exercises-solving-linear-systems-2-1-3; }
+#linear09-theorem-matrix-exponential-properties-1-1-4 { counter-set: linear09-theorem-matrix-exponential-properties-1-1-4 0; }
+#linear09-theorem-matrix-exponential-properties-1-1-4 > li::marker { content: ""counter(linear09-theorem-matrix-exponential-properties-1-1-4,decimal)"."; }
+#linear09-theorem-matrix-exponential-properties-1-1-4 > li { counter-increment: linear09-theorem-matrix-exponential-properties-1-1-4; }
+#linear09-subsection-generalized-eigenvalues-5-4 { counter-set: linear09-subsection-generalized-eigenvalues-5-4 0; }
+#linear09-subsection-generalized-eigenvalues-5-4 > li::marker { content: ""counter(linear09-subsection-generalized-eigenvalues-5-4,decimal)"."; }
+#linear09-subsection-generalized-eigenvalues-5-4 > li { counter-increment: linear09-subsection-generalized-eigenvalues-5-4; }
+#linear09-exercises-solving-linear-systems-2-1-3 { counter-set: linear09-exercises-solving-linear-systems-2-1-3 0; }
+#linear09-exercises-solving-linear-systems-2-1-3 > li::marker { content: "("counter(linear09-exercises-solving-linear-systems-2-1-3,lower-alpha)")"; }
+#linear09-exercises-solving-linear-systems-2-1-3 > li { counter-increment: linear09-exercises-solving-linear-systems-2-1-3; }
+#linear09-exercises-6-1-1-7 { counter-set: linear09-exercises-6-1-1-7 0; }
+#linear09-exercises-6-1-1-7 > li::marker { content: "("counter(linear09-exercises-6-1-1-7,lower-alpha)")"; }
+#linear09-exercises-6-1-1-7 > li { counter-increment: linear09-exercises-6-1-1-7; }
+#linear10-project-1-2-2-1 { counter-set: linear10-project-1-2-2-1 0; }
+#linear10-project-1-2-2-1 > li::marker { content: ""counter(linear10-project-1-2-2-1,decimal)"."; }
+#linear10-project-1-2-2-1 > li { counter-increment: linear10-project-1-2-2-1; }
+#secondorder01-exercises-harmonic-oscillators-2-1-5 { counter-set: secondorder01-exercises-harmonic-oscillators-2-1-5 0; }
+#secondorder01-exercises-harmonic-oscillators-2-1-5 > li::marker { content: "("counter(secondorder01-exercises-harmonic-oscillators-2-1-5,lower-alpha)")"; }
+#secondorder01-exercises-harmonic-oscillators-2-1-5 > li { counter-increment: secondorder01-exercises-harmonic-oscillators-2-1-5; }
+#secondorder01-exercises-hanging-mass-3-1-1-3 { counter-set: secondorder01-exercises-hanging-mass-3-1-1-3 0; }
+#secondorder01-exercises-hanging-mass-3-1-1-3 > li::marker { content: "("counter(secondorder01-exercises-hanging-mass-3-1-1-3,lower-alpha)")"; }
+#secondorder01-exercises-hanging-mass-3-1-1-3 > li { counter-increment: secondorder01-exercises-hanging-mass-3-1-1-3; }
+#secondorder01-exercises-hanging-mass-4-1-1-3 { counter-set: secondorder01-exercises-hanging-mass-4-1-1-3 0; }
+#secondorder01-exercises-hanging-mass-4-1-1-3 > li::marker { content: "("counter(secondorder01-exercises-hanging-mass-4-1-1-3,lower-alpha)")"; }
+#secondorder01-exercises-hanging-mass-4-1-1-3 > li { counter-increment: secondorder01-exercises-hanging-mass-4-1-1-3; }
+#secondorder01-exercises-hanging-mass-5-1-1-1 { counter-set: secondorder01-exercises-hanging-mass-5-1-1-1 0; }
+#secondorder01-exercises-hanging-mass-5-1-1-1 > li::marker { content: "("counter(secondorder01-exercises-hanging-mass-5-1-1-1,lower-alpha)")"; }
+#secondorder01-exercises-hanging-mass-5-1-1-1 > li { counter-increment: secondorder01-exercises-hanging-mass-5-1-1-1; }
+#secondorder01-exercises-6-1-1-4 { counter-set: secondorder01-exercises-6-1-1-4 0; }
+#secondorder01-exercises-6-1-1-4 > li::marker { content: "("counter(secondorder01-exercises-6-1-1-4,lower-alpha)")"; }
+#secondorder01-exercises-6-1-1-4 > li { counter-increment: secondorder01-exercises-6-1-1-4; }
+#secondorder01-exercises-6-2-1-1 { counter-set: secondorder01-exercises-6-2-1-1 0; }
+#secondorder01-exercises-6-2-1-1 > li::marker { content: "("counter(secondorder01-exercises-6-2-1-1,lower-alpha)")"; }
+#secondorder01-exercises-6-2-1-1 > li { counter-increment: secondorder01-exercises-6-2-1-1; }
+#secondorder01-exercises-7-1-1-3 { counter-set: secondorder01-exercises-7-1-1-3 0; }
+#secondorder01-exercises-7-1-1-3 > li::marker { content: "("counter(secondorder01-exercises-7-1-1-3,lower-alpha)")"; }
+#secondorder01-exercises-7-1-1-3 > li { counter-increment: secondorder01-exercises-7-1-1-3; }
+#secondorder01-exercises-7-2-1-1 { counter-set: secondorder01-exercises-7-2-1-1 0; }
+#secondorder01-exercises-7-2-1-1 > li::marker { content: "("counter(secondorder01-exercises-7-2-1-1,lower-alpha)")"; }
+#secondorder01-exercises-7-2-1-1 > li { counter-increment: secondorder01-exercises-7-2-1-1; }
+#secondorder01-exercises-8-1-1-4 { counter-set: secondorder01-exercises-8-1-1-4 0; }
+#secondorder01-exercises-8-1-1-4 > li::marker { content: "("counter(secondorder01-exercises-8-1-1-4,lower-alpha)")"; }
+#secondorder01-exercises-8-1-1-4 > li { counter-increment: secondorder01-exercises-8-1-1-4; }
+#secondorder01-exercises-10-1-1-1 { counter-set: secondorder01-exercises-10-1-1-1 0; }
+#secondorder01-exercises-10-1-1-1 > li::marker { content: "("counter(secondorder01-exercises-10-1-1-1,lower-alpha)")"; }
+#secondorder01-exercises-10-1-1-1 > li { counter-increment: secondorder01-exercises-10-1-1-1; }
+#secondorder01-exercises-11-2-1-3 { counter-set: secondorder01-exercises-11-2-1-3 0; }
+#secondorder01-exercises-11-2-1-3 > li::marker { content: "("counter(secondorder01-exercises-11-2-1-3,lower-alpha)")"; }
+#secondorder01-exercises-11-2-1-3 > li { counter-increment: secondorder01-exercises-11-2-1-3; }
+#secondorder01-exercises-12-2-1-6 { counter-set: secondorder01-exercises-12-2-1-6 0; }
+#secondorder01-exercises-12-2-1-6 > li::marker { content: "("counter(secondorder01-exercises-12-2-1-6,lower-alpha)")"; }
+#secondorder01-exercises-12-2-1-6 > li { counter-increment: secondorder01-exercises-12-2-1-6; }
+#secondorder01-exercises-13-2-1-11 { counter-set: secondorder01-exercises-13-2-1-11 0; }
+#secondorder01-exercises-13-2-1-11 > li::marker { content: "("counter(secondorder01-exercises-13-2-1-11,lower-alpha)")"; }
+#secondorder01-exercises-13-2-1-11 > li { counter-increment: secondorder01-exercises-13-2-1-11; }
+#secondorder02-exercises-7-1-1-14 { counter-set: secondorder02-exercises-7-1-1-14 0; }
+#secondorder02-exercises-7-1-1-14 > li::marker { content: "("counter(secondorder02-exercises-7-1-1-14,lower-alpha)")"; }
+#secondorder02-exercises-7-1-1-14 > li { counter-increment: secondorder02-exercises-7-1-1-14; }
+#secondorder02-exercises-7-2-1-1 { counter-set: secondorder02-exercises-7-2-1-1 0; }
+#secondorder02-exercises-7-2-1-1 > li::marker { content: "("counter(secondorder02-exercises-7-2-1-1,lower-alpha)")"; }
+#secondorder02-exercises-7-2-1-1 > li { counter-increment: secondorder02-exercises-7-2-1-1; }
+#secondorder02-exercises-8-1-1-6 { counter-set: secondorder02-exercises-8-1-1-6 0; }
+#secondorder02-exercises-8-1-1-6 > li::marker { content: "("counter(secondorder02-exercises-8-1-1-6,lower-alpha)")"; }
+#secondorder02-exercises-8-1-1-6 > li { counter-increment: secondorder02-exercises-8-1-1-6; }
+#secondorder02-exercises-8-2-1-1 { counter-set: secondorder02-exercises-8-2-1-1 0; }
+#secondorder02-exercises-8-2-1-1 > li::marker { content: "("counter(secondorder02-exercises-8-2-1-1,lower-alpha)")"; }
+#secondorder02-exercises-8-2-1-1 > li { counter-increment: secondorder02-exercises-8-2-1-1; }
+#secondorder04-exercises-4-1-1-2 { counter-set: secondorder04-exercises-4-1-1-2 0; }
+#secondorder04-exercises-4-1-1-2 > li::marker { content: "("counter(secondorder04-exercises-4-1-1-2,lower-alpha)")"; }
+#secondorder04-exercises-4-1-1-2 > li { counter-increment: secondorder04-exercises-4-1-1-2; }
+#secondorder04-exercises-5-1-1-10 { counter-set: secondorder04-exercises-5-1-1-10 0; }
+#secondorder04-exercises-5-1-1-10 > li::marker { content: "("counter(secondorder04-exercises-5-1-1-10,lower-alpha)")"; }
+#secondorder04-exercises-5-1-1-10 > li { counter-increment: secondorder04-exercises-5-1-1-10; }
+#nonlinear01-exercises-linearization-2-1-2 { counter-set: nonlinear01-exercises-linearization-2-1-2 0; }
+#nonlinear01-exercises-linearization-2-1-2 > li::marker { content: "("counter(nonlinear01-exercises-linearization-2-1-2,lower-alpha)")"; }
+#nonlinear01-exercises-linearization-2-1-2 > li { counter-increment: nonlinear01-exercises-linearization-2-1-2; }
+#nonlinear01-exercises-3-1-1-1 { counter-set: nonlinear01-exercises-3-1-1-1 0; }
+#nonlinear01-exercises-3-1-1-1 > li::marker { content: "("counter(nonlinear01-exercises-3-1-1-1,lower-alpha)")"; }
+#nonlinear01-exercises-3-1-1-1 > li { counter-increment: nonlinear01-exercises-3-1-1-1; }
+#nonlinear01-exercises-5-1-1-2 { counter-set: nonlinear01-exercises-5-1-1-2 0; }
+#nonlinear01-exercises-5-1-1-2 > li::marker { content: "("counter(nonlinear01-exercises-5-1-1-2,lower-alpha)")"; }
+#nonlinear01-exercises-5-1-1-2 > li { counter-increment: nonlinear01-exercises-5-1-1-2; }
+#nonlinear02-theorem-finding-hamiltonians-1-1-4 { counter-set: nonlinear02-theorem-finding-hamiltonians-1-1-4 0; }
+#nonlinear02-theorem-finding-hamiltonians-1-1-4 > li::marker { content: ""counter(nonlinear02-theorem-finding-hamiltonians-1-1-4,decimal)"."; }
+#nonlinear02-theorem-finding-hamiltonians-1-1-4 > li { counter-increment: nonlinear02-theorem-finding-hamiltonians-1-1-4; }
+#nonlinear02-subsection-ideal-pendulum-10-2-1-1 { counter-set: nonlinear02-subsection-ideal-pendulum-10-2-1-1 0; }
+#nonlinear02-subsection-ideal-pendulum-10-2-1-1 > li::marker { content: ""counter(nonlinear02-subsection-ideal-pendulum-10-2-1-1,decimal)"."; }
+#nonlinear02-subsection-ideal-pendulum-10-2-1-1 > li { counter-increment: nonlinear02-subsection-ideal-pendulum-10-2-1-1; }
+#nonlinear02-exercises-hamiltonian-systems-2-1-2 { counter-set: nonlinear02-exercises-hamiltonian-systems-2-1-2 0; }
+#nonlinear02-exercises-hamiltonian-systems-2-1-2 > li::marker { content: "("counter(nonlinear02-exercises-hamiltonian-systems-2-1-2,lower-alpha)")"; }
+#nonlinear02-exercises-hamiltonian-systems-2-1-2 > li { counter-increment: nonlinear02-exercises-hamiltonian-systems-2-1-2; }
+#nonlinear02-exercises-3-1-1-4 { counter-set: nonlinear02-exercises-3-1-1-4 0; }
+#nonlinear02-exercises-3-1-1-4 > li::marker { content: "("counter(nonlinear02-exercises-3-1-1-4,lower-alpha)")"; }
+#nonlinear02-exercises-3-1-1-4 > li { counter-increment: nonlinear02-exercises-3-1-1-4; }
+#nonlinear02-exercises-5-1-1-2 { counter-set: nonlinear02-exercises-5-1-1-2 0; }
+#nonlinear02-exercises-5-1-1-2 > li::marker { content: "("counter(nonlinear02-exercises-5-1-1-2,lower-alpha)")"; }
+#nonlinear02-exercises-5-1-1-2 > li { counter-increment: nonlinear02-exercises-5-1-1-2; }
+#nonlinear03-theorem-lyapunov-1-1-7 { counter-set: nonlinear03-theorem-lyapunov-1-1-7 0; }
+#nonlinear03-theorem-lyapunov-1-1-7 > li::marker { content: ""counter(nonlinear03-theorem-lyapunov-1-1-7,decimal)"."; }
+#nonlinear03-theorem-lyapunov-1-1-7 > li { counter-increment: nonlinear03-theorem-lyapunov-1-1-7; }
+#nonlinear03-subsection-important-lessons-2-1-3-1-7 { counter-set: nonlinear03-subsection-important-lessons-2-1-3-1-7 0; }
+#nonlinear03-subsection-important-lessons-2-1-3-1-7 > li::marker { content: ""counter(nonlinear03-subsection-important-lessons-2-1-3-1-7,decimal)"."; }
+#nonlinear03-subsection-important-lessons-2-1-3-1-7 > li { counter-increment: nonlinear03-subsection-important-lessons-2-1-3-1-7; }
+#nonlinear03-exercises-3-1-1-2 { counter-set: nonlinear03-exercises-3-1-1-2 0; }
+#nonlinear03-exercises-3-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-3-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-3-1-1-2 > li { counter-increment: nonlinear03-exercises-3-1-1-2; }
+#nonlinear03-exercises-4-1-1-2 { counter-set: nonlinear03-exercises-4-1-1-2 0; }
+#nonlinear03-exercises-4-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-4-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-4-1-1-2 > li { counter-increment: nonlinear03-exercises-4-1-1-2; }
+#nonlinear03-exercises-5-1-1-2 { counter-set: nonlinear03-exercises-5-1-1-2 0; }
+#nonlinear03-exercises-5-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-5-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-5-1-1-2 > li { counter-increment: nonlinear03-exercises-5-1-1-2; }
+#nonlinear03-exercises-7-1-1-2 { counter-set: nonlinear03-exercises-7-1-1-2 0; }
+#nonlinear03-exercises-7-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-7-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-7-1-1-2 > li { counter-increment: nonlinear03-exercises-7-1-1-2; }
+#nonlinear03-exercises-8-1-1-2 { counter-set: nonlinear03-exercises-8-1-1-2 0; }
+#nonlinear03-exercises-8-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-8-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-8-1-1-2 > li { counter-increment: nonlinear03-exercises-8-1-1-2; }
+#nonlinear03-exercises-9-1-1-2 { counter-set: nonlinear03-exercises-9-1-1-2 0; }
+#nonlinear03-exercises-9-1-1-2 > li::marker { content: "("counter(nonlinear03-exercises-9-1-1-2,lower-alpha)")"; }
+#nonlinear03-exercises-9-1-1-2 > li { counter-increment: nonlinear03-exercises-9-1-1-2; }
+#nonlinear03-exercises-10-2-3-5 { counter-set: nonlinear03-exercises-10-2-3-5 0; }
+#nonlinear03-exercises-10-2-3-5 > li::marker { content: "("counter(nonlinear03-exercises-10-2-3-5,lower-alpha)")"; }
+#nonlinear03-exercises-10-2-3-5 > li { counter-increment: nonlinear03-exercises-10-2-3-5; }
+#nonlinear04-exercises-2-1-1-2 { counter-set: nonlinear04-exercises-2-1-1-2 0; }
+#nonlinear04-exercises-2-1-1-2 > li::marker { content: "("counter(nonlinear04-exercises-2-1-1-2,lower-alpha)")"; }
+#nonlinear04-exercises-2-1-1-2 > li { counter-increment: nonlinear04-exercises-2-1-1-2; }
+#nonlinear04-exercises-3-1-1-2 { counter-set: nonlinear04-exercises-3-1-1-2 0; }
+#nonlinear04-exercises-3-1-1-2 > li::marker { content: "("counter(nonlinear04-exercises-3-1-1-2,lower-alpha)")"; }
+#nonlinear04-exercises-3-1-1-2 > li { counter-increment: nonlinear04-exercises-3-1-1-2; }
+#nonlinear04-exercises-4-1-1-4 { counter-set: nonlinear04-exercises-4-1-1-4 0; }
+#nonlinear04-exercises-4-1-1-4 > li::marker { content: "("counter(nonlinear04-exercises-4-1-1-4,lower-alpha)")"; }
+#nonlinear04-exercises-4-1-1-4 > li { counter-increment: nonlinear04-exercises-4-1-1-4; }
+#nonlinear04-exercises-5-1-1-6 { counter-set: nonlinear04-exercises-5-1-1-6 0; }
+#nonlinear04-exercises-5-1-1-6 > li::marker { content: "("counter(nonlinear04-exercises-5-1-1-6,lower-alpha)")"; }
+#nonlinear04-exercises-5-1-1-6 > li { counter-increment: nonlinear04-exercises-5-1-1-6; }
+#laplace01-example-basic-examples-1-1 { counter-set: laplace01-example-basic-examples-1-1 0; }
+#laplace01-example-basic-examples-1-1 > li::marker { content: ""counter(laplace01-example-basic-examples-1-1,decimal)"."; }
+#laplace01-example-basic-examples-1-1 > li { counter-increment: laplace01-example-basic-examples-1-1; }
+#laplace01-subsection-properties-4-5 { counter-set: laplace01-subsection-properties-4-5 0; }
+#laplace01-subsection-properties-4-5 > li::marker { content: ""counter(laplace01-subsection-properties-4-5,decimal)"."; }
+#laplace01-subsection-properties-4-5 > li { counter-increment: laplace01-subsection-properties-4-5; }
+#exercises-laplace01-8-1-1-7 { counter-set: exercises-laplace01-8-1-1-7 0; }
+#exercises-laplace01-8-1-1-7 > li::marker { content: "("counter(exercises-laplace01-8-1-1-7,lower-alpha)")"; }
+#exercises-laplace01-8-1-1-7 > li { counter-increment: exercises-laplace01-8-1-1-7; }
+#laplace02-exercises-4-1-1-4 { counter-set: laplace02-exercises-4-1-1-4 0; }
+#laplace02-exercises-4-1-1-4 > li::marker { content: "("counter(laplace02-exercises-4-1-1-4,lower-alpha)")"; }
+#laplace02-exercises-4-1-1-4 > li { counter-increment: laplace02-exercises-4-1-1-4; }
+#laplace02-exercises-6-1-1-6 { counter-set: laplace02-exercises-6-1-1-6 0; }
+#laplace02-exercises-6-1-1-6 > li::marker { content: "("counter(laplace02-exercises-6-1-1-6,lower-alpha)")"; }
+#laplace02-exercises-6-1-1-6 > li { counter-increment: laplace02-exercises-6-1-1-6; }
+#laplace02-exercises-7-2-1-5 { counter-set: laplace02-exercises-7-2-1-5 0; }
+#laplace02-exercises-7-2-1-5 > li::marker { content: "("counter(laplace02-exercises-7-2-1-5,lower-alpha)")"; }
+#laplace02-exercises-7-2-1-5 > li { counter-increment: laplace02-exercises-7-2-1-5; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="odeproject.html"><span class="title">The Ordinary Differential Equations Project</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-6.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="frontmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\real}{\operatorname{Re}}
+\newcommand{\imaginary}{\operatorname{Im}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter contains-active">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-colophon active"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="firstlook.html" class="internal"><span class="codenumber">1</span> <span class="title">A First Look at Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook01.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Modeling with Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-exponential-growth" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-logistic-growth" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Logistic Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-spring-mass" class="internal"><span class="codenumber">1.1.3</span> <span class="title">A Spring-Mass Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-predator-prey" class="internal"><span class="codenumber">1.1.4</span> <span class="title">A Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-modeling-hiv" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Modeling the HIV-1 Virus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-questions-for-thought" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Some Questions for Thought</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-important-lessons" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook01.html#reading-questions-firstlook01" class="internal"><span class="codenumber">1.1.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-exercises" class="internal"><span class="codenumber">1.1.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-sage" class="internal"><span class="codenumber">1.1.10</span> <span class="title">An Introduction to <em class="emphasis">Sage</em></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-sage-exercises" class="internal"><span class="codenumber">1.1.10</span> <span class="title"><em class="emphasis">Sage</em> Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook02.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Separable Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-separable-de" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Separable Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-newtons-law-cooling" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Newton’s Law of Cooling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-mixing-problem" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Mixing Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-retirement" class="internal"><span class="codenumber">1.2.4</span> <span class="title">A Retirement Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-some-theory" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Some Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-what-can-go-wrong" class="internal"><span class="codenumber">1.2.6</span> <span class="title">What Can Go Wrong</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-important-lessons" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook02.html#reading-questions-firstlook02" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-exercises-" class="internal"><span class="codenumber">1.2.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-sage" class="internal"><span class="codenumber">1.2.10</span> <span class="title">Sage—Quick Start Guide to Solving Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook03.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Geometric and Quantitative Analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits" class="internal"><span class="codenumber">1.3.1</span> <span class="title">RC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits-revisited" class="internal"><span class="codenumber">1.3.3</span> <span class="title">RC Circuits Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-direction-fields" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Plotting Direction Fields with Sage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-autonomous-equations" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Autonomous Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-important-lessons" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook03.html#reading-questions-firstlook03" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-exercises" class="internal"><span class="codenumber">1.3.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage" class="internal"><span class="codenumber">1.3.9</span> <span class="title">Sage—Plotting Direction Fields and Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields-sage" class="internal"><span class="codenumber">1.3.9.1</span> <span class="title">Plotting direction fields</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-desolve_rk4" class="internal"><span class="codenumber">1.3.9.2</span> <span class="title">Plotting solutions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-4" class="internal"><span class="codenumber">1.3.9.3</span> <span class="title">Sage Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook04.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Analyzing Equations Numerically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-eulers-method" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-error-bound" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding an Error Bound</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-improving-euler" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Improving Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-important-lessons" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook04.html#reading-questions-firstlook04" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook04.html#exercises-firstlook04" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-sage-project" class="internal"><span class="codenumber">1.4.7</span> <span class="title">Sage—Numerical Routines for solving ODEs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook05.html" class="internal"><span class="codenumber">1.5</span> <span class="title">First-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mine-tailings" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Mine Tailings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-first-order-linear-de" class="internal"><span class="codenumber">1.5.2</span> <span class="title">First-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mixing-models" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Mixing Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-finance-models" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Finance Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-8" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-important-lessons" class="internal"><span class="codenumber">1.5.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook05.html#reading-questions-firstlook05" class="internal"><span class="codenumber">1.5.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook05.html#exercises-firstlook05" class="internal"><span class="codenumber">1.5.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook06.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-existence" class="internal"><span class="codenumber">1.6.1</span> <span class="title">The Existence and Uniqueness Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-picard" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Picard Iteration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-important-lessons" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook06.html#reading-questions-firstlook06" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook06.html#exercises-firstlook06" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook07.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Bifurcations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-logisitic-harvesting" class="internal"><span class="codenumber">1.7.1</span> <span class="title">The Logistic Model with Harvesting Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-one-parameter-families" class="internal"><span class="codenumber">1.7.2</span> <span class="title">One-Parameter Families</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-important-lessons" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook07.html#reading-questions-firstlook07" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-exercises" class="internal"><span class="codenumber">1.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="firstlook08.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Projects for First-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Systems of Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems01.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Modeling with Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-predator-prey" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-spring-mass" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Spring-Mass Model Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-epidemics" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Modeling Epidemics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-important-lessons" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems01.html#reading-questions-system01" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems01.html#systems01-exercises" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-sage" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems02.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Geometry of Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-direction-fields" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-predator-prey" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Modified Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-competing-species" class="internal"><span class="codenumber">2.2.3</span> <span class="title">A Competing Species Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-sage-direction-fields" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Plotting Direction Fields with <em class="emphasis">Sage</em></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-phase-plane-analysis" class="internal"><span class="codenumber">2.2.5</span> <span class="title">A Summary of Phase Plane Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-important-lessons" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems02.html#reading-questions-system02" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems02.html#systems02-exercises" class="internal"><span class="codenumber">2.2.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#subsection-sytems02-sage" class="internal"><span class="codenumber">2.2.9</span> <span class="title">Plotting Nullclines with <em class="emphasis">Sage</em></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems03.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Numerical Techniques for Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-duffing" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Duffing’s Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-eulers-method" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Euler’s Method for Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-taylor-series" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Taylor Series Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-existence-uniqueness" class="internal"><span class="codenumber">2.3.4</span> <span class="title">A Word about Existence and Uniqueness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-important-lessons" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems03.html#reading-questions-system03" class="internal"><span class="codenumber">2.3.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-exercises" class="internal"><span class="codenumber">2.3.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems with Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage-12" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Sage Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems04.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Solving Systems Analytically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-partially-coupled" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Partially Coupled Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-sage-linear-systems" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-harmonic-oscillator" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-important-lessons" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems04.html#reading-questions-system04" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems04.html#systems04-exercises" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="systems05.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Projects for Systems of Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear.html" class="internal"><span class="codenumber">3</span> <span class="title">Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear01.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Linear Algebra in a Nutshell</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-matrices" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-linear-independence" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-finding-eigenvalues" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-important-lessons" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear01.html#reading-questions-linear01" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear01.html#exercises-linear01" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-sage-project" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Finding Eigenvalues and Eigenvectors with Sage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear02.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Planar Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-planar-systems" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Planar Systems and <span class="process-math">\(2 \times 2\)</span> Matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-systems-of-de" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Systems of Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-solving-systems" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Solving Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-important-lessons" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear02.html#reading-questions-linear02" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear02.html#linear02-exercises" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear03.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Phase Plane Analysis of Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-different-signs" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Case <span class="process-math">\(\lambda_1 \lt 0 \lt \lambda_2\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-negative" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \lt \lambda_2 \lt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-positive" class="internal"><span class="codenumber">3.3.3</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \gt \lambda_2 \gt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-important-lessons" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear03.html#reading-questions-linear03" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear03.html#linear03-exercises" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear04.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Complex Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-spiral-sinks-sources" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spiral Sinks and Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-quick-start" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Solving Systems with Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-important-lessons" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear04.html#reading-questions-linear04" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear04.html#linear04-exercises" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear05.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Repeated Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-quick-start" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Solving Systems with Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-important-lessons" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear05.html#reading-questions-linear05" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear05.html#exercises-linear05" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear06.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Changing Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-linear-maps" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Linear Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates-system" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Systems and Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-distinct-real-eigenvalues" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Distinct Real Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.6.6</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-important-lessons" class="internal"><span class="codenumber">3.6.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear06.html#reading-questions-linear06" class="internal"><span class="codenumber">3.6.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear06.html#linear06-exercises" class="internal"><span class="codenumber">3.6.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear07.html" class="internal"><span class="codenumber">3.7</span> <span class="title">The Trace-Determinant Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-trace-determinant" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Trace-Determinant Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-parameterized-families" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Parameterized Families of Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-important-lessons" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear07.html#reading-questions-linear07" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear07.html#linear07-exercises" class="internal"><span class="codenumber">3.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear08.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Linear Systems in Higher Dimensions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-higher-order-systems" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Higher-Order Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-geometry" class="internal"><span class="codenumber">3.8.2</span> <span class="title">The Geometry of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-double-spring-mass" class="internal"><span class="codenumber">3.8.3</span> <span class="title">The Double Spring-Mass Systems Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-important-lessons" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear08.html#reading-questions-linear08" class="internal"><span class="codenumber">3.8.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear08.html#linear08-exercises" class="internal"><span class="codenumber">3.8.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear09.html" class="internal"><span class="codenumber">3.9</span> <span class="title">The Matrix Exponential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-matrix-exponential" class="internal"><span class="codenumber">3.9.1</span> <span class="title">The Exponential of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-generalized-eigenvalues" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Generalized Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-important-lessons" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear09.html#reading-questions-linear09" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear09.html#linear09-exercises" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear10.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Projects Systems of Linear Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="secondorder.html" class="internal"><span class="codenumber">4</span> <span class="title">Second-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder01.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Homogeneous Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-rlc-circuit" class="internal"><span class="codenumber">4.1.1</span> <span class="title">RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-second-order-linear-de" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-harmonic-oscillators" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Classifying Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-important-lessons" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder01.html#reading-questions-secondorder01" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-sage" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Solving Second Order Linear Equations with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises-sage" class="internal"><span class="codenumber">4.1.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder02.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-nonhomogeneous-de" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-forcing" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Forcing Terms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-undetermined-coefficients" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The Method of Undetermined Coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-strategy" class="internal"><span class="codenumber">4.2.4</span> <span class="title">A Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-important-lessons" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder02.html#reading-questions-secondorder02" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-exercises" class="internal"><span class="codenumber">4.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder03.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Sinusoidal Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-complexification" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Complexification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-qualitative-analysis" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Qualitative Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-important-lessons" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder03.html#reading-questions-secondorder03" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-exercises" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder04.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Forcing and Resonance</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-resonance" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Resonance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-beats" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Beats or the Case <span class="process-math">\(\omega \neq \omega_0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-forced-damped" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Forced Damped Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-important-lessons" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder04.html#reading-questions-secondorder04" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-exercises" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="secondorder05.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Projects for Second-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="nonlinear.html" class="internal"><span class="codenumber">5</span> <span class="title">Nonlinear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear01.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Linearization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Equilibrium Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-linearization-fails" class="internal"><span class="codenumber">5.1.2</span> <span class="title">When Linearization Fails</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-important-lessons" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear01.html#reading-questions-nonlinear01" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-exercises" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear02.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Hamiltonian Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-pendulum" class="internal"><span class="codenumber">5.2.1</span> <span class="title">The Nonlinear Pendulum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-hamiltonian-systems" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-ideal-pendulum" class="internal"><span class="codenumber">5.2.3</span> <span class="title">The Ideal Pendulum Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Equilibrium Solutions of Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-important-lessons" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear02.html#reading-questions-nonlinear02" class="internal"><span class="codenumber">5.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-exercises" class="internal"><span class="codenumber">5.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear03.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Nonlinear Mechanics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-pendulum-damping" class="internal"><span class="codenumber">5.3.1</span> <span class="title">The Nonlinear Pendulum and Damping</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-lyapunov-functions" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Lyapunov Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-gradient-systems" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Gradient Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-important-lessons" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear03.html#reading-questions-nonlinear03" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-exercises" class="internal"><span class="codenumber">5.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear04.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Hopf Bifurcation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-bifurcations" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bifurcations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-hopf-bifurcation" class="internal"><span class="codenumber">5.4.2</span> <span class="title">The Hopf Bifurcation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-important-lessons" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear04.html#reading-questions-nonlinear04" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-exercises" class="internal"><span class="codenumber">5.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="nonlinear05.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Projects</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="laplace.html" class="internal"><span class="codenumber">6</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace01.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-definitions" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Definition of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-properties" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Properties of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-existence-and-uniqueness" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Existence and Uniqueness of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-finding-laplace-transforms" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Finding Laplace Transforms and Inverse Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-important-lessons" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace01.html#reading-questions-laplace01" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#exercises-laplace01" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-sage" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Laplace Transforms with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#laplace01-12" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace02.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Solving Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-derivatives" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Laplace Transforms of the Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-discontinuous-functions" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-harmonic-oscillators" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Forced Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-important-lessons" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace02.html#reading-questions-laplace02" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace02.html#laplace02-exercises" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace03.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Delta Functions and Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-impulse-forcing" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Impulse Forcing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-dirac-delta" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Laplace Transform of the Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-important-lessons" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace03.html#reading-questions-laplace03" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace03.html#laplace03-exercises" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace04.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Convolution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-convolution" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Convolution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-applying-convolution" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Applying the Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-important-lessons" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace04.html#reading-questions-laplace04" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace04.html#laplace04-exercises" class="internal"><span class="codenumber">6.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="laplace05.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Projects for Laplace Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Reference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Readings and References</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="front-colophon"><h2 class="heading hide-type">
+<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+</h2>
+<div class="credit">
+<b class="title">Edition</b> 2024 Edition</div>
+<div class="credit">
+<b class="title">Website</b> <a class="external" href="https://github.com/twjudson/odeproject-public" target="_blank"><code class="code-inline tex2jax_ignore">https://github.com/twjudson/odeproject-public</code></a><details class="ptx-footnote" aria-live="polite" id="frontmatter-1-4-2"><summary class="ptx-footnote__number" title="Footnote 0.0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-1-4-2"><code class="code-inline tex2jax_ignore">github.com/twjudson/odeproject-public</code></div></details>
+</div>
+<div class="para copyright">©2019–2024 Thomas W. Judson</div>
+<div class="para license">Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled “GNU Free Documentation License.”</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="frontmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+<script>diagcess.Base.init()</script>
+</body>
+</html>

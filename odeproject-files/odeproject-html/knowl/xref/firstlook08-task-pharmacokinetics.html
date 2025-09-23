@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="task exercise-like"><h4 class="heading">
+<span class="type">Task</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.3.a</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pharmacokinetics of Malaria Chemoprophylaxis.</span>
+</h4>
+<div class="introduction">
+<div class="para">Your first task is to analyze the anti-malarial drug dosing regimen for those building the hospital. The primary concerns are how soon to start treatment before everyone arrives and the potential risks if employees miss one or two of their scheduled doses. These questions require an understanding of pharmacokinetics.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Pharmacokinetics is the study of what the body does to a drug. Specifically, it refers to the movement of the drug into, through, and out of the body. Understanding the pharmacokinetics of a drug allows medical professionals to develop appropriate drug dosing regimens for their patients.  A complete understanding of the pharmacokinetics of a drug requires information on the processes of absorption, distribution, metabolization, and excretion of the drug from the body. In order to simplify this problem, we will assume that the anti-malarial medication is immediately absorbed into the blood stream and that everyone begins treatment with zero anti-malarial medication in their body. After the drug is absorbed into the blood, the rate of elimination of the drug from the body is proportional to the amount of drug currently in the blood. In other words, the more of the drug in the blood stream, the faster it is removed from the body. We will also assume that the rate of excretion of the drug is the same for everyone.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Atovaquone/proguanil, sold under the trade names Malarone among others, is a combination of two antimalarial medication atovaquone and proguanil. It is used to treat and prevent malaria, including chloroquine-resistant malaria.  A standard adult pill of Malarone contains 250mg of atovaquone and 100mg of proguanil. A typical dose is one pill taken at the same time each day. An individual must maintain at least 300mg of atovaquone and 30mg of proguanil in their blood at all times in order to prevent contracting malaria. A typical adult eliminates atovaquone at a rate that corresponds to a half-life (time to eliminate one half of the original dose) of 48 hours. The half-life of proguanil is 12 hours.<details class="ptx-footnote" aria-live="polite" id="firstlook08-task-pharmacokinetics-2-3-1"><summary class="ptx-footnote__number" title="Footnote 1.8.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-task-pharmacokinetics-2-3-1">Malarone: Prescribing Information. US Food and Drug Administration. <a class="external" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/021078s016lbl.pdf" target="_blank"><code class="code-inline tex2jax_ignore">www.accessdata.fda.gov/drugsatfda_docs/label/2008/021078s016lbl.pdf</code></a>
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para">At <span class="process-math">\(t = 0\text{,}\)</span> a typical adult ingests one pill of Malarone. Write an initial value problem (IVP) that models the mass (mg) of the drug proguanil in the adult’s blood for <span class="process-math">\(t \geq 0\text{.}\)</span> Solve this IVP analytically. After a person takes the first pill of Malarone, if they take no further medication, for how many hours can they expect to have enough proguanil in his blood to prevent contracting malaria?<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-i-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.i"><a href="#firstlook08-task-malarone-i" title="Copy heading and permalink for Task 1.8.3.a.i" aria-label="Copy heading and permalink for Task 1.8.3.a.i">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para">Approximate the solution to the IVP you developed in <a href="firstlook08.html#firstlook08-task-malarone-i" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-i.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.i">Task 1.8.3.a.i</a> over the next seven days (168 hours) by implementing Euler’s method in Sage with two step sizes: <span class="process-math">\(h = 6\)</span> hours and <span class="process-math">\(h = 1\)</span> hour (see <a class="external" href="http://utmost-sage-cell.org/diff-equations" target="_blank"><code class="code-inline tex2jax_ignore">utmost-sage-cell.org/diff-equations</code></a>). Compute the error for both step sizes by comparing your estimate to the analytic solution.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-ii-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-ii-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.ii"><a href="#firstlook08-task-malarone-ii" title="Copy heading and permalink for Task 1.8.3.a.ii" aria-label="Copy heading and permalink for Task 1.8.3.a.ii">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(iii)</span></h5>
+<div class="para">Approximate the solution to the IVP over the next seven days by implementing the RK4 or classic Runge–Kutta method in Sage with step size: <span class="process-math">\(h = 1\)</span> hour. Compute the error for both step sizes by comparing your estimate to the analytic solution (see <a class="external" href="http://utmost-sage-cell.org/diff-equations" target="_blank"><code class="code-inline tex2jax_ignore">utmost-sage-cell.org/diff-equations</code></a>).<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-iii-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-iii-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.iii"><a href="#firstlook08-task-malarone-iii" title="Copy heading and permalink for Task 1.8.3.a.iii" aria-label="Copy heading and permalink for Task 1.8.3.a.iii">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(iv)</span></h5>
+<div class="para">Create a table summarizing the results of all numerical methods (<a href="firstlook08.html#firstlook08-task-malarone-ii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-ii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.ii">Task 1.8.3.a.ii</a> and <a href="firstlook08.html#firstlook08-task-malarone-iii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-iii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.iii">Task 1.8.3.a.iii</a>). This table should include columns for time, the actual mass of proguanil in each subject’s blood (from <a href="firstlook08.html#firstlook08-task-malarone-i" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-i.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.i">Task 1.8.3.a.i</a>), and the approximate values of the solution for all methods and step sizes at <span class="process-math">\(t = 0, 24, 48, \ldots, 168\)</span> only. Your table should have a total of 5 columns. Include an additional entry at the bottom of each of the last 3 columns providing the error for that method and step size. Discuss your results. Your analysis should include a comparison of error for different step sizes and for different methods.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-iv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.iv"><a href="#firstlook08-task-malarone-iv" title="Copy heading and permalink for Task 1.8.3.a.iv" aria-label="Copy heading and permalink for Task 1.8.3.a.iv">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(v)</span></h5>
+<div class="para">Write an IVP that models the mass (mg) of the drug atovaquone in a typical adult’s blood for <span class="process-math">\(t \geq 0\)</span> if a person ingests only one pill of Malarone at <span class="process-math">\(t = 0\text{.}\)</span> Approximate the solution to this IVP using the RK4 method in Sage with step size: <span class="process-math">\(h = 1\)</span> hour.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-v-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-v-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.v"><a href="#firstlook08-task-malarone-v" title="Copy heading and permalink for Task 1.8.3.a.v" aria-label="Copy heading and permalink for Task 1.8.3.a.v">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(vi)</span></h5>
+<div class="para">Using your solutions to parts <a href="firstlook08.html#firstlook08-task-malarone-iii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-iii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.iii">Task 1.8.3.a.iii</a> and <a href="firstlook08.html#firstlook08-task-malarone-v" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-v.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.v">Task 1.8.3.a.v</a>, if an adult ingests one pill of Malarone at the same time each day, how long before your construction crew departure to Africa should your crew begin taking their pills? In other words, how long until everyone has enough proguanil AND atovaquone in their blood to prevent contracting malaria? Illustrate your result using a graph or table.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.vi"><a href="#firstlook08-task-pharmacokinetics-8" title="Copy heading and permalink for Task 1.8.3.a.vi" aria-label="Copy heading and permalink for Task 1.8.3.a.vi">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(vii)</span></h5>
+<div class="para">Assume a typical person reaches a “steady state” level of proguanil and atovaquone in their body after their 8th dose of Malarone. If after reaching “steady state” a person misses one dose, are they at risk of contracting malaria? How about after missing two consecutive doses? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.vii"><a href="#firstlook08-task-pharmacokinetics-9" title="Copy heading and permalink for Task 1.8.3.a.vii" aria-label="Copy heading and permalink for Task 1.8.3.a.vii">🔗</a></div></article><div class="autopermalink" data-description="Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis"><a href="#firstlook08-task-pharmacokinetics" title="Copy heading and permalink for Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis" aria-label="Copy heading and permalink for Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis">🔗</a></div></article><span class="incontext"><a class="internal" href="firstlook08.html#firstlook08-task-pharmacokinetics">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="324" height="324">
+  <defs>
+    <clipPath id="clipPath-0">
+      <rect x="12.0" y="12.0" width="300.0" height="300.0"/>
+    </clipPath>
+    <clipPath id="clipPath-1">
+      <rect x="12.0" y="12.0" width="300.0" height="300.0"/>
+    </clipPath>
+    <marker id="arrow-head-end-1_5_30_75-black" markerWidth="4.3" markerHeight="5.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="3.4" refY="2.5">
+      <path d="M 4.3 2.5L 0.0 5.0L 0.5 3.0L 0.5 2.0L 0.0 0.0Z" fill="black" stroke="none"/>
+    </marker>
+    <marker id="arrow-head-end-1_5_30_75-black-outline" markerWidth="8.3" markerHeight="9.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="5.4" refY="4.5">
+      <path d="M 7.3 6.2 L 3.0 8.7 A 2 2 0 0 1 0.0 7.0 L 0.0 2.0 A 2 2 0 0 1 3.0 0.3 L 7.3 2.8 A 2 2 0 0 1 7.3 6.2 Z" fill="white" stroke="none"/>
+    </marker>
+  </defs>
+  <g id="grid-axes">
+    <g id="grid" stroke="#ccc" stroke-width="1">
+      <line id="line-0" x1="12.0" y1="312.0" x2="12.0" y2="12.0"/>
+      <line id="line-1" x1="54.9" y1="312.0" x2="54.9" y2="12.0"/>
+      <line id="line-2" x1="97.7" y1="312.0" x2="97.7" y2="12.0"/>
+      <line id="line-3" x1="140.6" y1="312.0" x2="140.6" y2="12.0"/>
+      <line id="line-4" x1="183.4" y1="312.0" x2="183.4" y2="12.0"/>
+      <line id="line-5" x1="226.3" y1="312.0" x2="226.3" y2="12.0"/>
+      <line id="line-6" x1="269.1" y1="312.0" x2="269.1" y2="12.0"/>
+      <line id="line-7" x1="312.0" y1="312.0" x2="312.0" y2="12.0"/>
+      <line id="line-8" x1="12.0" y1="312.0" x2="312.0" y2="312.0"/>
+      <line id="line-9" x1="12.0" y1="262.0" x2="312.0" y2="262.0"/>
+      <line id="line-10" x1="12.0" y1="212.0" x2="312.0" y2="212.0"/>
+      <line id="line-11" x1="12.0" y1="162.0" x2="312.0" y2="162.0"/>
+      <line id="line-12" x1="12.0" y1="112.0" x2="312.0" y2="112.0"/>
+      <line id="line-13" x1="12.0" y1="62.0" x2="312.0" y2="62.0"/>
+      <line id="line-14" x1="12.0" y1="12.0" x2="312.0" y2="12.0"/>
+    </g>
+    <g id="axes" stroke="black" stroke-width="2">
+      <line id="line-15" x1="12.0" y1="212.0" x2="312.0" y2="212.0" stroke="black" stroke-width="2"/>
+      <line id="line-16" x1="54.9" y1="312.0" x2="54.9" y2="12.0" stroke="black" stroke-width="2"/>
+      <g id="g-0">
+        <line id="line-17" x1="140.6" y1="215.0" x2="140.6" y2="209.0"/>
+        <line id="line-18" x1="226.3" y1="215.0" x2="226.3" y2="209.0"/>
+      </g>
+      <g id="g-1">
+        <line id="line-19" x1="51.9" y1="112.0" x2="57.9" y2="112.0"/>
+      </g>
+    </g>
+    <g id="label-0" transform="translate(140.6,223.0) translate(-4.5,-0.0)">
+      <g id="g-3">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-2-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="2">
+                <use data-c="32" xlink:href="#MJX-2-TEX-N-32"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-1" transform="translate(226.3,223.0) translate(-4.5,-0.0)">
+      <g id="g-4">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-3-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="4">
+                <use data-c="34" xlink:href="#MJX-3-TEX-N-34"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-2" transform="translate(43.9,112.0) translate(-9.0,-6.2)">
+      <g id="g-5">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.456px" role="img" focusable="false" viewBox="0 -666 500 688" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-4-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="5">
+                <use data-c="35" xlink:href="#MJX-4-TEX-N-35"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-3" transform="translate(308.0,208.0) translate(-6.5,-11.5)">
+      <g id="g-6">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.200px" width="6.536px" height="11.528px" role="img" focusable="false" viewBox="0 -626 361 637" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-5-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="t">
+                <use data-c="1D461" xlink:href="#MJX-5-TEX-I-1D461"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-4" transform="translate(58.9,16.0) translate(0.0,-0.0)">
+      <g id="g-7">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="29.488px" height="18.096px" role="img" focusable="false" viewBox="0 -750 1629 1000" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-6-TEX-I-1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"/>
+            <path id="MJX-6-TEX-N-2061" d=""/>
+            <path id="MJX-6-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/>
+            <path id="MJX-6-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/>
+            <path id="MJX-6-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="6" data-semantic-children="0,4" data-semantic-content="5,0" data-semantic-speech="y left parenthesis t right parenthesis">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="6" data-semantic-operator="appl" data-semantic-speech="y">
+                <use data-c="1D466" xlink:href="#MJX-6-TEX-I-1D466"/>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="5" data-semantic-parent="6" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(490,0)">
+                <use data-c="2061" xlink:href="#MJX-6-TEX-N-2061"/>
+              </g>
+              <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="4" data-semantic-children="2" data-semantic-content="1,3" data-semantic-parent="6" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(490,0)">
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="1" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                  <use data-c="28" xlink:href="#MJX-6-TEX-N-28"/>
+                </g>
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="2" data-semantic-parent="4" data-semantic-speech="t" transform="translate(389,0)">
+                  <use data-c="1D461" xlink:href="#MJX-6-TEX-I-1D461"/>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="3" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                  <use data-c="29" xlink:href="#MJX-6-TEX-N-29"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+  </g>
+  <g id="g-2">
+    <line id="line-20" x1="11.2" y1="317.0" x2="12.8" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-21" x1="10.8" y1="297.0" x2="13.2" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-22" x1="10.0" y1="277.0" x2="13.9" y2="267.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-23" x1="8.4" y1="257.0" x2="15.6" y2="247.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-24" x1="4.9" y1="237.0" x2="19.1" y2="227.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-25" x1="1.3" y1="217.0" x2="22.7" y2="207.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-26" x1="4.9" y1="197.0" x2="19.1" y2="187.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-27" x1="8.4" y1="177.0" x2="15.6" y2="167.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-28" x1="10.0" y1="157.0" x2="13.9" y2="147.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-29" x1="10.8" y1="137.0" x2="13.2" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-30" x1="11.2" y1="117.0" x2="12.8" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-31" x1="11.4" y1="97.0" x2="12.6" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-32" x1="11.6" y1="77.0" x2="12.4" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-33" x1="11.7" y1="57.0" x2="12.3" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-34" x1="11.7" y1="37.0" x2="12.3" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-35" x1="11.8" y1="17.0" x2="12.2" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-36" x1="54.0" y1="317.0" x2="55.7" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-37" x1="53.5" y1="297.0" x2="56.2" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-38" x1="52.5" y1="277.0" x2="57.2" y2="267.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-39" x1="49.5" y1="257.0" x2="60.2" y2="247.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-40" x1="44.1" y1="234.5" x2="65.6" y2="229.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-41" x1="44.1" y1="212.0" x2="65.6" y2="212.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-42" x1="44.1" y1="194.5" x2="65.6" y2="189.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-43" x1="49.5" y1="177.0" x2="60.2" y2="167.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-44" x1="52.5" y1="157.0" x2="57.2" y2="147.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-45" x1="53.5" y1="137.0" x2="56.2" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-46" x1="54.0" y1="117.0" x2="55.7" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-47" x1="54.3" y1="97.0" x2="55.5" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-48" x1="54.4" y1="77.0" x2="55.3" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-49" x1="54.5" y1="57.0" x2="55.2" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-50" x1="54.6" y1="37.0" x2="55.1" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-51" x1="54.6" y1="17.0" x2="55.1" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-52" x1="96.8" y1="317.0" x2="98.6" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-53" x1="96.2" y1="297.0" x2="99.2" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-54" x1="94.7" y1="277.0" x2="100.8" y2="267.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-55" x1="87.0" y1="257.0" x2="108.4" y2="247.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-56" x1="87.0" y1="229.5" x2="108.4" y2="234.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-57" x1="87.0" y1="207.0" x2="108.4" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-58" x1="87.0" y1="189.5" x2="108.4" y2="194.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-59" x1="87.0" y1="177.0" x2="108.4" y2="167.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-60" x1="94.7" y1="157.0" x2="100.8" y2="147.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-61" x1="96.2" y1="137.0" x2="99.2" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-62" x1="96.8" y1="117.0" x2="98.6" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-63" x1="97.1" y1="97.0" x2="98.3" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-64" x1="97.3" y1="77.0" x2="98.2" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-65" x1="97.4" y1="57.0" x2="98.1" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-66" x1="97.4" y1="37.0" x2="98.0" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-67" x1="97.5" y1="17.0" x2="97.9" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-68" x1="139.6" y1="317.0" x2="141.6" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-69" x1="138.8" y1="297.0" x2="142.4" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-70" x1="136.3" y1="277.0" x2="144.9" y2="267.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-71" x1="129.9" y1="252.0" x2="151.3" y2="252.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-72" x1="133.4" y1="227.0" x2="147.7" y2="237.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-73" x1="135.2" y1="207.0" x2="145.9" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-74" x1="133.4" y1="187.0" x2="147.7" y2="197.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-75" x1="129.9" y1="172.0" x2="151.3" y2="172.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-76" x1="136.3" y1="157.0" x2="144.9" y2="147.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-77" x1="138.8" y1="137.0" x2="142.4" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-78" x1="139.6" y1="117.0" x2="141.6" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-79" x1="139.9" y1="97.0" x2="141.2" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-80" x1="140.1" y1="77.0" x2="141.0" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-81" x1="140.2" y1="57.0" x2="140.9" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-82" x1="140.3" y1="37.0" x2="140.8" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-83" x1="140.3" y1="17.0" x2="140.8" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-84" x1="182.3" y1="317.0" x2="184.6" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-85" x1="181.3" y1="297.0" x2="185.6" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-86" x1="176.3" y1="277.0" x2="190.6" y2="267.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-87" x1="172.7" y1="247.0" x2="194.1" y2="257.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-88" x1="179.1" y1="227.0" x2="187.7" y2="237.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-89" x1="179.9" y1="207.0" x2="187.0" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-90" x1="179.1" y1="187.0" x2="187.7" y2="197.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-91" x1="172.7" y1="167.0" x2="194.1" y2="177.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-92" x1="176.3" y1="157.0" x2="190.6" y2="147.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-93" x1="181.3" y1="137.0" x2="185.6" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-94" x1="182.3" y1="117.0" x2="184.6" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-95" x1="182.7" y1="97.0" x2="184.1" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-96" x1="182.9" y1="77.0" x2="183.9" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-97" x1="183.1" y1="57.0" x2="183.8" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-98" x1="183.1" y1="37.0" x2="183.7" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-99" x1="183.2" y1="17.0" x2="183.7" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-100" x1="225.0" y1="317.0" x2="227.5" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-101" x1="223.6" y1="297.0" x2="229.0" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-102" x1="215.6" y1="274.5" x2="237.0" y2="269.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-103" x1="220.9" y1="247.0" x2="231.6" y2="257.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-104" x1="223.2" y1="227.0" x2="229.3" y2="237.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-105" x1="223.6" y1="207.0" x2="229.0" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-106" x1="223.2" y1="187.0" x2="229.3" y2="197.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-107" x1="220.9" y1="167.0" x2="231.6" y2="177.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-108" x1="215.6" y1="154.5" x2="237.0" y2="149.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-109" x1="223.6" y1="137.0" x2="229.0" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-110" x1="225.0" y1="117.0" x2="227.5" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-111" x1="225.5" y1="97.0" x2="227.1" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-112" x1="225.8" y1="77.0" x2="226.8" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-113" x1="225.9" y1="57.0" x2="226.7" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-114" x1="226.0" y1="37.0" x2="226.6" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-115" x1="226.1" y1="17.0" x2="226.5" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-116" x1="267.7" y1="317.0" x2="270.6" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-117" x1="265.6" y1="297.0" x2="272.7" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-118" x1="258.4" y1="269.5" x2="279.9" y2="274.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-119" x1="265.6" y1="247.0" x2="272.7" y2="257.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-120" x1="266.8" y1="227.0" x2="271.5" y2="237.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-121" x1="267.0" y1="207.0" x2="271.3" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-122" x1="266.8" y1="187.0" x2="271.5" y2="197.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-123" x1="265.6" y1="167.0" x2="272.7" y2="177.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-124" x1="258.4" y1="149.5" x2="279.9" y2="154.5" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-125" x1="265.6" y1="137.0" x2="272.7" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-126" x1="267.7" y1="117.0" x2="270.6" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-127" x1="268.3" y1="97.0" x2="270.0" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-128" x1="268.6" y1="77.0" x2="269.7" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-129" x1="268.7" y1="57.0" x2="269.5" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-130" x1="268.8" y1="37.0" x2="269.4" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-131" x1="268.9" y1="17.0" x2="269.4" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-132" x1="310.3" y1="317.0" x2="313.6" y2="307.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-133" x1="306.6" y1="297.0" x2="317.4" y2="287.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-134" x1="304.9" y1="267.0" x2="319.1" y2="277.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-135" x1="309.3" y1="247.0" x2="314.7" y2="257.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-136" x1="310.1" y1="227.0" x2="313.9" y2="237.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-137" x1="310.2" y1="207.0" x2="313.8" y2="217.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-138" x1="310.1" y1="187.0" x2="313.9" y2="197.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-139" x1="309.3" y1="167.0" x2="314.7" y2="177.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-140" x1="304.9" y1="147.0" x2="319.1" y2="157.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-141" x1="306.6" y1="137.0" x2="317.4" y2="127.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-142" x1="310.3" y1="117.0" x2="313.6" y2="107.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-143" x1="311.1" y1="97.0" x2="312.9" y2="87.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-144" x1="311.4" y1="77.0" x2="312.6" y2="67.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-145" x1="311.6" y1="57.0" x2="312.4" y2="47.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-146" x1="311.7" y1="37.0" x2="312.3" y2="27.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+    <line id="line-147" x1="311.8" y1="17.0" x2="312.2" y2="7.0" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow-head-end-1_5_30_75-black)"/>
+  </g>
+  <path id="path-0" d="M 12.0 205.4 L 14.6 204.1 L 17.2 202.9 L 19.8 201.8 L 22.4 200.6 L 25.0 199.5 L 27.6 198.5 L 30.2 197.4 L 32.8 196.4 L 35.4 195.5 L 38.0 194.5 L 40.6 193.6 L 43.2 192.7 L 45.8 191.8 L 48.4 190.9 L 51.0 190.1 L 53.6 189.2 L 56.2 188.4 L 58.8 187.6 L 61.4 186.8 L 63.9 186.1 L 66.5 185.3 L 69.1 184.6 L 71.7 183.8 L 74.3 183.1 L 76.9 182.4 L 79.5 181.7 L 82.1 181.0 L 84.7 180.4 L 87.3 179.7 L 89.9 179.0 L 92.5 178.4 L 95.1 177.7 L 97.7 177.1 L 100.3 176.5 L 102.9 175.9 L 105.5 175.2 L 108.1 174.6 L 110.7 174.0 L 113.3 173.4 L 115.9 172.8 L 118.5 172.2 L 121.1 171.6 L 123.7 171.0 L 126.3 170.4 L 128.9 169.8 L 131.5 169.2 L 134.1 168.6 L 136.7 168.0 L 139.3 167.4 L 141.9 166.8 L 144.5 166.2 L 147.1 165.5 L 149.7 164.9 L 152.3 164.2 L 154.9 163.4 L 157.5 162.7 L 160.1 161.8 L 162.6 160.9 L 165.2 160.0 L 167.8 158.9 L 170.4 157.8 L 173.0 156.5 L 175.6 155.1 L 178.2 153.5 L 180.8 151.7 L 183.4 149.6 L 186.0 147.1 L 188.6 144.2 L 191.2 140.7 L 193.8 136.4 L 196.4 131.1 L 199.0 124.5 L 201.6 116.0 L 204.2 104.5 L 206.8 88.7 L 209.4 65.7 L 212.0 29.7 L 214.6 -33.1 L 217.2 -170.6 L 219.8 -684.5" stroke="green" stroke-width="2" fill="none" clip-path="url(#clipPath-1)"/>
+  <path id="path-1" d="M 12.0 212.0 L 14.6 210.8 L 17.2 209.7 L 19.8 208.7 L 22.4 207.7 L 25.0 206.8 L 27.6 205.9 L 30.2 205.1 L 32.8 204.4 L 35.4 203.7 L 38.0 203.1 L 40.6 202.5 L 43.2 202.0 L 45.8 201.5 L 48.4 201.2 L 51.0 200.8 L 53.6 200.6 L 56.2 200.4 L 58.8 200.2 L 61.4 200.1 L 63.9 200.2 L 66.5 200.2 L 69.1 200.4 L 71.7 200.6 L 74.3 201.0 L 76.9 201.4 L 79.5 201.9 L 82.1 202.5 L 84.7 203.2 L 87.3 203.9 L 89.9 204.8 L 92.5 205.7 L 95.1 206.8 L 97.7 207.9 L 100.3 209.2 L 102.9 210.5 L 105.5 211.9 L 108.1 213.4 L 110.7 214.9 L 113.3 216.5 L 115.9 218.1 L 118.5 219.8 L 121.1 221.5 L 123.7 223.3 L 126.3 225.0 L 128.9 226.8 L 131.5 228.6 L 134.1 230.3 L 136.7 232.0 L 139.3 233.7 L 141.9 235.4 L 144.5 237.0 L 147.1 238.5 L 149.7 240.1 L 152.3 241.5 L 154.9 242.9 L 157.5 244.3 L 160.1 245.6 L 162.6 246.8 L 165.2 248.0 L 167.8 249.1 L 170.4 250.2 L 173.0 251.3 L 175.6 252.2 L 178.2 253.2 L 180.8 254.1 L 183.4 254.9 L 186.0 255.8 L 188.6 256.6 L 191.2 257.3 L 193.8 258.0 L 196.4 258.8 L 199.0 259.4 L 201.6 260.1 L 204.2 260.7 L 206.8 261.3 L 209.4 261.9 L 212.0 262.5 L 214.6 263.1 L 217.2 263.6 L 219.8 264.2 L 222.4 264.7 L 225.0 265.3 L 227.6 265.8 L 230.2 266.3 L 232.8 266.8 L 235.4 267.2 L 238.0 267.7 L 240.6 268.2 L 243.2 268.6 L 245.8 269.1 L 248.4 269.6 L 251.0 270.0 L 253.6 270.5 L 256.2 270.9 L 258.8 271.3 L 261.4 271.8 L 263.9 272.2 L 266.5 272.6 L 269.1 273.0" stroke="blue" stroke-width="2" fill="none" clip-path="url(#clipPath-1)"/>
+  <path id="path-2" d="M 12.0 232.0 L 14.6 230.3 L 17.2 228.7 L 19.8 227.3 L 22.4 226.0 L 25.0 224.8 L 27.6 223.8 L 30.2 222.9 L 32.8 222.0 L 35.4 221.3 L 38.0 220.7 L 40.6 220.2 L 43.2 219.7 L 45.8 219.4 L 48.4 219.1 L 51.0 218.9 L 53.6 218.7 L 56.2 218.6 L 58.8 218.7 L 61.4 218.7 L 63.9 218.9 L 66.5 219.1 L 69.1 219.4 L 71.7 219.7 L 74.3 220.2 L 76.9 220.6 L 79.5 221.2 L 82.1 221.8 L 84.7 222.4 L 87.3 223.2 L 89.9 223.9 L 92.5 224.7 L 95.1 225.6 L 97.7 226.4 L 100.3 227.3 L 102.9 228.3 L 105.5 229.2 L 108.1 230.2 L 110.7 231.2 L 113.3 232.3 L 115.9 233.3 L 118.5 234.4 L 121.1 235.4 L 123.7 236.4 L 126.3 237.5 L 128.9 238.5 L 131.5 239.6 L 134.1 240.6 L 136.7 241.6 L 139.3 242.5 L 141.9 243.5 L 144.5 244.5 L 147.1 245.4 L 149.7 246.3 L 152.3 247.2 L 154.9 248.1 L 157.5 248.9 L 160.1 249.7 L 162.6 250.5 L 165.2 251.3 L 167.8 252.1 L 170.4 252.8 L 173.0 253.6 L 175.6 254.3 L 178.2 255.0 L 180.8 255.7 L 183.4 256.3 L 186.0 257.0 L 188.6 257.6 L 191.2 258.3 L 193.8 258.9 L 196.4 259.4 L 199.0 260.0 L 201.6 260.6 L 204.2 261.2 L 206.8 261.7 L 209.4 262.3 L 212.0 262.8 L 214.6 263.4 L 217.2 263.9 L 219.8 264.4 L 222.4 264.9 L 225.0 265.4 L 227.6 265.9 L 230.2 266.3 L 232.8 266.8 L 235.4 267.3 L 238.0 267.8 L 240.6 268.2 L 243.2 268.7 L 245.8 269.2 L 248.4 269.6 L 251.0 270.1 L 253.6 270.5 L 256.2 270.9 L 258.8 271.3 L 261.4 271.8 L 263.9 272.2 L 266.5 272.6 L 269.1 273.0" stroke="red" stroke-width="2" fill="none" clip-path="url(#clipPath-1)"/>
+</svg>

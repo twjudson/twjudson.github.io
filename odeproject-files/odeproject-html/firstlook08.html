@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ODE-Project Projects for First-Order Differential Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="The Ordinary Differential Equations Project">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.8';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="odeproject.html"><span class="title">The Ordinary Differential Equations Project</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="firstlook07.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="firstlook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="systems.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\real}{\operatorname{Re}}
+\newcommand{\imaginary}{\operatorname{Im}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="firstlook.html" class="internal"><span class="codenumber">1</span> <span class="title">A First Look at Differential Equations</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook01.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Modeling with Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-exponential-growth" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-logistic-growth" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Logistic Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-spring-mass" class="internal"><span class="codenumber">1.1.3</span> <span class="title">A Spring-Mass Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-predator-prey" class="internal"><span class="codenumber">1.1.4</span> <span class="title">A Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-modeling-hiv" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Modeling the HIV-1 Virus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-questions-for-thought" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Some Questions for Thought</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-important-lessons" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook01.html#reading-questions-firstlook01" class="internal"><span class="codenumber">1.1.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-exercises" class="internal"><span class="codenumber">1.1.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook01.html#firstlook01-subsection-sage" class="internal"><span class="codenumber">1.1.10</span> <span class="title">An Introduction to <em class="emphasis">Sage</em></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook01.html#firstlook01-sage-exercises" class="internal"><span class="codenumber">1.1.10</span> <span class="title"><em class="emphasis">Sage</em> Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook02.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Separable Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-separable-de" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Separable Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-newtons-law-cooling" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Newton’s Law of Cooling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-mixing-problem" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Mixing Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-retirement" class="internal"><span class="codenumber">1.2.4</span> <span class="title">A Retirement Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-some-theory" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Some Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-what-can-go-wrong" class="internal"><span class="codenumber">1.2.6</span> <span class="title">What Can Go Wrong</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-important-lessons" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook02.html#reading-questions-firstlook02" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-exercises-" class="internal"><span class="codenumber">1.2.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook02.html#firstlook02-subsection-sage" class="internal"><span class="codenumber">1.2.10</span> <span class="title">Sage—Quick Start Guide to Solving Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook03.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Geometric and Quantitative Analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits" class="internal"><span class="codenumber">1.3.1</span> <span class="title">RC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-rc-circuits-revisited" class="internal"><span class="codenumber">1.3.3</span> <span class="title">RC Circuits Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-direction-fields" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Plotting Direction Fields with Sage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-autonomous-equations" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Autonomous Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-important-lessons" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook03.html#reading-questions-firstlook03" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-exercises" class="internal"><span class="codenumber">1.3.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage" class="internal"><span class="codenumber">1.3.9</span> <span class="title">Sage—Plotting Direction Fields and Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-direction-fields-sage" class="internal"><span class="codenumber">1.3.9.1</span> <span class="title">Plotting direction fields</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-desolve_rk4" class="internal"><span class="codenumber">1.3.9.2</span> <span class="title">Plotting solutions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook03.html#firstlook03-subsection-sage-4" class="internal"><span class="codenumber">1.3.9.3</span> <span class="title">Sage Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook04.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Analyzing Equations Numerically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-eulers-method" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-error-bound" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding an Error Bound</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-improving-euler" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Improving Euler’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-important-lessons" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook04.html#reading-questions-firstlook04" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook04.html#exercises-firstlook04" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook04.html#firstlook04-subsection-sage-project" class="internal"><span class="codenumber">1.4.7</span> <span class="title">Sage—Numerical Routines for solving ODEs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook05.html" class="internal"><span class="codenumber">1.5</span> <span class="title">First-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mine-tailings" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Mine Tailings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-first-order-linear-de" class="internal"><span class="codenumber">1.5.2</span> <span class="title">First-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-mixing-models" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Mixing Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-finance-models" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Finance Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-8" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook05.html#firstlook05-subsection-important-lessons" class="internal"><span class="codenumber">1.5.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook05.html#reading-questions-firstlook05" class="internal"><span class="codenumber">1.5.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook05.html#exercises-firstlook05" class="internal"><span class="codenumber">1.5.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook06.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Existence and Uniqueness of Solutions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-existence" class="internal"><span class="codenumber">1.6.1</span> <span class="title">The Existence and Uniqueness Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-picard" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Picard Iteration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook06.html#firstlook06-subsection-important-lessons" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook06.html#reading-questions-firstlook06" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook06.html#exercises-firstlook06" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="firstlook07.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Bifurcations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-logisitic-harvesting" class="internal"><span class="codenumber">1.7.1</span> <span class="title">The Logistic Model with Harvesting Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-one-parameter-families" class="internal"><span class="codenumber">1.7.2</span> <span class="title">One-Parameter Families</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-subsection-important-lessons" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="firstlook07.html#reading-questions-firstlook07" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="firstlook07.html#firstlook07-exercises" class="internal"><span class="codenumber">1.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="firstlook08.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Projects for First-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Systems of Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems01.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Modeling with Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-predator-prey" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Predator-Prey Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-spring-mass" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Spring-Mass Model Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-epidemics" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Modeling Epidemics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-important-lessons" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems01.html#reading-questions-system01" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems01.html#systems01-exercises" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems01.html#systems01-subsection-sage" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems02.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Geometry of Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-direction-fields" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-predator-prey" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Modified Predator-Prey System</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-competing-species" class="internal"><span class="codenumber">2.2.3</span> <span class="title">A Competing Species Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-sage-direction-fields" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Plotting Direction Fields with <em class="emphasis">Sage</em></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-phase-plane-analysis" class="internal"><span class="codenumber">2.2.5</span> <span class="title">A Summary of Phase Plane Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#systems02-subsection-important-lessons" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems02.html#reading-questions-system02" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems02.html#systems02-exercises" class="internal"><span class="codenumber">2.2.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems02.html#subsection-sytems02-sage" class="internal"><span class="codenumber">2.2.9</span> <span class="title">Plotting Nullclines with <em class="emphasis">Sage</em></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems03.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Numerical Techniques for Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-duffing" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Duffing’s Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-eulers-method" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Euler’s Method for Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-taylor-series" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Taylor Series Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-existence-uniqueness" class="internal"><span class="codenumber">2.3.4</span> <span class="title">A Word about Existence and Uniqueness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-important-lessons" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems03.html#reading-questions-system03" class="internal"><span class="codenumber">2.3.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-exercises" class="internal"><span class="codenumber">2.3.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Systems with Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems03.html#systems03-subsection-sage-12" class="internal"><span class="codenumber">2.3.8</span> <span class="title">Sage Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems04.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Solving Systems Analytically</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-partially-coupled" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Partially Coupled Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-sage-linear-systems" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Using <em class="emphasis">Sage</em> to Solve Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-harmonic-oscillator" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems04.html#systems04-subsection-important-lessons" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="systems04.html#reading-questions-system04" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="systems04.html#systems04-exercises" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="systems05.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Projects for Systems of Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear.html" class="internal"><span class="codenumber">3</span> <span class="title">Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear01.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Linear Algebra in a Nutshell</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-matrices" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-linear-independence" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-finding-eigenvalues" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-important-lessons" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear01.html#reading-questions-linear01" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear01.html#exercises-linear01" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear01.html#linear01-subsection-sage-project" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Finding Eigenvalues and Eigenvectors with Sage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear02.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Planar Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-planar-systems" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Planar Systems and <span class="process-math">\(2 \times 2\)</span> Matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-systems-of-de" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Systems of Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-solving-systems" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Solving Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear02.html#linear02-subsection-important-lessons" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear02.html#reading-questions-linear02" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear02.html#linear02-exercises" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear03.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Phase Plane Analysis of Linear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-different-signs" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Case <span class="process-math">\(\lambda_1 \lt 0 \lt \lambda_2\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-negative" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \lt \lambda_2 \lt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-eigenvalues-positive" class="internal"><span class="codenumber">3.3.3</span> <span class="title">The Case <span class="process-math">\(\lambda_1  \gt \lambda_2 \gt 0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear03.html#linear03-subsection-important-lessons" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear03.html#reading-questions-linear03" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear03.html#linear03-exercises" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear04.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Complex Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-spiral-sinks-sources" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Spiral Sinks and Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-quick-start" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Solving Systems with Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear04.html#linear04-subsection-important-lessons" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear04.html#reading-questions-linear04" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear04.html#linear04-exercises" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear05.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Repeated Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-quick-start" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Solving Systems with Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear05.html#linear05-subsection-important-lessons" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear05.html#reading-questions-linear05" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear05.html#exercises-linear05" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear06.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Changing Coordinates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-linear-maps" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Linear Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-changing-coordinates-system" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Systems and Changing Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-distinct-real-eigenvalues" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Distinct Real Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-complex-eigenvalues" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Complex Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-repeated-eigenvalues" class="internal"><span class="codenumber">3.6.6</span> <span class="title">Repeated Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear06.html#linear06-subsection-important-lessons" class="internal"><span class="codenumber">3.6.7</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear06.html#reading-questions-linear06" class="internal"><span class="codenumber">3.6.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear06.html#linear06-exercises" class="internal"><span class="codenumber">3.6.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear07.html" class="internal"><span class="codenumber">3.7</span> <span class="title">The Trace-Determinant Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-trace-determinant" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Trace-Determinant Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-parameterized-families" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Parameterized Families of Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear07.html#linear07-subsection-important-lessons" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear07.html#reading-questions-linear07" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear07.html#linear07-exercises" class="internal"><span class="codenumber">3.7.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear08.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Linear Systems in Higher Dimensions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-higher-order-systems" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Higher-Order Linear Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-geometry" class="internal"><span class="codenumber">3.8.2</span> <span class="title">The Geometry of Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-double-spring-mass" class="internal"><span class="codenumber">3.8.3</span> <span class="title">The Double Spring-Mass Systems Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear08.html#linear08-subsection-important-lessons" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear08.html#reading-questions-linear08" class="internal"><span class="codenumber">3.8.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear08.html#linear08-exercises" class="internal"><span class="codenumber">3.8.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear09.html" class="internal"><span class="codenumber">3.9</span> <span class="title">The Matrix Exponential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-matrix-exponential" class="internal"><span class="codenumber">3.9.1</span> <span class="title">The Exponential of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-generalized-eigenvalues" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Generalized Eigenvalues</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linear09.html#linear09-subsection-important-lessons" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="linear09.html#reading-questions-linear09" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear09.html#linear09-exercises" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear10.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Projects Systems of Linear Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="secondorder.html" class="internal"><span class="codenumber">4</span> <span class="title">Second-Order Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder01.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Homogeneous Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-rlc-circuit" class="internal"><span class="codenumber">4.1.1</span> <span class="title">RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-second-order-linear-de" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second-Order Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-harmonic-oscillators" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Classifying Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-important-lessons" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder01.html#reading-questions-secondorder01" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-subsection-sage" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Solving Second Order Linear Equations with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder01.html#secondorder01-exercises-sage" class="internal"><span class="codenumber">4.1.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder02.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-nonhomogeneous-de" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Nonhomogeneous Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-forcing" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Forcing Terms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-undetermined-coefficients" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The Method of Undetermined Coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-strategy" class="internal"><span class="codenumber">4.2.4</span> <span class="title">A Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-subsection-important-lessons" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder02.html#reading-questions-secondorder02" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder02.html#secondorder02-exercises" class="internal"><span class="codenumber">4.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder03.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Sinusoidal Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-complexification" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Complexification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-qualitative-analysis" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Qualitative Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-subsection-important-lessons" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder03.html#reading-questions-secondorder03" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder03.html#secondorder03-exercises" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secondorder04.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Forcing and Resonance</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-resonance" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Resonance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-beats" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Beats or the Case <span class="process-math">\(\omega \neq \omega_0\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-forced-damped" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Forced Damped Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-subsection-important-lessons" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="secondorder04.html#reading-questions-secondorder04" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="secondorder04.html#secondorder04-exercises" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="secondorder05.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Projects for Second-Order Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="nonlinear.html" class="internal"><span class="codenumber">5</span> <span class="title">Nonlinear Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear01.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Linearization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Equilibrium Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-linearization-fails" class="internal"><span class="codenumber">5.1.2</span> <span class="title">When Linearization Fails</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-subsection-important-lessons" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear01.html#reading-questions-nonlinear01" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear01.html#nonlinear01-exercises" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear02.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Hamiltonian Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-pendulum" class="internal"><span class="codenumber">5.2.1</span> <span class="title">The Nonlinear Pendulum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-hamiltonian-systems" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-ideal-pendulum" class="internal"><span class="codenumber">5.2.3</span> <span class="title">The Ideal Pendulum Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-equilibrium-solutions" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Equilibrium Solutions of Hamiltonian Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-subsection-important-lessons" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear02.html#reading-questions-nonlinear02" class="internal"><span class="codenumber">5.2.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear02.html#nonlinear02-exercises" class="internal"><span class="codenumber">5.2.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear03.html" class="internal"><span class="codenumber">5.3</span> <span class="title">More Nonlinear Mechanics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-pendulum-damping" class="internal"><span class="codenumber">5.3.1</span> <span class="title">The Nonlinear Pendulum and Damping</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-lyapunov-functions" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Lyapunov Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-gradient-systems" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Gradient Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-subsection-important-lessons" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear03.html#reading-questions-nonlinear03" class="internal"><span class="codenumber">5.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear03.html#nonlinear03-exercises" class="internal"><span class="codenumber">5.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="nonlinear04.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Hopf Bifurcation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-bifurcations" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bifurcations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-hopf-bifurcation" class="internal"><span class="codenumber">5.4.2</span> <span class="title">The Hopf Bifurcation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-subsection-important-lessons" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="nonlinear04.html#reading-questions-nonlinear04" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="nonlinear04.html#nonlinear04-exercises" class="internal"><span class="codenumber">5.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="nonlinear05.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Projects</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="laplace.html" class="internal"><span class="codenumber">6</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace01.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Laplace Transform</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-definitions" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Definition of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-properties" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Properties of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-existence-and-uniqueness" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Existence and Uniqueness of the Laplace Transform</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-finding-laplace-transforms" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Finding Laplace Transforms and Inverse Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-important-lessons" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace01.html#reading-questions-laplace01" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#exercises-laplace01" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace01.html#laplace01-subsection-sage" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Laplace Transforms with Sage</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace01.html#laplace01-12" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace02.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Solving Initial Value Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-derivatives" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Laplace Transforms of the Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-discontinuous-functions" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-harmonic-oscillators" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Forced Harmonic Oscillators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace02.html#laplace02-subsection-important-lessons" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace02.html#reading-questions-laplace02" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace02.html#laplace02-exercises" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace03.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Delta Functions and Forcing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-impulse-forcing" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Impulse Forcing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-dirac-delta" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Laplace Transform of the Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace03.html#laplace03-subsection-important-lessons" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace03.html#reading-questions-laplace03" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace03.html#laplace03-exercises" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="laplace04.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Convolution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-convolution" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Convolution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-applying-convolution" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Applying the Convolution Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="laplace04.html#laplace04-subsection-important-lessons" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Important Lessons</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="laplace04.html#reading-questions-laplace04" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="laplace04.html#laplace04-exercises" class="internal"><span class="codenumber">6.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="laplace05.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Projects for Laplace Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Reference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Readings and References</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="firstlook08"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Projects for First-Order Differential Equations</span>
+</h2>
+<article class="project project-like" id="firstlook08-project-spruce-budworm"><h3 class="heading">
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project—The Spruce Budworm.</span>
+</h3>
+<div class="introduction" id="firstlook08-project-spruce-budworm-2">
+<div class="para" id="firstlook08-project-spruce-budworm-2-1">
+<em class="emphasis">Choristoneura fumiferana</em> or the <em class="emphasis">eastern spruce budworm</em> is a species of moth native to the eastern United States and Canada. The caterpillars feed on the needles of spruce and fir trees. Populations can experience significant oscillations.  The spruce budworm population remains at a relatively low, constant level most of the time.  However, outbreaks have been recurring approximately every three decades, and studies suggest the spruce budworm has been breaking out in eastern North America for thousands of years.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-project-spruce-budworm-2-2">Outbreaks of the spruce budworm have been responsible for some major deforestations in Canada and the United States. The eastern spruce budworm is considered one of the most destructive forest pests in North America.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-project-spruce-budworm-2-3">You are acting as a consultant to the state department of forestry.  Your task is to explain how outbreaks occur and how often the state can expect outbreaks.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook08-project-spruce-budworm-2-4">
+<div class="para">The equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ludwig-1978.html" id="firstlook08-equation-spruce-budworm">
+\begin{equation}
+x' = r \left( 1 - \frac{x}{K} \right) x - c \frac{x^2}{a + x^2}\tag{1.8.1}
+\end{equation}
+</div>
+<div class="para">has been used to describe the dynamics of spruce budworm populations, where the variable <span class="process-math">\(x\)</span> denotes the population or density of the insect <a href="backmatter-3.html#ludwig-1978" class="xref" data-knowl="./knowl/xref/ludwig-1978.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 16: The Journal of Animal Ecology">[16]</a>.  One explanation that has been given for the occurrence of outbreaks is based on the multiple bifurcations that occur with this differential equation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="firstlook08-project-spruce-budworm-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="firstlook08-project-spruce-budworm-3-1-1">Explain how <a href="firstlook08.html#firstlook08-equation-spruce-budworm" class="xref" data-knowl="./knowl/xref/firstlook08-equation-spruce-budworm.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.8.1">(1.8.1)</a> can be used to model the spruce budworm population.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.1.a"><a href="#firstlook08-project-spruce-budworm-3" title="Copy heading and permalink for Task 1.8.1.a" aria-label="Copy heading and permalink for Task 1.8.1.a">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-spruce-budworm-ii"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="firstlook08-task-spruce-budworm-ii-1-1">
+<div class="para">If <span class="process-math">\(a = 0.01\text{,}\)</span> <span class="process-math">\(c = 1\text{,}\)</span> and <span class="process-math">\(K = 1\text{,}\)</span> we have a family of differential equations parameterized by <span class="process-math">\(r\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x' = rx(1-x) - \frac{x^2}{0.01 + x^2}.
+\end{equation*}
+</div>
+<div class="para">Solve the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+rx(1-x) - \frac{x^2}{0.01 + x^2} = 0
+\end{equation*}
+</div>
+<div class="para">and plot the result in the <span class="process-math">\(xr\)</span>-plane for <span class="process-math">\(0 \leq r \lt 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-spruce-budworm-ii-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.1.b"><a href="#firstlook08-task-spruce-budworm-ii" title="Copy heading and permalink for Task 1.8.1.b" aria-label="Copy heading and permalink for Task 1.8.1.b">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-spruce-budworm-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="firstlook08-project-spruce-budworm-5-1-1">To find the bifurcation diagram for the spruce budworm equation, reflect the graph obtained in part <a href="firstlook08.html#firstlook08-task-spruce-budworm-ii" class="xref" data-knowl="./knowl/xref/firstlook08-task-spruce-budworm-ii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.1.b">Task 1.8.1.b</a> about the line <span class="process-math">\(r= x\)</span> line.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.1.c"><a href="#firstlook08-project-spruce-budworm-5" title="Copy heading and permalink for Task 1.8.1.c" aria-label="Copy heading and permalink for Task 1.8.1.c">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-spruce-budworm-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="firstlook08-project-spruce-budworm-6-1-1">Estimate the two bifurcation values from your graph. Explain what happens to the population as <span class="process-math">\(r\)</span> increases. That is, when does an outbreak occur?  What happens after an outbreak?<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.1.d"><a href="#firstlook08-project-spruce-budworm-6" title="Copy heading and permalink for Task 1.8.1.d" aria-label="Copy heading and permalink for Task 1.8.1.d">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-spruce-budworm-7"><h4 class="heading">
+<span class="codenumber">(e)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Your Final Report.</span>
+</h4>
+<div class="para" id="firstlook08-project-spruce-budworm-7-2-1">Your final report should contain a one-page executive summary.  The executive summary should summarize your work in such a way that the reader can rapidly become acquainted with the material. It should contain a brief description of the problem, important background information, a discussion of pertinent assumptions, a short description of your methodology, concise analysis, and your main conclusions. Assume the reader is familiar with the basics of calculus and differential equations, so there is no need to walk through every step of your solution process or include equations. However, you should still describe the processes and mathematical techniques you used to reach your conclusions and explain why you used them.  Refer the reader to the appendices as needed.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="firstlook08-project-spruce-budworm-7-2-2">
+<div class="para">Appendices should be neatly formatted and present information in a logical manner. <em class="emphasis">DO NOT</em> simply print out Sage code. Consolidate your results and provide a short explanation of what it is the reader is seeing while also highlighting key pieces of information in the appendix.</div>
+<ul class="disc" id="firstlook08-project-spruce-budworm-7-2-2-2">
+<li id="firstlook08-project-spruce-budworm-7-2-2-2-1">
+<div class="para" id="firstlook08-project-spruce-budworm-7-2-2-2-1-1">Appendix A—Answers and analysis<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-7-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-project-spruce-budworm-7-2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook08-project-spruce-budworm-7-2-2-2-2">
+<div class="para" id="firstlook08-project-spruce-budworm-7-2-2-2-2-1">Additional Appendices—Include additional appendices as necessary.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-7-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-project-spruce-budworm-7-2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-spruce-budworm-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.1.e: Your Final Report"><a href="#firstlook08-project-spruce-budworm-7" title="Copy heading and permalink for Task 1.8.1.e: Your Final Report" aria-label="Copy heading and permalink for Task 1.8.1.e: Your Final Report">🔗</a></div></article><div class="autopermalink" data-description="Project 1.8.1: Project—The Spruce Budworm"><a href="#firstlook08-project-spruce-budworm" title="Copy heading and permalink for Project 1.8.1: Project—The Spruce Budworm" aria-label="Copy heading and permalink for Project 1.8.1: Project—The Spruce Budworm">🔗</a></div></article><article class="project project-like" id="firstlook08-project-oil-spill"><h3 class="heading">
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project—The Spread of an Oil Spill.</span>
+</h3>
+<div class="introduction" id="firstlook08-project-oil-spill-2">
+<div class="para" id="firstlook08-project-oil-spill-2-1">Oil spills such as the Deepwater Horizon in the Gulf of Mexico or the Amoco Cadiz off the coast of Brittany can have disastrous consequences for society—economically, environmentally, and socially. Even smaller spills such as the Exxon Valdez can have have a huge impact on the surrounding environment due to the remoteness of the site or the difficulty of mounting an emergency environmental response.  Cleanup and recovery from an oil spill is difficult and depends upon many factors, including the type of oil spilled, the temperature of the water, and the types of shorelines and beaches involved. Spills may take weeks, months or even years to clean up.  For this reason the timeliness of an emergency response is critical.<details class="ptx-footnote" aria-live="polite" id="firstlook08-project-oil-spill-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.8.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-project-oil-spill-2-1-2">This project is adapted from Brian Winkel(2015), “1-005-S-OilSlick,” <a class="external" href="https://www.simiode.org/resources/196" target="_blank"><code class="code-inline tex2jax_ignore">https://www.simiode.org/resources/196</code></a>.</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-project-oil-spill-2-2">Suppose an oil spill occurs off the coast of Texas. From time to time, but irregularly, a helicopter is dispatched by the Coast Guard to photograph the oil slick. On each trip, the helicopter arrives over the slick, the pilot takes a photo, waits 10 minutes, takes a second photo, and heads home. On each of seven trips the size (in area) of the slick is measured from both photographs.  The data is given in <a href="firstlook08.html#firstlook08-table-oil-spill" class="xref" data-knowl="./knowl/xref/firstlook08-table-oil-spill.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.8.1: Data on spread of an oil spill">Table 1.8.1</a><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="firstlook08-table-oil-spill"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Data on spread of an oil spill<div class="autopermalink" data-description="Table 1.8.1: Data on spread of an oil spill"><a href="#firstlook08-table-oil-spill" title="Copy heading and permalink for Table 1.8.1: Data on spread of an oil spill" aria-label="Copy heading and permalink for Table 1.8.1: Data on spread of an oil spill">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t2 lines">Initial Observation</td>
+<td class="c m b2 r0 l0 t2 lines">10 Minutes Later</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">1.047</td>
+<td class="c m b0 r0 l0 t0 lines">1.139</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">2.005</td>
+<td class="c m b0 r0 l0 t0 lines">2.087</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">3.348</td>
+<td class="c m b0 r0 l0 t0 lines">3.413</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">5.719</td>
+<td class="c m b0 r0 l0 t0 lines">5.765</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">7.273</td>
+<td class="c m b0 r0 l0 t0 lines">7.304</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">8.410</td>
+<td class="c m b0 r0 l0 t0 lines">8.426</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">9.117</td>
+<td class="c m b2 r0 l0 t0 lines">9.127</td>
+</tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like" id="firstlook08-project-oil-spill-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="firstlook08-project-oil-spill-3-1-1">Build a model for the size of the oil slick at time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.a"><a href="#firstlook08-project-oil-spill-3" title="Copy heading and permalink for Task 1.8.2.a" aria-label="Copy heading and permalink for Task 1.8.2.a">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oil-spill-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="firstlook08-project-oil-spill-4-1-1">Predict the future size of the oil slick, say at <span class="process-math">\(t=10\)</span> min, <span class="process-math">\(t=20\)</span> min, <span class="process-math">\(t=120\)</span> min.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.b"><a href="#firstlook08-project-oil-spill-4" title="Copy heading and permalink for Task 1.8.2.b" aria-label="Copy heading and permalink for Task 1.8.2.b">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oil-spill-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="firstlook08-project-oil-spill-5-1-1">Plot your model of the size of the oil slick as a function of time.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.c"><a href="#firstlook08-project-oil-spill-5" title="Copy heading and permalink for Task 1.8.2.c" aria-label="Copy heading and permalink for Task 1.8.2.c">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oil-spill-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="firstlook08-project-oil-spill-6-1-1">Find the time at which the oil slick is 8 square miles.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.d"><a href="#firstlook08-project-oil-spill-6" title="Copy heading and permalink for Task 1.8.2.d" aria-label="Copy heading and permalink for Task 1.8.2.d">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oil-spill-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="firstlook08-project-oil-spill-7-1-1">Determine the time of each of the observations for the first, third, fifth, and seventh initial observations.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.e"><a href="#firstlook08-project-oil-spill-7" title="Copy heading and permalink for Task 1.8.2.e" aria-label="Copy heading and permalink for Task 1.8.2.e">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oil-spill-8"><h4 class="heading">
+<span class="codenumber">(f)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Your Final Report.</span>
+</h4>
+<div class="para" id="firstlook08-project-oil-spill-8-2-1">You have been retained as a consultant to the  United States Coast Guard (USCG) to analyze this data and submit a report of your findings.  Your final report should contain a one-page executive summary.  The executive summary should summarize your work in such a way that the reader can rapidly become acquainted with the material. It should contain a brief description of the problem, important background information, a discussion of pertinent assumptions, a short description of your methodology, concise analysis, and your main conclusions. Do not assume that the reader knows anything about calculus or differential equations, but does have experts that can verify your model and calculations, which should appear in an appendix.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="firstlook08-project-oil-spill-8-2-2">
+<div class="para">Appendices should be neatly formatted and present information in a logical manner. <em class="emphasis">DO NOT</em> simply print out Sage code or a series of equations. Consolidate your results and provide a short explanation of what it is the reader is seeing while also highlighting key pieces of information in the appendix.</div>
+<ul class="disc" id="firstlook08-project-oil-spill-8-2-2-2">
+<li id="firstlook08-project-oil-spill-8-2-2-2-1">
+<div class="para" id="firstlook08-project-oil-spill-8-2-2-2-1-1">Appendix A—Answers and analysis<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-8-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-project-oil-spill-8-2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook08-project-oil-spill-8-2-2-2-2">
+<div class="para" id="firstlook08-project-oil-spill-8-2-2-2-2-1">Additional Appendices—Include additional appendices as necessary.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-8-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-project-oil-spill-8-2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oil-spill-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.2.f: Your Final Report"><a href="#firstlook08-project-oil-spill-8" title="Copy heading and permalink for Task 1.8.2.f: Your Final Report" aria-label="Copy heading and permalink for Task 1.8.2.f: Your Final Report">🔗</a></div></article><div class="autopermalink" data-description="Project 1.8.2: Project—The Spread of an Oil Spill"><a href="#firstlook08-project-oil-spill" title="Copy heading and permalink for Project 1.8.2: Project—The Spread of an Oil Spill" aria-label="Copy heading and permalink for Project 1.8.2: Project—The Spread of an Oil Spill">🔗</a></div></article><article class="project project-like" id="firstlook08-malaria-control"><h3 class="heading">
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project—Malaria Control.</span>
+</h3>
+<div class="introduction" id="firstlook08-malaria-control-2">
+<div class="para" id="firstlook08-malaria-control-2-1">Your company has been contracted to build a hospital in sub-Saharan Africa. The company is aware of the malaria threat in the region and has asked you to analyze malaria preventive measures for the employees that will be sent to build the hospital.<details class="ptx-footnote" aria-live="polite" id="firstlook08-malaria-control-2-1-1"><summary class="ptx-footnote__number" title="Footnote 1.8.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-malaria-control-2-1-1">This project is adapted from David Culver (2016), “1-024-S-MalariaControl,” <a class="external" href="https://www.simiode.org/resources/1750" target="_blank"><code class="code-inline tex2jax_ignore">www.simiode.org/resources/1750</code></a>.</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-malaria-control-2-2">Malaria is a serious and sometimes fatal disease. In 2018, it was estimated that 228 million people worldwide contracted malaria.  The estimated number of deaths was approximately 405,000 people. Children under the age of 5 years are the most vulnerable group, and they accounted for 67% (272,000) of all malaria deaths worldwide. Ninety-three percent of malaria cases are in Africa with six countries accounting or more than half of all malaria cases worldwide: Nigeria (25%), the Democratic Republic of the Congo (12%), Uganda (5%), and Côte d’Ivoire, Mozambique and Niger (4% each).<details class="ptx-footnote" aria-live="polite" id="firstlook08-malaria-control-2-2-1"><summary class="ptx-footnote__number" title="Footnote 1.8.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-malaria-control-2-2-1">World Malaria Report 2019, World Health Organization, <a class="external" href="https://www.who.int/publications/i/item/9789241565721" target="_blank"><code class="code-inline tex2jax_ignore">www.who.int/publications/i/item/9789241565721</code></a>.</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-malaria-control-2-3">People who get malaria are typically very sick with high fevers, shaking chills, and flu-like illness. Although malaria can be a deadly disease, illness and death from malaria can usually be prevented. The disease is caused by a parasite that infects red blood cells. The parasite is transmitted from person to person through the bite of mosquitoes. Avoiding mosquito bites is the only sure method to prevent malaria infection. Malaria can be cured with prescription drugs. The type of drugs and length of treatment depend on the type of malaria, where the person was infected, their age, whether they are pregnant, and how sick they are at the start of treatment.<details class="ptx-footnote" aria-live="polite" id="firstlook08-malaria-control-2-3-1"><summary class="ptx-footnote__number" title="Footnote 1.8.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-malaria-control-2-3-1">Malaria, Centers for Disease Control and Prevention, <a class="external" href="https://www.cdc.gov/parasites/malaria/index.html" target="_blank"><code class="code-inline tex2jax_ignore">www.cdc.gov/parasites/malaria/index.html</code></a>.</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="firstlook08-task-pharmacokinetics"><h4 class="heading">
+<span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pharmacokinetics of Malaria Chemoprophylaxis.</span>
+</h4>
+<div class="introduction" id="firstlook08-task-pharmacokinetics-2">
+<div class="para" id="firstlook08-task-pharmacokinetics-2-1">Your first task is to analyze the anti-malarial drug dosing regimen for those building the hospital. The primary concerns are how soon to start treatment before everyone arrives and the potential risks if employees miss one or two of their scheduled doses. These questions require an understanding of pharmacokinetics.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-task-pharmacokinetics-2-2">Pharmacokinetics is the study of what the body does to a drug. Specifically, it refers to the movement of the drug into, through, and out of the body. Understanding the pharmacokinetics of a drug allows medical professionals to develop appropriate drug dosing regimens for their patients.  A complete understanding of the pharmacokinetics of a drug requires information on the processes of absorption, distribution, metabolization, and excretion of the drug from the body. In order to simplify this problem, we will assume that the anti-malarial medication is immediately absorbed into the blood stream and that everyone begins treatment with zero anti-malarial medication in their body. After the drug is absorbed into the blood, the rate of elimination of the drug from the body is proportional to the amount of drug currently in the blood. In other words, the more of the drug in the blood stream, the faster it is removed from the body. We will also assume that the rate of excretion of the drug is the same for everyone.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-task-pharmacokinetics-2-3">Atovaquone/proguanil, sold under the trade names Malarone among others, is a combination of two antimalarial medication atovaquone and proguanil. It is used to treat and prevent malaria, including chloroquine-resistant malaria.  A standard adult pill of Malarone contains 250mg of atovaquone and 100mg of proguanil. A typical dose is one pill taken at the same time each day. An individual must maintain at least 300mg of atovaquone and 30mg of proguanil in their blood at all times in order to prevent contracting malaria. A typical adult eliminates atovaquone at a rate that corresponds to a half-life (time to eliminate one half of the original dose) of 48 hours. The half-life of proguanil is 12 hours.<details class="ptx-footnote" aria-live="polite" id="firstlook08-task-pharmacokinetics-2-3-1"><summary class="ptx-footnote__number" title="Footnote 1.8.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-task-pharmacokinetics-2-3-1">Malarone: Prescribing Information. US Food and Drug Administration. <a class="external" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/021078s016lbl.pdf" target="_blank"><code class="code-inline tex2jax_ignore">www.accessdata.fda.gov/drugsatfda_docs/label/2008/021078s016lbl.pdf</code></a>
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="firstlook08-task-malarone-i"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="firstlook08-task-malarone-i-1-1">At <span class="process-math">\(t = 0\text{,}\)</span> a typical adult ingests one pill of Malarone. Write an initial value problem (IVP) that models the mass (mg) of the drug proguanil in the adult’s blood for <span class="process-math">\(t \geq 0\text{.}\)</span> Solve this IVP analytically. After a person takes the first pill of Malarone, if they take no further medication, for how many hours can they expect to have enough proguanil in his blood to prevent contracting malaria?<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-i-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.i"><a href="#firstlook08-task-malarone-i" title="Copy heading and permalink for Task 1.8.3.a.i" aria-label="Copy heading and permalink for Task 1.8.3.a.i">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-malarone-ii"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="firstlook08-task-malarone-ii-1-1">Approximate the solution to the IVP you developed in <a href="firstlook08.html#firstlook08-task-malarone-i" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-i.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.i">Task 1.8.3.a.i</a> over the next seven days (168 hours) by implementing Euler’s method in Sage with two step sizes: <span class="process-math">\(h = 6\)</span> hours and <span class="process-math">\(h = 1\)</span> hour (see <a class="external" href="http://utmost-sage-cell.org/diff-equations" target="_blank"><code class="code-inline tex2jax_ignore">utmost-sage-cell.org/diff-equations</code></a>). Compute the error for both step sizes by comparing your estimate to the analytic solution.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-ii-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-ii-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.ii"><a href="#firstlook08-task-malarone-ii" title="Copy heading and permalink for Task 1.8.3.a.ii" aria-label="Copy heading and permalink for Task 1.8.3.a.ii">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-malarone-iii"><h5 class="heading"><span class="codenumber">(iii)</span></h5>
+<div class="para" id="firstlook08-task-malarone-iii-1-1">Approximate the solution to the IVP over the next seven days by implementing the RK4 or classic Runge–Kutta method in Sage with step size: <span class="process-math">\(h = 1\)</span> hour. Compute the error for both step sizes by comparing your estimate to the analytic solution (see <a class="external" href="http://utmost-sage-cell.org/diff-equations" target="_blank"><code class="code-inline tex2jax_ignore">utmost-sage-cell.org/diff-equations</code></a>).<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-iii-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-iii-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.iii"><a href="#firstlook08-task-malarone-iii" title="Copy heading and permalink for Task 1.8.3.a.iii" aria-label="Copy heading and permalink for Task 1.8.3.a.iii">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-malarone-iv"><h5 class="heading"><span class="codenumber">(iv)</span></h5>
+<div class="para" id="firstlook08-task-malarone-iv-1-1">Create a table summarizing the results of all numerical methods (<a href="firstlook08.html#firstlook08-task-malarone-ii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-ii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.ii">Task 1.8.3.a.ii</a> and <a href="firstlook08.html#firstlook08-task-malarone-iii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-iii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.iii">Task 1.8.3.a.iii</a>). This table should include columns for time, the actual mass of proguanil in each subject’s blood (from <a href="firstlook08.html#firstlook08-task-malarone-i" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-i.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.i">Task 1.8.3.a.i</a>), and the approximate values of the solution for all methods and step sizes at <span class="process-math">\(t = 0, 24, 48, \ldots, 168\)</span> only. Your table should have a total of 5 columns. Include an additional entry at the bottom of each of the last 3 columns providing the error for that method and step size. Discuss your results. Your analysis should include a comparison of error for different step sizes and for different methods.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-iv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.iv"><a href="#firstlook08-task-malarone-iv" title="Copy heading and permalink for Task 1.8.3.a.iv" aria-label="Copy heading and permalink for Task 1.8.3.a.iv">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-malarone-v"><h5 class="heading"><span class="codenumber">(v)</span></h5>
+<div class="para" id="firstlook08-task-malarone-v-1-1">Write an IVP that models the mass (mg) of the drug atovaquone in a typical adult’s blood for <span class="process-math">\(t \geq 0\)</span> if a person ingests only one pill of Malarone at <span class="process-math">\(t = 0\text{.}\)</span> Approximate the solution to this IVP using the RK4 method in Sage with step size: <span class="process-math">\(h = 1\)</span> hour.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-malarone-v-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="firstlook08-task-malarone-v-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Task 1.8.3.a.v"><a href="#firstlook08-task-malarone-v" title="Copy heading and permalink for Task 1.8.3.a.v" aria-label="Copy heading and permalink for Task 1.8.3.a.v">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-pharmacokinetics-8"><h5 class="heading"><span class="codenumber">(vi)</span></h5>
+<div class="para" id="firstlook08-task-pharmacokinetics-8-1-1">Using your solutions to parts <a href="firstlook08.html#firstlook08-task-malarone-iii" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-iii.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.iii">Task 1.8.3.a.iii</a> and <a href="firstlook08.html#firstlook08-task-malarone-v" class="xref" data-knowl="./knowl/xref/firstlook08-task-malarone-v.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a.v">Task 1.8.3.a.v</a>, if an adult ingests one pill of Malarone at the same time each day, how long before your construction crew departure to Africa should your crew begin taking their pills? In other words, how long until everyone has enough proguanil AND atovaquone in their blood to prevent contracting malaria? Illustrate your result using a graph or table.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.vi"><a href="#firstlook08-task-pharmacokinetics-8" title="Copy heading and permalink for Task 1.8.3.a.vi" aria-label="Copy heading and permalink for Task 1.8.3.a.vi">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-pharmacokinetics-9"><h5 class="heading"><span class="codenumber">(vii)</span></h5>
+<div class="para" id="firstlook08-task-pharmacokinetics-9-1-1">Assume a typical person reaches a “steady state” level of proguanil and atovaquone in their body after their 8th dose of Malarone. If after reaching “steady state” a person misses one dose, are they at risk of contracting malaria? How about after missing two consecutive doses? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-pharmacokinetics-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.a.vii"><a href="#firstlook08-task-pharmacokinetics-9" title="Copy heading and permalink for Task 1.8.3.a.vii" aria-label="Copy heading and permalink for Task 1.8.3.a.vii">🔗</a></div></article><div class="autopermalink" data-description="Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis"><a href="#firstlook08-task-pharmacokinetics" title="Copy heading and permalink for Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis" aria-label="Copy heading and permalink for Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-population-control"><h4 class="heading">
+<span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mosquito Population Control.</span>
+</h4>
+<div class="introduction" id="firstlook08-task-population-control-2">
+<div class="para" id="firstlook08-task-population-control-2-1">Unfortunately anti-malarial drugs are not 100% effective at preventing the spread of malaria. The only sure method to prevent contracting malaria is to avoid mosquito bites. In light of this, you must look at methods to control the mosquito population in the construction area near the living quarters. Your objective is to reduce the mosquito population in both the short (less than 6 months) and long (greater than 6 months) term while also minimizing the environmental impact and potential health problems associated with the mosquito control measures that are implemented.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-task-population-control-2-2">There are two typical approaches to mosquito control. The first approach is to directly kill mosquitoes using an insecticide spray. The effectiveness of this method depends on the frequency of spraying and the concentration of the insecticide. However, frequent spraying of insecticide has potential negative health effects on both humans and nearby wildlife. This method is also temporary as the mosquito population will recover once routine spraying has stopped. The second approach to mosquito population control is to eliminate the resources that support the mosquito population. This is done through the destruction of mosquito breeding grounds and involves everything from filling in small puddles to the draining of swamps and marshes. Keeping in consideration manpower and budget constraints, you must find the combination of these two approaches that best meets these objectives over the next six months.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook08-task-population-control-2-3">
+<div class="para">Studies on mosquito control indicate that the rate of change of the mosquito population, <span class="process-math">\(P\text{,}\)</span> (measured in millions of mosquitoes) in the area can be accurately modeled using the following Initial Value Problem:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dP}{dt} = kP \left( 1 - \frac{P}{M} \right) - EP, \quad P(0) = P_0,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(E\)</span> is a constant that represents the effectiveness of insecticide spraying efforts, M is the local carrying capacity and is affected by efforts to reduce mosquito breeding grounds, <span class="process-math">\(k\)</span> is the population growth constant, <span class="process-math">\(P_0\)</span> is the initial population, and time <span class="process-math">\(t\)</span> is measured in months. Current estimates suggest that there are approximately 10 million mosquitoes living near the proposed site of the hospital. Data indicates that <span class="process-math">\(M = 11\)</span> million and <span class="process-math">\(k = 1.2\)</span> for this mosquito population.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="firstlook08-task-population-control-2-4">Use the information provided and the RK4 method to evaluate the following three mosquito population scenarios. Recommend a scenario and support your recommendation with mathematics. Be sure to include other considerations (not just what your mathematical model tells you) in your analysis. Tables, graphs, and other visual representations that summarize and support your analysis and recommendation are encouraged and should be included in an appendix.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="firstlook08-task-population-control-3"><h5 class="heading">
+<span class="codenumber">(i)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Scenario A.</span>
+</h5>
+<div class="para" id="firstlook08-task-population-control-3-2-1">In this scenario, you would devote most of your available resources for mosquito control to the use of insecticide. You would spray highly concentrated and expensive insecticide in the employee living areas daily. Due to the emphasis on the use of insecticide would be limited to destroying small mosquito breeding grounds only on the base camp. You estimate a value for <span class="process-math">\(E\)</span> of <span class="process-math">\(E_A\)</span> (see <a href="firstlook08.html#firstlook08-table-mosquito" class="xref" data-knowl="./knowl/xref/firstlook08-table-mosquito.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.8.2: Values for M and E">Table 1.8.2</a>) and a new carrying capacity of <span class="process-math">\(M_A\)</span> million mosquitoes that would be in effect immediately.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="table table-like" id="firstlook08-table-mosquito"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Values for <span class="process-math">\(M\)</span> and <span class="process-math">\(E\)</span><div class="autopermalink" data-description="Table 1.8.2: Values for M and E"><a href="#firstlook08-table-mosquito" title="Copy heading and permalink for Table 1.8.2: Values for M and E" aria-label="Copy heading and permalink for Table 1.8.2: Values for M and E">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t2 lines"></td>
+<td class="c m b2 r0 l0 t2 lines" colspan="2">Scenario A</td>
+<td class="c m b2 r0 l0 t2 lines" colspan="2">Scenario B</td>
+<td class="c m b2 r0 l0 t2 lines" colspan="2">Scenario C</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(M_A\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(E_A\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(M_B\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(E_B\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(M_C\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(E_C\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Set 1</td>
+<td class="c m b0 r0 l0 t0 lines">10.5</td>
+<td class="c m b0 r0 l0 t0 lines">0.55</td>
+<td class="c m b0 r0 l0 t0 lines">6.0</td>
+<td class="c m b0 r0 l0 t0 lines">0.10</td>
+<td class="c m b0 r0 l0 t0 lines">9.0</td>
+<td class="c m b0 r0 l0 t0 lines">0.40</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Set 2</td>
+<td class="c m b0 r0 l0 t0 lines">10.0</td>
+<td class="c m b0 r0 l0 t0 lines">0.60</td>
+<td class="c m b0 r0 l0 t0 lines">5.5</td>
+<td class="c m b0 r0 l0 t0 lines">0.10</td>
+<td class="c m b0 r0 l0 t0 lines">8.5</td>
+<td class="c m b0 r0 l0 t0 lines">0.45</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">Set 3</td>
+<td class="c m b2 r0 l0 t0 lines">10.5</td>
+<td class="c m b2 r0 l0 t0 lines">0.50</td>
+<td class="c m b2 r0 l0 t0 lines">6.5</td>
+<td class="c m b2 r0 l0 t0 lines">0.10</td>
+<td class="c m b2 r0 l0 t0 lines">9.0</td>
+<td class="c m b2 r0 l0 t0 lines">0.40</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Task 1.8.3.b.i: Scenario A"><a href="#firstlook08-task-population-control-3" title="Copy heading and permalink for Task 1.8.3.b.i: Scenario A" aria-label="Copy heading and permalink for Task 1.8.3.b.i: Scenario A">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-population-control-4"><h5 class="heading">
+<span class="codenumber">(ii)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Scenario B.</span>
+</h5>
+<div class="para" id="firstlook08-task-population-control-4-2-1">In this scenario, you would devote most of your resources towards destroying mosquito breeding grounds. This would involve the permanent draining of a nearby marsh that is believed to be the primary breeding ground for mosquitoes at the construction site. Draining the marsh would take time to complete, delaying any impact on the mosquito population by two months, but would lower the carrying capacity to <span class="process-math">\(M_B\)</span> million mosquitoes. You would still spray insecticide but less frequently and with less potency than in Scenario A. It is estimated that spraying would immediately result in a value for <span class="process-math">\(E\)</span> of <span class="process-math">\(E_B.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.b.ii: Scenario B"><a href="#firstlook08-task-population-control-4" title="Copy heading and permalink for Task 1.8.3.b.ii: Scenario B" aria-label="Copy heading and permalink for Task 1.8.3.b.ii: Scenario B">🔗</a></div></article><article class="task exercise-like" id="firstlook08-task-population-control-5"><h5 class="heading">
+<span class="codenumber">(iii)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Scenario C.</span>
+</h5>
+<div class="para" id="firstlook08-task-population-control-5-2-1">This scenario seeks to balance the insecticide and breeding ground destruction approaches. You would use the same, more potent, insecticide as Scenario A but spray less frequently. This would free up manpower to destroy small mosquito breeding grounds. You estimate a new value for <span class="process-math">\(E\)</span> of <span class="process-math">\(E_C\)</span> and a new carrying capacity of <span class="process-math">\(M_C\)</span> million mosquitoes that would be in effect immediately.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-task-population-control-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.b.iii: Scenario C"><a href="#firstlook08-task-population-control-5" title="Copy heading and permalink for Task 1.8.3.b.iii: Scenario C" aria-label="Copy heading and permalink for Task 1.8.3.b.iii: Scenario C">🔗</a></div></article><div class="autopermalink" data-description="Task 1.8.3.b: Mosquito Population Control"><a href="#firstlook08-task-population-control" title="Copy heading and permalink for Task 1.8.3.b: Mosquito Population Control" aria-label="Copy heading and permalink for Task 1.8.3.b: Mosquito Population Control">🔗</a></div></article><article class="task exercise-like" id="firstlook08-malaria-control-5"><h4 class="heading">
+<span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Your Final Report.</span>
+</h4>
+<div class="para" id="firstlook08-malaria-control-5-2-1">Your final report should contain a one-page executive summary.  The executive summary should summarize your work for <a href="firstlook08.html#firstlook08-task-pharmacokinetics" class="xref" data-knowl="./knowl/xref/firstlook08-task-pharmacokinetics.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis">Task 1.8.3.a</a> and  <a href="firstlook08.html#firstlook08-task-population-control" class="xref" data-knowl="./knowl/xref/firstlook08-task-population-control.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.b: Mosquito Population Control">Task 1.8.3.b</a> in such a way that the reader can rapidly become acquainted with the material. It should contain a brief description of the problem, important background information, a discussion of pertinent assumptions, a short description of your methodology, concise analysis, and your main conclusions. Assume the reader is familiar with the basics of calculus and differential equations, so there is no need to walk through every step of your solution process or include equations. However, you should still describe the processes and mathematical techniques you used to reach your conclusions and explain why you used them.  Refer the reader to the appendices as needed.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="firstlook08-malaria-control-5-2-2">
+<div class="para">Appendices should be neatly formatted and present information in a logical manner. <em class="emphasis">DO NOT</em> simply print out Sage code. Consolidate your results and provide a short explanation of what it is the reader is seeing while also highlighting key pieces of information in the appendix.</div>
+<ul class="disc" id="firstlook08-malaria-control-5-2-2-2">
+<li id="firstlook08-malaria-control-5-2-2-2-1">
+<div class="para" id="firstlook08-malaria-control-5-2-2-2-1-1">Appendix A—Answers and analysis for <a href="firstlook08.html#firstlook08-task-pharmacokinetics" class="xref" data-knowl="./knowl/xref/firstlook08-task-pharmacokinetics.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.a: Pharmacokinetics of Malaria Chemoprophylaxis">Task 1.8.3.a</a><div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-5-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-malaria-control-5-2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook08-malaria-control-5-2-2-2-2">
+<div class="para" id="firstlook08-malaria-control-5-2-2-2-2-1">Appendix B—Provide a table that summarizes the results of your analysis for all three scenarios in <a href="firstlook08.html#firstlook08-task-population-control" class="xref" data-knowl="./knowl/xref/firstlook08-task-population-control.html" data-reveal-label="Reveal" data-close-label="Close" title="Task 1.8.3.b: Mosquito Population Control">Task 1.8.3.b</a>. Also include a copy of all work you used to analyze your recommended scenario.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-5-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-malaria-control-5-2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="firstlook08-malaria-control-5-2-2-2-3">
+<div class="para" id="firstlook08-malaria-control-5-2-2-2-3-1">Additional Appendices—Include additional appendices as necessary.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-5-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#firstlook08-malaria-control-5-2-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-malaria-control-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.3.c: Your Final Report"><a href="#firstlook08-malaria-control-5" title="Copy heading and permalink for Task 1.8.3.c: Your Final Report" aria-label="Copy heading and permalink for Task 1.8.3.c: Your Final Report">🔗</a></div></article><div class="autopermalink" data-description="Project 1.8.3: Project—Malaria Control"><a href="#firstlook08-malaria-control" title="Copy heading and permalink for Project 1.8.3: Project—Malaria Control" aria-label="Copy heading and permalink for Project 1.8.3: Project—Malaria Control">🔗</a></div></article><article class="project project-like" id="firstlook08-project-oligarch"><h3 class="heading">
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project—Oligarchies.</span>
+</h3>
+<div class="introduction" id="firstlook08-project-oligarch-2">
+<div class="para" id="firstlook08-project-oligarch-2-1">An oligarch is an individual holding a non-negligible fraction of the country’s total wealth.<details class="ptx-footnote" aria-live="polite" id="firstlook08-project-oligarch-2-1-1"><summary class="ptx-footnote__number" title="Footnote 1.8.6"><sup> 6 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-project-oligarch-2-1-1">This project is adopted from Boghosian, Bruce and Borgers, Christoph (2024) “ODE Models of Wealth Concentration and Taxation,” <em class="emphasis">CODEE Journal</em>: Vol. 17, Article 10. Available at: <a class="external" href="https://scholarship.claremont.edu/codee/vol17/iss1/10" target="_blank"><code class="code-inline tex2jax_ignore">scholarship.claremont.edu/codee/vol17/iss1/10</code></a>
+</div></details> The concentration of wealth in the hands of a small number of individuals is considerable in many countries around the world, including the United States. In 2017, <em class="emphasis">Forbes</em> found that just three individuals (Jeff Bezos, Warren Buffett and Bill Gates) held more wealth than the bottom half of the population.<details class="ptx-footnote" aria-live="polite" id="firstlook08-project-oligarch-2-1-3"><summary class="ptx-footnote__number" title="Footnote 1.8.7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="firstlook08-project-oligarch-2-1-3">Kirsch, Noah. “The 3 Richest Americans Hold More Wealth Than Bottom 50% Of The Country, Study Finds” <em class="emphasis">Forbes</em>.</div></details> Individuals who hold a significant fraction of society’s total wealth have considerable political power.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="firstlook08-project-oligarch-2-2">
+<div class="para">Assume that <span class="process-math">\(w \in (0, 1)\)</span> is the fraction society’s wealth. We assume that in a short time <span class="process-math">\(dt\text{,}\)</span> the oligarchs, by virtue of the power that their wealth gives them, acquire a small fraction <span class="process-math">\(\lambda \, dt\)</span> of the wealth not yet in their hands:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = \lambda(1 - w).
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(w\)</span> increases, acquiring wealth becomes easier for the oligarchs.  They can hire more lobbyists and better lawyers. They can afford riskier but more profitable investments.  Therefore, it is reasonable to assume that <span class="process-math">\(\lambda\)</span> is proportional to <span class="process-math">\(w\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda = gw
+\end{equation*}
+</div>
+<div class="para">for some constant <span class="process-math">\(g \gt 0\text{.}\)</span>  We thereby arrive at the logistic growth equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = gw( 1- w).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="firstlook08-project-oligarch-3"><h4 class="heading">
+<span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tax Policies.</span>
+</h4>
+<article class="task exercise-like" id="firstlook08-project-oligarch-3-3"><h5 class="heading">
+<span class="codenumber">(i)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flat Tax.</span>
+</h5>
+<div class="para logical" id="firstlook08-project-oligarch-3-3-2-1">
+<div class="para">Suppose that the government taxes the oligarchs by taxing away a small fraction of their wealth, say <span class="process-math">\(rw\text{.}\)</span> This is called a flat tax.  Our equation now becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = gw( 1- w) - rw.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="firstlook08-project-oligarch-3-3-2-2">
+<div class="para">Let us fix <span class="process-math">\(g\)</span> and let <span class="process-math">\(r\)</span> vary in the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = gw( 1- w) - rw.
+\end{equation*}
+</div>
+<div class="para">We now have a one-parameter family of equations.  Discuss the stability of equilibrium solutions.  When does a bifurcation occur?  What are the implications for a flat tax on the existence of oligarchies?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-3-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.4.a.i: Flat Tax"><a href="#firstlook08-project-oligarch-3-3" title="Copy heading and permalink for Task 1.8.4.a.i: Flat Tax" aria-label="Copy heading and permalink for Task 1.8.4.a.i: Flat Tax">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oligarch-3-4"><h5 class="heading">
+<span class="codenumber">(ii)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flat Income Tax.</span>
+</h5>
+<div class="para logical" id="firstlook08-project-oligarch-3-4-2-1">
+<div class="para">To model the taxation of income (or capital gains), assume the government takes away a fixed fraction <span class="process-math">\(\theta \in (0, 1)\)</span> of the wealth gained by the oligarchs in time <span class="process-math">\(dt\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = (1 - \theta)gw( 1- w).
+\end{equation*}
+</div>
+<div class="para">What are the equilibrium solutions.  Discuss their stability. What effect does a flat income tax have on an oligarchy?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.4.a.ii: Flat Income Tax"><a href="#firstlook08-project-oligarch-3-4" title="Copy heading and permalink for Task 1.8.4.a.ii: Flat Income Tax" aria-label="Copy heading and permalink for Task 1.8.4.a.ii: Flat Income Tax">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oligarch-3-5"><h5 class="heading">
+<span class="codenumber">(iii)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Progressive Wealth Tax.</span>
+</h5>
+<div class="para logical" id="firstlook08-project-oligarch-3-5-2-1">
+<div class="para">A progressive wealth tax would mean that <span class="process-math">\(r\)</span> itself grows with <span class="process-math">\(w\text{.}\)</span> Assume that <span class="process-math">\(r = r_0 P(w)\text{,}\)</span> where <span class="process-math">\(r_0\)</span> is a fixed positive constant, and <span class="process-math">\(P\)</span> is a continuous, monotonically increasing function of <span class="process-math">\(w \in [0, 1]\)</span> with <span class="process-math">\(P(0) = 1\text{.}\)</span>  Our equation now becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = gw( 1- w) - r_0 P(w)w.
+\end{equation*}
+</div>
+<div class="para">What are the equilibrium solutions for this equations.  Examine the stability when <span class="process-math">\(r_0 \lt g\)</span> and <span class="process-math">\(r_0 \gt g\text{.}\)</span>  What happens to oligarchies in both cases?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.4.a.iii: Progressive Wealth Tax"><a href="#firstlook08-project-oligarch-3-5" title="Copy heading and permalink for Task 1.8.4.a.iii: Progressive Wealth Tax" aria-label="Copy heading and permalink for Task 1.8.4.a.iii: Progressive Wealth Tax">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oligarch-3-6"><h5 class="heading">
+<span class="codenumber">(iv)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Progressive Income Tax.</span>
+</h5>
+<div class="para logical" id="firstlook08-project-oligarch-3-6-2-1">
+<div class="para">In a flat income tax the government takes away a fixed fraction <span class="process-math">\(\theta \in (0, 1)\)</span> of the wealth gained by the oligarchs in time <span class="process-math">\(dt\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = (1 - \theta)gw( 1- w).
+\end{equation*}
+</div>
+<div class="para">In a progressive income tax, the government will take away a larger fraction as income increases.  In other words, suppose that government collects taxes as a function <span class="process-math">\(Q\)</span> of <span class="process-math">\(x = gw(1-w)\text{.}\)</span>  Suppose that <span class="process-math">\(Q\)</span> is a monotoniically increasing function of <span class="process-math">\(x \geq 0\text{,}\)</span> where <span class="process-math">\(Q(0) \geq 0\text{.}\)</span>  The greater an oligarch’s gain per unit time, the greater percentage will be collected as tax.  Assuming that the government will never tax at a rate of 100%, we have <span class="process-math">\(Q(x) \lt 1\)</span> for all <span class="process-math">\(x\text{.}\)</span>  The equation for a progressive income tax is now</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dw}{dt} = (1 - Q(gw(1-w))gw( 1- w).
+\end{equation*}
+</div>
+<div class="para">What will happen to oligarchs under a progressive income tax?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.4.a.iv: Progressive Income Tax"><a href="#firstlook08-project-oligarch-3-6" title="Copy heading and permalink for Task 1.8.4.a.iv: Progressive Income Tax" aria-label="Copy heading and permalink for Task 1.8.4.a.iv: Progressive Income Tax">🔗</a></div></article><div class="autopermalink" data-description="Task 1.8.4.a: Tax Policies"><a href="#firstlook08-project-oligarch-3" title="Copy heading and permalink for Task 1.8.4.a: Tax Policies" aria-label="Copy heading and permalink for Task 1.8.4.a: Tax Policies">🔗</a></div></article><article class="task exercise-like" id="firstlook08-project-oligarch-4"><h4 class="heading">
+<span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Your Final Report.</span>
+</h4>
+<div class="para" id="firstlook08-project-oligarch-4-2-1">Your final report should contain a one-page executive summary.  The executive summary should summarize your work for work in a way that the reader can rapidly become acquainted with the material. It should contain a brief description of the problem, important background information, a discussion of pertinent assumptions, a short description of your methodology, concise analysis, and your main conclusions. Assume the reader is familiar with the basics of calculus and differential equations, so there is no need to walk through every step of your solution process or include equations. However, you should still describe the processes and mathematical techniques you used to reach your conclusions and explain why you used them.  Refer the reader to the appendices as needed.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="firstlook08-project-oligarch-4-2-2">Appendices should be neatly formatted and present information in a logical manner. <em class="emphasis">DO NOT</em> simply print out Sage code or write isolated equations. Consolidate your results and provide a short explanation of what it is the reader is seeing while also highlighting key pieces of information in the appendix.<div class="autopermalink" data-description="Paragraph"><a href="#firstlook08-project-oligarch-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.8.4.b: Your Final Report"><a href="#firstlook08-project-oligarch-4" title="Copy heading and permalink for Task 1.8.4.b: Your Final Report" aria-label="Copy heading and permalink for Task 1.8.4.b: Your Final Report">🔗</a></div></article><div class="autopermalink" data-description="Project 1.8.4: Project—Oligarchies"><a href="#firstlook08-project-oligarch" title="Copy heading and permalink for Project 1.8.4: Project—Oligarchies" aria-label="Copy heading and permalink for Project 1.8.4: Project—Oligarchies">🔗</a></div></article><div class="autopermalink" data-description="Section 1.8: Projects for First-Order Differential Equations"><a href="#firstlook08" title="Copy heading and permalink for Section 1.8: Projects for First-Order Differential Equations" aria-label="Copy heading and permalink for Section 1.8: Projects for First-Order Differential Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="firstlook07.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="systems.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

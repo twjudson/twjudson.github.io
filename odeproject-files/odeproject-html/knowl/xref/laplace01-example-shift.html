@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Given a function <span class="process-math">\(f(t)\text{,}\)</span> consider the new function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/laplace01-figure-piecewise-function.html">
+\begin{equation*}
+g(t) = u_a(t) f( t - a).
+\end{equation*}
+</div>
+<div class="para">To obtain the function <span class="process-math">\(g\)</span> from <span class="process-math">\(f\text{,}\)</span> we shift the graph of the <span class="process-math">\(f\)</span> to the right by <span class="process-math">\(a\)</span> units and let <span class="process-math">\(g(t) = 0\)</span> for <span class="process-math">\(0 \leq t \lt a\)</span> (see <a href="laplace01.html#laplace01-figure-piecewise-function" class="xref" data-knowl="./knowl/xref/laplace01-figure-piecewise-function.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.1.8">Figure 6.1.8</a>). Let us compute the Laplace transform of <span class="process-math">\(g\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/laplace01-figure-piecewise-function.html">
+\begin{equation*}
+{\mathcal L}(g) = \int_0^\infty g(t) e^{-st} \, dt =\int_a^\infty f(t - a) e^{-st} \, dt.
+\end{equation*}
+</div>
+<div class="para">If we make the substitution <span class="process-math">\(w = t - a\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/laplace01-figure-piecewise-function.html">
+\begin{equation*}
+{\mathcal L}(g) = \int_0^\infty f(w) e^{-s(w+a)} \, dt = e^{-sa} \int_0^\infty f(w) e^{-sw} \, dt = e^{-sa} {\mathcal L}(f).
+\end{equation*}
+</div>
+<div class="para">In other words, if <span class="process-math">\({\mathcal L}(f) = F(s)\text{,}\)</span> then <span class="process-math">\({\mathcal L}(u_a(t) f( t- a)) = e^{-as} F(s)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#laplace01-example-shift-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/piecewise-function.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(u_a(t)f(t-a)\text{,}\)</span> where <span class="process-math">\(a = 1\)</span><div class="autopermalink" data-description="Figure 6.1.8"><a href="#laplace01-figure-piecewise-function" title="Copy heading and permalink for Figure 6.1.8" aria-label="Copy heading and permalink for Figure 6.1.8">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 6.1.7"><a href="#laplace01-example-shift" title="Copy heading and permalink for Example 6.1.7" aria-label="Copy heading and permalink for Example 6.1.7">🔗</a></div></article><span class="incontext"><a class="internal" href="laplace01.html#laplace01-example-shift">in-context</a></span>
+</body>
+</html>
